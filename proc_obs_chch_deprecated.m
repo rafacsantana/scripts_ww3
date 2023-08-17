@@ -23,14 +23,16 @@ if proc_data==1
     time_obs(i-1)=datenum(ob.textdata{i,1},'YYYY-mm-ddTHH:MM:SS');
   end
   obs=ob.data;
-  lat_obs=-43+(45/60); lon_obs=173+(20/60);
+  lat_obs=-43.7567 % from ECAN website -43+(45/60);
+  lon_obs=173.3358 % 173+(20/60);
   save([path,file,'.mat'],'time_obs','obs','lat_obs','lon_obs')
 
 else
 
   display(['Loading: ',path,file,'.mat']);
   load([path,file,'.mat'])%,'time','obs')
-  lat_obs=-43+(45/60); lon_obs=173+(20/60);
+  lat_obs=-43.7567 % from ECAN website -43+(45/60); 
+  lon_obs=173.3358 % 173+(20/60);
 
 end
 
