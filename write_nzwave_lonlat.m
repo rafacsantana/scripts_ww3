@@ -18,13 +18,13 @@ gnames={'globalwave+globalum','nzwave+nzlam','nzwave_hr+nzcsm'};
 
 scrsz=[1 1 1366 768];
 %scrsz=get(0,'screensize');
-figure('position',scrsz,'color',[1 1 1],'visible','on')
-hold on
-set(gca,'fontsize',12,'fontweight','bold')
+%figure('position',scrsz,'color',[1 1 1],'visible','on')
+%hold on
+%set(gca,'fontsize',12,'fontweight','bold')
 
 colors={'b','r','k'};
 
-for i=2
+for i=3
 
   pname=[path,grids{i},ptime]
   if i==1;
@@ -35,8 +35,14 @@ for i=2
   end
   lon=ncread(fname,'lon');
   lat=ncread(fname,'lat');
+  hs=squeeze(double(ncread(fname,'hsig',          [1 1 1],[Inf Inf 1]))); 
+  tp=squeeze(double(ncread(fname,'tpeak',         [1 1 1],[Inf Inf 1]))); 
+  pd=squeeze(double(ncread(fname,'peak_direction',[1 1 1],[Inf Inf 1]))); 
+  depth=squeeze(double(ncread(fname,'depth',[1 1 1],[Inf Inf Inf]))); 
+  depth=nanmean(depth,3);
 
   fda=['WW3_grid_',grids{i},'.nc'];
+  fda=['nzwave-hr-lon-lat-depth','.nc'];
   if exist(fda)==2
      system(['rm -rf ',fda]);
   end
@@ -45,11 +51,20 @@ for i=2
   % creating nc and variables
   nccreate(fda,'lon','Dimensions', {'lon',  length(lon)}); 
   nccreate(fda,'lat','Dimensions', {'lat',  length(lat)}); 
+  %nccreate(fda,'hs','Dimensions',  {'lon',  length(lon),'lat',  length(lat)}); 
+  %nccreate(fda,'tp','Dimensions',  {'lon',  length(lon),'lat',  length(lat)}); 
+  %nccreate(fda,'pd','Dimensions',  {'lon',  length(lon),'lat',  length(lat)}); 
+  nccreate(fda,'depth','Dimensions',  {'lon',  length(lon),'lat',  length(lat)}); 
   ncwrite(fda,'lon',lon)
   ncwrite(fda,'lat',lat)
+  %ncwrite(fda,'hs',hs)
+  %ncwrite(fda,'tp',tp)
+  %ncwrite(fda,'pd',pd)
+  ncwrite(fda,'depth',depth)
+
 
   close all
-  if i==2; return; end
+  if i==3; return; end
 
   if i==1;
     pcolor(lon,lat,depth')
@@ -76,11 +91,12 @@ for i=2
 
 end
 
+return
+
 title('Bathymetry = GLOBALWAVE, Black = NZWAVE, and Red = NZWAVE-HR. Points are from p files')
 
 export_fig(gcf,'ww3_2023_grids','-png','-r150');
 
-return
 
 
 
