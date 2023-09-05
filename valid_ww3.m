@@ -2,63 +2,77 @@ clear
 close all
 
 % Daily time
-time_lima=datenum(2014,7,9,0,0,0):1:datenum(2014,12,15,0,0,0); % initial date
+time_lima=datenum(2014,7,9,0,0,0):1:datenum(2015,5,21,0,0,0); % initial date
 %time_lima=datenum(2014,8,5,0,0,0):1:datenum(2014,8,17,0,0,0); % 6-m wave event
+%time_lima=datenum(2014,8,5,0,0,0):1:datenum(2014,8,6,0,0,0); % Firts two days of output
 
-check_file=1;
+runs=[1,2];
+
+expt_names={'GLOBALWAVE','NZWAVE'};
+
 set_xlim  =1;
 proc_obs  =0;
 save_fig  =0;
+check_file=0;
 
-path='/scale_wlg_persistent/filesets/project/niwa03150/santanarc/';
-path_mod=[path,'model/'];
-path=[path,'data/obs/'];
+ww3pre={'ww3p_interp','ww3g'};
+ww3pre=ww3pre{2};
 
 
-path_expt=['/scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/GLOBALWAVE/'];%2018/01/05/00'];
-file_prepath_expt=['ww3g_'];%2018010500-utc_globalwave+globalum.nc']
-file_pos=['-utc_globalwave+globalum.nc'];
 
-gnames={'globalwave+globalum','nzwave+nzlam','nzwave_hr+nzcsm','tongawave+globalum'};
+for i=1:length(runs)
+  expts{i}=expt_names{runs(i)};
+end
+
+path_source=['/scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/']; % GLOBALWAVE/'];%2018/01/05/00'];
+path_santanarc='/scale_wlg_persistent/filesets/project/niwa03150/santanarc/';
+path_obs=[path_santanarc,'data/obs/'];
+
 
 % OBS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 file='SteepHead_SP_FullRecord_QC';
-file_obs=file;
+file_obs=[path_obs,file];
 %    {'date'}    {'PeakPerid'}    {'PeakDirection'}    {'Directional spread'}    {'Tm01'}    {'Tm02'}    {'Hs'}    {'Qp'}
 
 if proc_obs==1
   
-  display(['Processing: ',path,file,'.txt']);
-  ob=importdata([path,file,'.txt']);
+  display(['Processing: ',file_obs,'.txt']);
+  ob=importdata([file_obs,'.txt']);
   ob.textdata(1,:)
   for i=2:length(ob.textdata)
     time_obs(i-1)=datenum(ob.textdata{i,1},'YYYY-mm-ddTHH:MM:SS');
   end
+  time_obs=time_obs-.5;
   obs=ob.data;
   lat_obs=-43.7567 % from ECAN website -43+(45/60);
   lon_obs=173.3358 % 173+(20/60);
-  save([path,file,'.mat'],'time_obs','obs','lat_obs','lon_obs')
+  save([file_obs,'.mat'],'time_obs','obs','lat_obs','lon_obs')
 
 else
 
-  display(['Loading: ',path,file,'.mat']);
-  load([path,file,'.mat'])%,'time','obs')
+  display(['Loading: ',file_obs,'.mat']);
+  load([file_obs,'.mat'])%,'time','obs')
 
 end
 
 scrsz=[1 1 1366 768];
 scrsz=get(0,'screensize');
+
 figure('position',scrsz,'color',[1 1 1],'visible','on')
 hold on
 set(gca,'fontsize',12,'fontweight','bold')
   
 colors={'r','k'};
+legh={'Obs'}; legt={'Obs'};
 
-expts={'GLOBALWAVE','NZWAVE'};
-
+ke=0;
 for expt=expts
+  ke=ke+1;
 
   expt=expt{1};
+
+  gnames={'globalwave+globalum','nzwave+nzlam','nzwave_hr+nzcsm','tongawave+globalum'};
+
   if strncmp(expt,'GLOBAL',6)
     ig=1;
   elseif strncmp(expt,'NZWAVE-HR',9)
@@ -66,9 +80,8 @@ for expt=expts
   elseif strncmp(expt,'NZWAVE',6)
     ig=2;
   end
-    
 
-  path_expt=['/scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/',expt,'/']; % GLOBALWAVE/'];%2018/01/05/00'];
+  path_expt=[path_source,expt,'/']; % GLOBALWAVE/'];%2018/01/05/00'];
   
   path_dm=[path_expt,'matlab/'];
 
@@ -90,9 +103,10 @@ for expt=expts
     
       pname=[path_expt,ptime];
     
-      fname=[pname,'ww3p_interp_',ftime,'-utc_',gnames{ig},'.nc'];
+      fname=[pname,ww3pre,'_',ftime,'-utc_',gnames{ig},'.nc'];
       %fname=[pname,'ww3g_',ftime,'-utc_',gnames{1},'.nc'];
       display(['Loading: ',fname]);
+
       if t==time_lima(1)
         lon_mod=double(ncread(fname,'lon'));
         lat_mod=double(ncread(fname,'lat'));
@@ -101,13 +115,21 @@ for expt=expts
         if strcmp(file_obs,'SteepHead_SP_FullRecord_QC')
           %ilon=ilon+3;
         end
+        dis=sqrt((lon_mod(ilon)-lon_obs).^2 + (lat_mod(ilat)-lat_obs).^2)*110;
+        display(['Distance between obs and grid point is: ',num2str(dis),' km'])
       end
-    
+      
       time=squeeze(double(ncread(fname,'time')))./24+t; time=time(1:end-1);
-      hs=squeeze(double(ncread(fname,'hsig',          [ilon 1],[1 Inf]))); hs=hs(1:end-1)';
-      tp=squeeze(double(ncread(fname,'tpeak',         [ilon 1],[1 Inf]))); tp=tp(1:end-1)';
-      pd=squeeze(double(ncread(fname,'peak_direction',[ilon 1],[1 Inf]))); pd=pd(1:end-1)';
-    
+      if strncmp(ww3pre,'ww3p',4)
+        hs=squeeze(double(ncread(fname,'hsig',          [ilon 1],[1 Inf]))); hs=hs(1:end-1)';
+        tp=squeeze(double(ncread(fname,'tpeak',         [ilon 1],[1 Inf]))); tp=tp(1:end-1)';
+        pd=squeeze(double(ncread(fname,'peak_direction',[ilon 1],[1 Inf]))); pd=pd(1:end-1)';
+      elseif strncmp(ww3pre,'ww3g',4)
+        hs=squeeze(double(ncread(fname,'hsig',          [ilon ilat 1],[1 1 Inf]))); hs=hs(1:end-1);
+        tp=squeeze(double(ncread(fname,'tpeak',         [ilon ilat 1],[1 1 Inf]))); tp=tp(1:end-1);
+        pd=squeeze(double(ncread(fname,'peak_direction',[ilon ilat 1],[1 1 Inf]))); pd=pd(1:end-1);
+      end
+
       time_mod=[time_mod;time];
       hs_mod=[hs_mod;hs];
       tp_mod=[tp_mod;tp];
@@ -135,8 +157,8 @@ for expt=expts
     subplot(3,1,i);
     set(gca,'fontsize',12,'fontweight','bold')
     hold on
-    if ig==1
-      plot(time_obs-.5,obs(:,dcol(i))','.','color',[0 .7 0],'linewidth',2)
+    if ke==1
+      plot(time_obs,obs(:,dcol(i))','.','color',[0 .7 0],'linewidth',2)
     end
     plot(time_mod,model.data(:,dcol(i))','.','color',colors{ig},'linewidth',2)
   
@@ -149,12 +171,21 @@ for expt=expts
     %end
     title(tnames{dcol(i)})
     grid('on')
-  
+
+    modeli=interp1(time_mod,model.data(:,dcol(i)),time_obs);
+
+    if dcol(i)==6
+      legh=[legh,{[expt,' rmse = ',num2str(nanrmse(obs(:,dcol(i)),modeli'),'%.2f')]}];
+    end
+
   end
 
 end
 
-legend(['Obs',expts],'location','best')
+
+subplot(3,1,find(dcol==6));
+legend([legh],'location','best')
+
 
 if save_fig==1
   export_fig(gcf,'steephead_period','-png','-r150');

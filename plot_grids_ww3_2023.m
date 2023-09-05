@@ -12,6 +12,14 @@ file_obs=file;
 display(['Loading: ',path,file,'.mat']);
 load([path_obs,file,'.mat'])%,'time','obs')
 
+tstation={'Sinclair Head','Ohau Head','Mana Island','Makara','Karori Rock'};
+stations={'sinclair_head','ohau_head','mana_island','makara','karori_rock'};
+lat_obss=[-41.366885,-42.256063,  -41.083327, -41.203393, -41.344623];
+lon_obss=[174.716761, 173.853341, 174.763960, 174.702391, 174.650430];
+
+lon_obss=lon_obs; lat_obss=lat_obs;
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 path='/scale_wlg_devoper/filesets/archive/ecoconnect/EFS/';
 ptime=datestr(time,'/YYYY/mm/DD/HH/');
@@ -29,10 +37,10 @@ set(gca,'fontsize',12,'fontweight','bold')
 
 colors={'b','r','k','k'};
 
-for i=[2]
+for i=[3]
 
   pname=[path,grids{i},ptime];
-  if i==1;
+  if i==3;
     fname=[pname,'ww3g_',ftime,'-utc_',gnames{i},'.nc'];
     depth=ncread(fname,'depth',[1 1 1],[Inf Inf 1]); 
   else;
@@ -44,7 +52,7 @@ for i=[2]
   [lonm,latm]=meshgrid(lon_mod,lat_mod);
   %if i==2; return; end
 
-  if i==1;
+  if i==3;
     pcolor(lon_mod,lat_mod,depth')
     colormap(cmocean('deep'))
     shading flat;
@@ -60,7 +68,7 @@ for i=[2]
     plot([min_lon max_lon],[max_lat max_lat],'color',colors{i},'linewidth',2)
 	end
 
-  if i~=1;
+  if i~=3;
     fname=[pname,'ww3p_interp_',ftime,'-utc_',gnames{i},'.nc'];
     lon=ncread(fname,'lon');
   	lat=ncread(fname,'lat');
@@ -70,6 +78,8 @@ for i=[2]
 end
 
 xlim([170 185]); ylim([-60 -15]) % NZ and AUS
+xlim([min(lon_obss)-.3 max(lon_obss)+.3]); % NZ and AUS
+ylim([min(lat_obss)-.3 max(lat_obss)+.3]); % NZ and AUS
 %xlim([140 210]); ylim([-60 10])  % GLOBAL and TONGA
 %xlim([184.1 186.5]); ylim([-22 -15])   % GLOBAL and TONGA
 
@@ -81,20 +91,25 @@ if plot_aus==1;
 		plot(lon,lat,'.','color','m','markersize',4)
 end
 
+
 plot_obs=1;
 if plot_obs==1;
-		plot(lon_obs,lat_obs,'s','color','g','markersize',4)
+    for i=1:length(lon_obss)
+  		plot(lon_obss(i),lat_obss(i),'s','color','r','markersize',4)
+  		text(lon_obss(i),lat_obss(i),tstation{i},'fontsize',12,'color','k')%,'markersize',4)
+    end
 end
 
 %title('Bathymetry = GLOBALWAVE, Red = NZWAVE, and Black = NZWAVE-HR. Points are from p files')
 
 %return
 
-title('Bathymetry = GLOBALWAVE, Cyan = TONGAWAVE. Points are from ww3 p files')
+%title('Bathymetry = GLOBALWAVE, Cyan = TONGAWAVE. Points are from ww3 p files')
 
-save_fig=1;
+save_fig=0;
 if save_fig==1;
-  export_fig(gcf,'ww3_2023_tonga_grid','-png','-r150');
+  path_fig=['/scale_wlg_nobackup/filesets/nobackup/niwa03150/santanarc/figures/']; % GLOBALWAVE/'];%2018/01/05/00'];
+  export_fig(gcf,[path_fig,'south_wellington_stations'],'-png','-r150');
 end
 
 
