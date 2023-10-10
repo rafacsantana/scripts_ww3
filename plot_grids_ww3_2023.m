@@ -12,12 +12,18 @@ file_obs=file;
 display(['Loading: ',path,file,'.mat']);
 load([path_obs,file,'.mat'])%,'time','obs')
 
-tstation={'Sinclair Head','Ohau Head','Mana Island','Makara','Karori Rock'};
-stations={'sinclair_head','ohau_head','mana_island','makara','karori_rock'};
-lat_obss=[-41.366885,-42.256063,  -41.083327, -41.203393, -41.344623];
-lon_obss=[174.716761, 173.853341, 174.763960, 174.702391, 174.650430];
 
-lon_obss=lon_obs; lat_obss=lat_obs;
+tstation={'Sinclair Head','Ohau Head','Mana Island','Makara'  ,'Karori Rock','Wairewa Lake Forysyth'};
+stations={'sinclair_head','ohau_head','mana_island','makara'  ,'karori_rock','wairewa_lake_forsyth'};
+lat_obss=[-41.366885     ,-42.256063 ,-41.083327   ,-41.203393, -41.344623  ,-43.84110];
+lon_obss=[174.716761     , 173.853341,174.763960   ,174.702391, 174.650430  ,172.71835];
+
+tstation={tstation{end}};
+stations={stations{end}};
+lon_obss=lon_obss(end); lat_obss=lat_obss(end);
+lon_obss=lon_obss(end); lat_obss=lat_obss(end);
+
+lon_obs=lon_obss; lat_obs=lat_obss;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -37,10 +43,10 @@ set(gca,'fontsize',12,'fontweight','bold')
 
 colors={'b','r','k','k'};
 
-for i=[3]
+for i=[2]
 
   pname=[path,grids{i},ptime];
-  if i==3;
+  if i==2;
     fname=[pname,'ww3g_',ftime,'-utc_',gnames{i},'.nc'];
     depth=ncread(fname,'depth',[1 1 1],[Inf Inf 1]); 
   else;
@@ -50,9 +56,14 @@ for i=[3]
   lon_mod=double(ncread(fname,'lon'));
   lat_mod=double(ncread(fname,'lat'));
   [lonm,latm]=meshgrid(lon_mod,lat_mod);
+
+  [dif ilon]=nanmin(abs(lon_mod-lon_obs));
+  [dif ilat]=nanmin(abs(lat_mod-lat_obs));
+  
+  
   %if i==2; return; end
 
-  if i==3;
+  if i==2;
     pcolor(lon_mod,lat_mod,depth')
     colormap(cmocean('deep'))
     shading flat;
@@ -68,7 +79,7 @@ for i=[3]
     plot([min_lon max_lon],[max_lat max_lat],'color',colors{i},'linewidth',2)
 	end
 
-  if i~=3;
+  if i~=2;
     fname=[pname,'ww3p_interp_',ftime,'-utc_',gnames{i},'.nc'];
     lon=ncread(fname,'lon');
   	lat=ncread(fname,'lat');
@@ -78,10 +89,11 @@ for i=[3]
 end
 
 xlim([170 185]); ylim([-60 -15]) % NZ and AUS
-xlim([min(lon_obss)-.3 max(lon_obss)+.3]); % NZ and AUS
-ylim([min(lat_obss)-.3 max(lat_obss)+.3]); % NZ and AUS
+xlim([min(lon_obss)-.9 max(lon_obss)+.9]); % NZ and AUS
+ylim([min(lat_obss)-.9 max(lat_obss)+.9]); % NZ and AUS
 %xlim([140 210]); ylim([-60 10])  % GLOBAL and TONGA
 %xlim([184.1 186.5]); ylim([-22 -15])   % GLOBAL and TONGA
+caxis([0 200])
 
 plot_aus=0;
 if plot_aus==1;
@@ -111,15 +123,5 @@ if save_fig==1;
   path_fig=['/scale_wlg_nobackup/filesets/nobackup/niwa03150/santanarc/figures/']; % GLOBALWAVE/'];%2018/01/05/00'];
   export_fig(gcf,[path_fig,'south_wellington_stations'],'-png','-r150');
 end
-
-
-
-
-
-
-
-
-
-
 
 

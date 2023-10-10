@@ -1,0 +1,78 @@
+Opening log file:  /tmp/java.log.10025
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+              R2019b Update 6 (9.7.0.1434023) 64-bit (glnxa64)
+                               July 15, 2020
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+Going to ~/ww3/scripts_ww3 dir
+>> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> Loading: /scale_wlg_persistent/filesets/project/niwa03150/santanarc/data/obs/SteepHead_SP_FullRecord_QC.mat
+>> >> >> >> >> >> >> >> >> >> >> >> Loading: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/2021/05/15/00/ww3g_2021051500-utc_nzwave_hr+nzcsm.nc
+Distance between obs and grid point is: 1.69 km
+Loading: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/2021/05/16/00/ww3g_2021051600-utc_nzwave_hr+nzcsm.nc
+Loading: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/2021/05/17/00/ww3g_2021051700-utc_nzwave_hr+nzcsm.nc
+Loading: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/2021/05/18/00/ww3g_2021051800-utc_nzwave_hr+nzcsm.nc
+Loading: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/2021/05/19/00/ww3g_2021051900-utc_nzwave_hr+nzcsm.nc
+Loading: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/2021/05/20/00/ww3g_2021052000-utc_nzwave_hr+nzcsm.nc
+Loading: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/2021/05/21/00/ww3g_2021052100-utc_nzwave_hr+nzcsm.nc
+Loading: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/2021/05/22/00/ww3g_2021052200-utc_nzwave_hr+nzcsm.nc
+Loading: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/2021/05/23/00/ww3g_2021052300-utc_nzwave_hr+nzcsm.nc
+Loading: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/2021/05/24/00/ww3g_2021052400-utc_nzwave_hr+nzcsm.nc
+Loading: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/2021/05/25/00/ww3g_2021052500-utc_nzwave_hr+nzcsm.nc
+Loading: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/2021/05/26/00/ww3g_2021052600-utc_nzwave_hr+nzcsm.nc
+Loading: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/2021/05/27/00/ww3g_2021052700-utc_nzwave_hr+nzcsm.nc
+Loading: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/2021/05/28/00/ww3g_2021052800-utc_nzwave_hr+nzcsm.nc
+Loading: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/2021/05/29/00/ww3g_2021052900-utc_nzwave_hr+nzcsm.nc
+Loading: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/2021/05/30/00/ww3g_2021053000-utc_nzwave_hr+nzcsm.nc
+Loading: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/2021/05/31/00/ww3g_2021053100-utc_nzwave_hr+nzcsm.nc
+Loading: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/2021/06/01/00/ww3g_2021060100-utc_nzwave_hr+nzcsm.nc
+Loading: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/2021/06/02/00/ww3g_2021060200-utc_nzwave_hr+nzcsm.nc
+Loading: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/2021/06/03/00/ww3g_2021060300-utc_nzwave_hr+nzcsm.nc
+Loading: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/2021/06/04/00/ww3g_2021060400-utc_nzwave_hr+nzcsm.nc
+Loading: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/2021/06/05/00/ww3g_2021060500-utc_nzwave_hr+nzcsm.nc
+Loading: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/2021/06/06/00/ww3g_2021060600-utc_nzwave_hr+nzcsm.nc
+Loading: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/2021/06/07/00/ww3g_2021060700-utc_nzwave_hr+nzcsm.nc
+Loading: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/2021/06/08/00/ww3g_2021060800-utc_nzwave_hr+nzcsm.nc
+Loading: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/2021/06/09/00/ww3g_2021060900-utc_nzwave_hr+nzcsm.nc
+Loading: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/2021/06/10/00/ww3g_2021061000-utc_nzwave_hr+nzcsm.nc
+Loading: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/2021/06/11/00/ww3g_2021061100-utc_nzwave_hr+nzcsm.nc
+Loading: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/2021/06/12/00/ww3g_2021061200-utc_nzwave_hr+nzcsm.nc
+Loading: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/2021/06/13/00/ww3g_2021061300-utc_nzwave_hr+nzcsm.nc
+Loading: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/2021/06/14/00/ww3g_2021061400-utc_nzwave_hr+nzcsm.nc
+Loading: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/2021/06/15/00/ww3g_2021061500-utc_nzwave_hr+nzcsm.nc
+Loading: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/2021/06/16/00/ww3g_2021061600-utc_nzwave_hr+nzcsm.nc
+Loading: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/2021/06/17/00/ww3g_2021061700-utc_nzwave_hr+nzcsm.nc
+Loading: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/2021/06/18/00/ww3g_2021061800-utc_nzwave_hr+nzcsm.nc
+Loading: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/2021/06/19/00/ww3g_2021061900-utc_nzwave_hr+nzcsm.nc
+Loading: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/2021/06/20/00/ww3g_2021062000-utc_nzwave_hr+nzcsm.nc
+Loading: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/2021/06/21/00/ww3g_2021062100-utc_nzwave_hr+nzcsm.nc
+Loading: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/2021/06/22/00/ww3g_2021062200-utc_nzwave_hr+nzcsm.nc
+Loading: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/2021/06/23/00/ww3g_2021062300-utc_nzwave_hr+nzcsm.nc
+Loading: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/2021/06/24/00/ww3g_2021062400-utc_nzwave_hr+nzcsm.nc
+Loading: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/2021/06/25/00/ww3g_2021062500-utc_nzwave_hr+nzcsm.nc
+Loading: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/2021/06/26/00/ww3g_2021062600-utc_nzwave_hr+nzcsm.nc
+Loading: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/2021/06/27/00/ww3g_2021062700-utc_nzwave_hr+nzcsm.nc
+Loading: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/2021/06/28/00/ww3g_2021062800-utc_nzwave_hr+nzcsm.nc
+Loading: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/2021/06/29/00/ww3g_2021062900-utc_nzwave_hr+nzcsm.nc
+Loading: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/2021/06/30/00/ww3g_2021063000-utc_nzwave_hr+nzcsm.nc
+Loading: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/2021/07/01/00/ww3g_2021070100-utc_nzwave_hr+nzcsm.nc
+Loading: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/2021/07/02/00/ww3g_2021070200-utc_nzwave_hr+nzcsm.nc
+Loading: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/2021/07/03/00/ww3g_2021070300-utc_nzwave_hr+nzcsm.nc
+Loading: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/2021/07/04/00/ww3g_2021070400-utc_nzwave_hr+nzcsm.nc
+Loading: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/2021/07/05/00/ww3g_2021070500-utc_nzwave_hr+nzcsm.nc
+Loading: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/2021/07/06/00/ww3g_2021070600-utc_nzwave_hr+nzcsm.nc
+Loading: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/2021/07/07/00/ww3g_2021070700-utc_nzwave_hr+nzcsm.nc
+Loading: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/2021/07/08/00/ww3g_2021070800-utc_nzwave_hr+nzcsm.nc
+Loading: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/2021/07/09/00/ww3g_2021070900-utc_nzwave_hr+nzcsm.nc
+Loading: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/2021/07/10/00/ww3g_2021071000-utc_nzwave_hr+nzcsm.nc
+Loading: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/2021/07/11/00/ww3g_2021071100-utc_nzwave_hr+nzcsm.nc
+Loading: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/2021/07/12/00/ww3g_2021071200-utc_nzwave_hr+nzcsm.nc
+Loading: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/2021/07/13/00/ww3g_2021071300-utc_nzwave_hr+nzcsm.nc
+Loading: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/2021/07/14/00/ww3g_2021071400-utc_nzwave_hr+nzcsm.nc
+Loading: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/2021/07/15/00/ww3g_2021071500-utc_nzwave_hr+nzcsm.nc
+Saving: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/matlab/SteepHead_SP_FullRecord_QC_2021051500_2021071500.mat
+>> >> >> >> >> >> >> >> >> >> 

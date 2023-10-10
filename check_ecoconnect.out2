@@ -1,0 +1,2531 @@
+Opening log file:  /tmp/java.log.27525
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+              R2019b Update 6 (9.7.0.1434023) 64-bit (glnxa64)
+                               July 15, 2020
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+Going to ~/ww3/scripts_ww3 dir
+>> >> >> Going to ~/ww3/scripts_ww3 dir
+>> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/01/07/00/ww3g_2018010700-utc_nzwave_hr+nzcsm.nc
+Lon obs = 172.7183 and Lat obs = -43.8411
+Lon mod = 172.7051 and Lat mod = -43.8477
+Distance between obs and grid point is: 1.6431 km
+Reading time
+Elapsed time is 4.273067 seconds.
+Reading Hs
+Elapsed time is 2.169450 seconds.
+Concatenating
+Elapsed time is 0.000228 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/01/08/00/ww3g_2018010800-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.404046 seconds.
+Reading Hs
+Elapsed time is 1.679822 seconds.
+Concatenating
+Elapsed time is 0.000258 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/01/09/00/ww3g_2018010900-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.224969 seconds.
+Reading Hs
+Elapsed time is 1.627687 seconds.
+Concatenating
+Elapsed time is 0.000116 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/01/10/00/ww3g_2018011000-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.658600 seconds.
+Reading Hs
+Elapsed time is 1.798949 seconds.
+Concatenating
+Elapsed time is 0.000324 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/01/11/00/ww3g_2018011100-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.089552 seconds.
+Reading Hs
+Elapsed time is 1.603478 seconds.
+Concatenating
+Elapsed time is 0.000890 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/01/12/00/ww3g_2018011200-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.047717 seconds.
+Reading Hs
+Elapsed time is 1.723625 seconds.
+Concatenating
+Elapsed time is 0.000033 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/01/13/00/ww3g_2018011300-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.474565 seconds.
+Reading Hs
+Elapsed time is 1.840159 seconds.
+Concatenating
+Elapsed time is 0.000028 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/01/14/00/ww3g_2018011400-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.291535 seconds.
+Reading Hs
+Elapsed time is 1.658891 seconds.
+Concatenating
+Elapsed time is 0.000027 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/01/15/00/ww3g_2018011500-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.162338 seconds.
+Reading Hs
+Elapsed time is 1.550625 seconds.
+Concatenating
+Elapsed time is 0.000028 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/01/16/00/ww3g_2018011600-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.111069 seconds.
+Reading Hs
+Elapsed time is 1.680443 seconds.
+Concatenating
+Elapsed time is 0.000025 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/01/17/00/ww3g_2018011700-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.209037 seconds.
+Reading Hs
+Elapsed time is 1.646887 seconds.
+Concatenating
+Elapsed time is 0.000035 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/01/18/00/ww3g_2018011800-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.176183 seconds.
+Reading Hs
+Elapsed time is 1.804779 seconds.
+Concatenating
+Elapsed time is 0.000030 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/01/19/00/ww3g_2018011900-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.179525 seconds.
+Reading Hs
+Elapsed time is 1.675781 seconds.
+Concatenating
+Elapsed time is 0.000031 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/01/20/00/ww3g_2018012000-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.169763 seconds.
+Reading Hs
+Elapsed time is 1.674477 seconds.
+Concatenating
+Elapsed time is 0.000033 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/01/21/00/ww3g_2018012100-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.148131 seconds.
+Reading Hs
+Elapsed time is 1.732516 seconds.
+Concatenating
+Elapsed time is 0.000029 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/01/22/00/ww3g_2018012200-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.347515 seconds.
+Reading Hs
+Elapsed time is 1.578791 seconds.
+Concatenating
+Elapsed time is 0.000028 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/01/23/00/ww3g_2018012300-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.211094 seconds.
+Reading Hs
+Elapsed time is 1.546277 seconds.
+Concatenating
+Elapsed time is 0.000037 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/01/24/00/ww3g_2018012400-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.054640 seconds.
+Reading Hs
+Elapsed time is 1.638072 seconds.
+Concatenating
+Elapsed time is 0.000033 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/01/25/00/ww3g_2018012500-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.120762 seconds.
+Reading Hs
+Elapsed time is 1.705712 seconds.
+Concatenating
+Elapsed time is 0.000032 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/01/26/00/ww3g_2018012600-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.312576 seconds.
+Reading Hs
+Elapsed time is 2.044886 seconds.
+Concatenating
+Elapsed time is 0.000034 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/01/27/00/ww3g_2018012700-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.100996 seconds.
+Reading Hs
+Elapsed time is 1.513223 seconds.
+Concatenating
+Elapsed time is 0.000031 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/01/28/00/ww3g_2018012800-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.135054 seconds.
+Reading Hs
+Elapsed time is 1.572960 seconds.
+Concatenating
+Elapsed time is 0.000038 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/01/29/00/ww3g_2018012900-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.058189 seconds.
+Reading Hs
+Elapsed time is 1.709221 seconds.
+Concatenating
+Elapsed time is 0.000030 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/01/30/00/ww3g_2018013000-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.071721 seconds.
+Reading Hs
+Elapsed time is 1.639343 seconds.
+Concatenating
+Elapsed time is 0.000035 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/01/31/00/ww3g_2018013100-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.207385 seconds.
+Reading Hs
+Elapsed time is 1.594031 seconds.
+Concatenating
+Elapsed time is 0.000040 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/02/01/00/ww3g_2018020100-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.073904 seconds.
+Reading Hs
+Elapsed time is 1.615024 seconds.
+Concatenating
+Elapsed time is 0.000033 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/02/02/00/ww3g_2018020200-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.144626 seconds.
+Reading Hs
+Elapsed time is 1.695487 seconds.
+Concatenating
+Elapsed time is 0.000052 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/02/03/00/ww3g_2018020300-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.982698 seconds.
+Reading Hs
+Elapsed time is 1.641614 seconds.
+Concatenating
+Elapsed time is 0.000027 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/02/04/00/ww3g_2018020400-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.039982 seconds.
+Reading Hs
+Elapsed time is 1.721080 seconds.
+Concatenating
+Elapsed time is 0.000033 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/02/05/00/ww3g_2018020500-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.250347 seconds.
+Reading Hs
+Elapsed time is 1.649766 seconds.
+Concatenating
+Elapsed time is 0.000036 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/02/06/00/ww3g_2018020600-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.039509 seconds.
+Reading Hs
+Elapsed time is 1.698685 seconds.
+Concatenating
+Elapsed time is 0.000024 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/02/07/00/ww3g_2018020700-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.141679 seconds.
+Reading Hs
+Elapsed time is 1.654573 seconds.
+Concatenating
+Elapsed time is 0.000037 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/02/08/00/ww3g_2018020800-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.201317 seconds.
+Reading Hs
+Elapsed time is 1.637460 seconds.
+Concatenating
+Elapsed time is 0.000035 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/02/09/00/ww3g_2018020900-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.130110 seconds.
+Reading Hs
+Elapsed time is 1.648504 seconds.
+Concatenating
+Elapsed time is 0.000048 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/02/10/00/ww3g_2018021000-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.095831 seconds.
+Reading Hs
+Elapsed time is 1.801151 seconds.
+Concatenating
+Elapsed time is 0.000058 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/02/11/00/ww3g_2018021100-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.090476 seconds.
+Reading Hs
+Elapsed time is 1.627101 seconds.
+Concatenating
+Elapsed time is 0.000037 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/02/12/00/ww3g_2018021200-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.118103 seconds.
+Reading Hs
+Elapsed time is 1.649881 seconds.
+Concatenating
+Elapsed time is 0.000039 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/02/13/00/ww3g_2018021300-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.267485 seconds.
+Reading Hs
+Elapsed time is 1.640537 seconds.
+Concatenating
+Elapsed time is 0.000039 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/02/14/00/ww3g_2018021400-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.066898 seconds.
+Reading Hs
+Elapsed time is 1.619108 seconds.
+Concatenating
+Elapsed time is 0.000035 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/02/15/00/ww3g_2018021500-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.048575 seconds.
+Reading Hs
+Elapsed time is 1.477567 seconds.
+Concatenating
+Elapsed time is 0.000035 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/02/16/00/ww3g_2018021600-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.104922 seconds.
+Reading Hs
+Elapsed time is 1.682245 seconds.
+Concatenating
+Elapsed time is 0.000039 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/02/17/00/ww3g_2018021700-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.072177 seconds.
+Reading Hs
+Elapsed time is 1.773177 seconds.
+Concatenating
+Elapsed time is 0.000041 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/02/18/00/ww3g_2018021800-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.144252 seconds.
+Reading Hs
+Elapsed time is 1.683761 seconds.
+Concatenating
+Elapsed time is 0.000048 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/02/19/00/ww3g_2018021900-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.040426 seconds.
+Reading Hs
+Elapsed time is 1.660331 seconds.
+Concatenating
+Elapsed time is 0.000045 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/02/20/00/ww3g_2018022000-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.025247 seconds.
+Reading Hs
+Elapsed time is 1.563198 seconds.
+Concatenating
+Elapsed time is 0.000055 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/02/21/00/ww3g_2018022100-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.069984 seconds.
+Reading Hs
+Elapsed time is 1.704640 seconds.
+Concatenating
+Elapsed time is 0.000047 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/02/22/00/ww3g_2018022200-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.234110 seconds.
+Reading Hs
+Elapsed time is 1.638136 seconds.
+Concatenating
+Elapsed time is 0.000043 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/02/23/00/ww3g_2018022300-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.122531 seconds.
+Reading Hs
+Elapsed time is 1.559380 seconds.
+Concatenating
+Elapsed time is 0.000050 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/02/24/00/ww3g_2018022400-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.199412 seconds.
+Reading Hs
+Elapsed time is 1.919569 seconds.
+Concatenating
+Elapsed time is 0.000047 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/02/25/00/ww3g_2018022500-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.067196 seconds.
+Reading Hs
+Elapsed time is 1.646036 seconds.
+Concatenating
+Elapsed time is 0.000066 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/02/26/00/ww3g_2018022600-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.104002 seconds.
+Reading Hs
+Elapsed time is 1.565120 seconds.
+Concatenating
+Elapsed time is 0.000048 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/02/27/00/ww3g_2018022700-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.171375 seconds.
+Reading Hs
+Elapsed time is 1.674573 seconds.
+Concatenating
+Elapsed time is 0.000055 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/02/28/00/ww3g_2018022800-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.030908 seconds.
+Reading Hs
+Elapsed time is 1.589132 seconds.
+Concatenating
+Elapsed time is 0.000078 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/03/01/00/ww3g_2018030100-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.196783 seconds.
+Reading Hs
+Elapsed time is 1.601372 seconds.
+Concatenating
+Elapsed time is 0.000061 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/03/02/00/ww3g_2018030200-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.162372 seconds.
+Reading Hs
+Elapsed time is 1.653258 seconds.
+Concatenating
+Elapsed time is 0.000046 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/03/03/00/ww3g_2018030300-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.186841 seconds.
+Reading Hs
+Elapsed time is 1.692101 seconds.
+Concatenating
+Elapsed time is 0.000044 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/03/04/00/ww3g_2018030400-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.086589 seconds.
+Reading Hs
+Elapsed time is 1.588668 seconds.
+Concatenating
+Elapsed time is 0.000051 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/03/05/00/ww3g_2018030500-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.180917 seconds.
+Reading Hs
+Elapsed time is 1.620863 seconds.
+Concatenating
+Elapsed time is 0.000055 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/03/06/00/ww3g_2018030600-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.058036 seconds.
+Reading Hs
+Elapsed time is 1.728597 seconds.
+Concatenating
+Elapsed time is 0.000050 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/03/07/00/ww3g_2018030700-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.212464 seconds.
+Reading Hs
+Elapsed time is 2.109817 seconds.
+Concatenating
+Elapsed time is 0.000054 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/03/08/00/ww3g_2018030800-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.163245 seconds.
+Reading Hs
+Elapsed time is 1.621471 seconds.
+Concatenating
+Elapsed time is 0.000065 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/03/09/00/ww3g_2018030900-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.101328 seconds.
+Reading Hs
+Elapsed time is 1.652675 seconds.
+Concatenating
+Elapsed time is 0.000045 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/03/10/00/ww3g_2018031000-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.223923 seconds.
+Reading Hs
+Elapsed time is 1.699912 seconds.
+Concatenating
+Elapsed time is 0.000053 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/03/11/00/ww3g_2018031100-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.083101 seconds.
+Reading Hs
+Elapsed time is 1.612745 seconds.
+Concatenating
+Elapsed time is 0.000063 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/03/12/00/ww3g_2018031200-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.180160 seconds.
+Reading Hs
+Elapsed time is 1.602410 seconds.
+Concatenating
+Elapsed time is 0.000056 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/03/13/00/ww3g_2018031300-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.238299 seconds.
+Reading Hs
+Elapsed time is 1.567562 seconds.
+Concatenating
+Elapsed time is 0.000057 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/03/14/00/ww3g_2018031400-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.003599 seconds.
+Reading Hs
+Elapsed time is 1.575511 seconds.
+Concatenating
+Elapsed time is 0.000087 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/03/15/00/ww3g_2018031500-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.225337 seconds.
+Reading Hs
+Elapsed time is 1.760216 seconds.
+Concatenating
+Elapsed time is 0.000060 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/03/16/00/ww3g_2018031600-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.116241 seconds.
+Reading Hs
+Elapsed time is 1.664369 seconds.
+Concatenating
+Elapsed time is 0.000055 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/03/17/00/ww3g_2018031700-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.096628 seconds.
+Reading Hs
+Elapsed time is 1.613951 seconds.
+Concatenating
+Elapsed time is 0.000057 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/03/18/00/ww3g_2018031800-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.179945 seconds.
+Reading Hs
+Elapsed time is 1.702944 seconds.
+Concatenating
+Elapsed time is 0.000057 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/03/19/00/ww3g_2018031900-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.044431 seconds.
+Reading Hs
+Elapsed time is 1.479097 seconds.
+Concatenating
+Elapsed time is 0.000060 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/03/20/00/ww3g_2018032000-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.172895 seconds.
+Reading Hs
+Elapsed time is 1.672007 seconds.
+Concatenating
+Elapsed time is 0.000058 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/03/21/00/ww3g_2018032100-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.146787 seconds.
+Reading Hs
+Elapsed time is 1.792099 seconds.
+Concatenating
+Elapsed time is 0.000065 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/03/22/00/ww3g_2018032200-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.102949 seconds.
+Reading Hs
+Elapsed time is 1.647534 seconds.
+Concatenating
+Elapsed time is 0.000062 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/03/23/00/ww3g_2018032300-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.109055 seconds.
+Reading Hs
+Elapsed time is 1.598750 seconds.
+Concatenating
+Elapsed time is 0.000063 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/03/24/00/ww3g_2018032400-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.079346 seconds.
+Reading Hs
+Elapsed time is 1.700019 seconds.
+Concatenating
+Elapsed time is 0.000058 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/03/25/00/ww3g_2018032500-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.116196 seconds.
+Reading Hs
+Elapsed time is 1.632253 seconds.
+Concatenating
+Elapsed time is 0.000065 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/03/26/00/ww3g_2018032600-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.138030 seconds.
+Reading Hs
+Elapsed time is 1.607208 seconds.
+Concatenating
+Elapsed time is 0.000065 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/03/27/00/ww3g_2018032700-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.081279 seconds.
+Reading Hs
+Elapsed time is 1.573689 seconds.
+Concatenating
+Elapsed time is 0.000067 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/03/28/00/ww3g_2018032800-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.113981 seconds.
+Reading Hs
+Elapsed time is 1.635353 seconds.
+Concatenating
+Elapsed time is 0.000059 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/03/29/00/ww3g_2018032900-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.277182 seconds.
+Reading Hs
+Elapsed time is 1.514976 seconds.
+Concatenating
+Elapsed time is 0.000055 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/03/30/00/ww3g_2018033000-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.170484 seconds.
+Reading Hs
+Elapsed time is 1.754086 seconds.
+Concatenating
+Elapsed time is 0.000065 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/03/31/00/ww3g_2018033100-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.059014 seconds.
+Reading Hs
+Elapsed time is 1.604234 seconds.
+Concatenating
+Elapsed time is 0.000062 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/04/01/00/ww3g_2018040100-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.120950 seconds.
+Reading Hs
+Elapsed time is 1.480478 seconds.
+Concatenating
+Elapsed time is 0.000082 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/04/02/00/ww3g_2018040200-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.206062 seconds.
+Reading Hs
+Elapsed time is 1.535638 seconds.
+Concatenating
+Elapsed time is 0.000068 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/04/03/00/ww3g_2018040300-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.189401 seconds.
+Reading Hs
+Elapsed time is 1.639209 seconds.
+Concatenating
+Elapsed time is 0.000069 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/04/04/00/ww3g_2018040400-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.954999 seconds.
+Reading Hs
+Elapsed time is 1.697360 seconds.
+Concatenating
+Elapsed time is 0.000052 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/04/05/00/ww3g_2018040500-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.043344 seconds.
+Reading Hs
+Elapsed time is 1.627426 seconds.
+Concatenating
+Elapsed time is 0.000068 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/04/06/00/ww3g_2018040600-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.219148 seconds.
+Reading Hs
+Elapsed time is 1.557635 seconds.
+Concatenating
+Elapsed time is 0.000070 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/04/07/00/ww3g_2018040700-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.144628 seconds.
+Reading Hs
+Elapsed time is 1.575691 seconds.
+Concatenating
+Elapsed time is 0.000055 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/04/08/00/ww3g_2018040800-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.046192 seconds.
+Reading Hs
+Elapsed time is 1.621027 seconds.
+Concatenating
+Elapsed time is 0.000058 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/04/09/00/ww3g_2018040900-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.028907 seconds.
+Reading Hs
+Elapsed time is 1.647953 seconds.
+Concatenating
+Elapsed time is 0.000074 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/04/10/00/ww3g_2018041000-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.070266 seconds.
+Reading Hs
+Elapsed time is 1.661943 seconds.
+Concatenating
+Elapsed time is 0.000067 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/04/11/00/ww3g_2018041100-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.111712 seconds.
+Reading Hs
+Elapsed time is 2.145758 seconds.
+Concatenating
+Elapsed time is 0.000059 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/04/12/00/ww3g_2018041200-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.983568 seconds.
+Reading Hs
+Elapsed time is 1.936532 seconds.
+Concatenating
+Elapsed time is 0.000056 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/04/13/00/ww3g_2018041300-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.969168 seconds.
+Reading Hs
+Elapsed time is 1.712472 seconds.
+Concatenating
+Elapsed time is 0.000066 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/04/14/00/ww3g_2018041400-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.054153 seconds.
+Reading Hs
+Elapsed time is 1.667909 seconds.
+Concatenating
+Elapsed time is 0.000069 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/04/15/00/ww3g_2018041500-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.104583 seconds.
+Reading Hs
+Elapsed time is 1.711938 seconds.
+Concatenating
+Elapsed time is 0.000078 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/04/16/00/ww3g_2018041600-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.153234 seconds.
+Reading Hs
+Elapsed time is 1.638978 seconds.
+Concatenating
+Elapsed time is 0.000066 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/04/17/00/ww3g_2018041700-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.152530 seconds.
+Reading Hs
+Elapsed time is 1.616848 seconds.
+Concatenating
+Elapsed time is 0.000070 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/04/18/00/ww3g_2018041800-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.190662 seconds.
+Reading Hs
+Elapsed time is 1.637795 seconds.
+Concatenating
+Elapsed time is 0.000077 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/04/19/00/ww3g_2018041900-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.131228 seconds.
+Reading Hs
+Elapsed time is 1.744247 seconds.
+Concatenating
+Elapsed time is 0.000091 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/04/20/00/ww3g_2018042000-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.878225 seconds.
+Reading Hs
+Elapsed time is 1.662654 seconds.
+Concatenating
+Elapsed time is 0.000126 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/04/21/00/ww3g_2018042100-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.106999 seconds.
+Reading Hs
+Elapsed time is 1.655818 seconds.
+Concatenating
+Elapsed time is 0.000080 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/04/22/00/ww3g_2018042200-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.107600 seconds.
+Reading Hs
+Elapsed time is 1.535459 seconds.
+Concatenating
+Elapsed time is 0.000068 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/04/23/00/ww3g_2018042300-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.118680 seconds.
+Reading Hs
+Elapsed time is 1.601852 seconds.
+Concatenating
+Elapsed time is 0.000081 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/04/24/00/ww3g_2018042400-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.150588 seconds.
+Reading Hs
+Elapsed time is 1.586766 seconds.
+Concatenating
+Elapsed time is 0.000082 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/04/25/00/ww3g_2018042500-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.124124 seconds.
+Reading Hs
+Elapsed time is 1.645363 seconds.
+Concatenating
+Elapsed time is 0.000071 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/04/26/00/ww3g_2018042600-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.135593 seconds.
+Reading Hs
+Elapsed time is 1.595006 seconds.
+Concatenating
+Elapsed time is 0.000077 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/04/27/00/ww3g_2018042700-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.135725 seconds.
+Reading Hs
+Elapsed time is 1.643338 seconds.
+Concatenating
+Elapsed time is 0.000080 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/04/28/00/ww3g_2018042800-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.135544 seconds.
+Reading Hs
+Elapsed time is 1.612299 seconds.
+Concatenating
+Elapsed time is 0.000070 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/04/29/00/ww3g_2018042900-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.114001 seconds.
+Reading Hs
+Elapsed time is 1.585545 seconds.
+Concatenating
+Elapsed time is 0.000074 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/04/30/00/ww3g_2018043000-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.110059 seconds.
+Reading Hs
+Elapsed time is 1.575429 seconds.
+Concatenating
+Elapsed time is 0.000076 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/05/01/00/ww3g_2018050100-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.129934 seconds.
+Reading Hs
+Elapsed time is 1.695925 seconds.
+Concatenating
+Elapsed time is 0.000068 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/05/02/00/ww3g_2018050200-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.126372 seconds.
+Reading Hs
+Elapsed time is 1.644863 seconds.
+Concatenating
+Elapsed time is 0.000100 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/05/03/00/ww3g_2018050300-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.146873 seconds.
+Reading Hs
+Elapsed time is 1.663668 seconds.
+Concatenating
+Elapsed time is 0.000083 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/05/04/00/ww3g_2018050400-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.030040 seconds.
+Reading Hs
+Elapsed time is 1.509904 seconds.
+Concatenating
+Elapsed time is 0.000075 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/05/05/00/ww3g_2018050500-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.045957 seconds.
+Reading Hs
+Elapsed time is 1.571409 seconds.
+Concatenating
+Elapsed time is 0.000080 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/05/06/00/ww3g_2018050600-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.121134 seconds.
+Reading Hs
+Elapsed time is 1.581709 seconds.
+Concatenating
+Elapsed time is 0.000073 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/05/07/00/ww3g_2018050700-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.185957 seconds.
+Reading Hs
+Elapsed time is 1.497389 seconds.
+Concatenating
+Elapsed time is 0.000076 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/05/08/00/ww3g_2018050800-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.070147 seconds.
+Reading Hs
+Elapsed time is 1.665617 seconds.
+Concatenating
+Elapsed time is 0.000081 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/05/09/00/ww3g_2018050900-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.100899 seconds.
+Reading Hs
+Elapsed time is 1.634397 seconds.
+Concatenating
+Elapsed time is 0.000085 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/05/10/00/ww3g_2018051000-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.117106 seconds.
+Reading Hs
+Elapsed time is 1.741744 seconds.
+Concatenating
+Elapsed time is 0.000070 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/05/11/00/ww3g_2018051100-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.142603 seconds.
+Reading Hs
+Elapsed time is 1.606667 seconds.
+Concatenating
+Elapsed time is 0.000104 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/05/12/00/ww3g_2018051200-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.827835 seconds.
+Reading Hs
+Elapsed time is 1.579931 seconds.
+Concatenating
+Elapsed time is 0.000129 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/05/13/00/ww3g_2018051300-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.186862 seconds.
+Reading Hs
+Elapsed time is 1.709172 seconds.
+Concatenating
+Elapsed time is 0.000069 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/05/14/00/ww3g_2018051400-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.169642 seconds.
+Reading Hs
+Elapsed time is 1.711809 seconds.
+Concatenating
+Elapsed time is 0.000112 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/05/15/00/ww3g_2018051500-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.045524 seconds.
+Reading Hs
+Elapsed time is 1.565465 seconds.
+Concatenating
+Elapsed time is 0.000091 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/05/16/00/ww3g_2018051600-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.257186 seconds.
+Reading Hs
+Elapsed time is 1.919533 seconds.
+Concatenating
+Elapsed time is 0.000078 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/05/17/00/ww3g_2018051700-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.066739 seconds.
+Reading Hs
+Elapsed time is 1.600566 seconds.
+Concatenating
+Elapsed time is 0.000083 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/05/18/00/ww3g_2018051800-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.161701 seconds.
+Reading Hs
+Elapsed time is 1.629813 seconds.
+Concatenating
+Elapsed time is 0.000089 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/05/19/00/ww3g_2018051900-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.099613 seconds.
+Reading Hs
+Elapsed time is 1.689400 seconds.
+Concatenating
+Elapsed time is 0.000084 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/05/20/00/ww3g_2018052000-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.116646 seconds.
+Reading Hs
+Elapsed time is 1.640928 seconds.
+Concatenating
+Elapsed time is 0.000072 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/05/21/00/ww3g_2018052100-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.117797 seconds.
+Reading Hs
+Elapsed time is 1.604221 seconds.
+Concatenating
+Elapsed time is 0.000093 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/05/22/00/ww3g_2018052200-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.168547 seconds.
+Reading Hs
+Elapsed time is 1.647509 seconds.
+Concatenating
+Elapsed time is 0.000080 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/05/23/00/ww3g_2018052300-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.071865 seconds.
+Reading Hs
+Elapsed time is 1.490435 seconds.
+Concatenating
+Elapsed time is 0.000089 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/05/24/00/ww3g_2018052400-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.066047 seconds.
+Reading Hs
+Elapsed time is 1.933392 seconds.
+Concatenating
+Elapsed time is 0.000092 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/05/25/00/ww3g_2018052500-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.111813 seconds.
+Reading Hs
+Elapsed time is 1.755524 seconds.
+Concatenating
+Elapsed time is 0.000080 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/05/26/00/ww3g_2018052600-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.103881 seconds.
+Reading Hs
+Elapsed time is 1.582717 seconds.
+Concatenating
+Elapsed time is 0.000090 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/05/27/00/ww3g_2018052700-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.230646 seconds.
+Reading Hs
+Elapsed time is 1.564870 seconds.
+Concatenating
+Elapsed time is 0.000128 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/05/28/00/ww3g_2018052800-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.028524 seconds.
+Reading Hs
+Elapsed time is 1.472831 seconds.
+Concatenating
+Elapsed time is 0.000083 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/05/29/00/ww3g_2018052900-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.067782 seconds.
+Reading Hs
+Elapsed time is 1.668578 seconds.
+Concatenating
+Elapsed time is 0.000103 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/05/30/00/ww3g_2018053000-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.073256 seconds.
+Reading Hs
+Elapsed time is 1.732431 seconds.
+Concatenating
+Elapsed time is 0.000095 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/05/31/00/ww3g_2018053100-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.258558 seconds.
+Reading Hs
+Elapsed time is 1.511368 seconds.
+Concatenating
+Elapsed time is 0.000085 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/06/01/00/ww3g_2018060100-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.197074 seconds.
+Reading Hs
+Elapsed time is 1.554485 seconds.
+Concatenating
+Elapsed time is 0.000092 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/06/02/00/ww3g_2018060200-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.071856 seconds.
+Reading Hs
+Elapsed time is 1.485465 seconds.
+Concatenating
+Elapsed time is 0.000096 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/06/03/00/ww3g_2018060300-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.403596 seconds.
+Reading Hs
+Elapsed time is 1.659980 seconds.
+Concatenating
+Elapsed time is 0.000085 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/06/04/00/ww3g_2018060400-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.092929 seconds.
+Reading Hs
+Elapsed time is 1.622913 seconds.
+Concatenating
+Elapsed time is 0.000097 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/06/05/00/ww3g_2018060500-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.191904 seconds.
+Reading Hs
+Elapsed time is 1.629726 seconds.
+Concatenating
+Elapsed time is 0.000097 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/06/06/00/ww3g_2018060600-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.198751 seconds.
+Reading Hs
+Elapsed time is 1.578085 seconds.
+Concatenating
+Elapsed time is 0.000081 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/06/07/00/ww3g_2018060700-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.070319 seconds.
+Reading Hs
+Elapsed time is 2.019431 seconds.
+Concatenating
+Elapsed time is 0.000095 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/06/08/00/ww3g_2018060800-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.303955 seconds.
+Reading Hs
+Elapsed time is 1.661616 seconds.
+Concatenating
+Elapsed time is 0.000102 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/06/09/00/ww3g_2018060900-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.128398 seconds.
+Reading Hs
+Elapsed time is 1.732150 seconds.
+Concatenating
+Elapsed time is 0.000076 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/06/10/00/ww3g_2018061000-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.061473 seconds.
+Reading Hs
+Elapsed time is 1.675292 seconds.
+Concatenating
+Elapsed time is 0.000096 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/06/11/00/ww3g_2018061100-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.075816 seconds.
+Reading Hs
+Elapsed time is 1.541756 seconds.
+Concatenating
+Elapsed time is 0.000111 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/06/12/00/ww3g_2018061200-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.130974 seconds.
+Reading Hs
+Elapsed time is 1.644890 seconds.
+Concatenating
+Elapsed time is 0.000122 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/06/13/00/ww3g_2018061300-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.159039 seconds.
+Reading Hs
+Elapsed time is 1.636137 seconds.
+Concatenating
+Elapsed time is 0.000096 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/06/14/00/ww3g_2018061400-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.158705 seconds.
+Reading Hs
+Elapsed time is 1.613293 seconds.
+Concatenating
+Elapsed time is 0.000093 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/06/15/00/ww3g_2018061500-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.149504 seconds.
+Reading Hs
+Elapsed time is 1.675387 seconds.
+Concatenating
+Elapsed time is 0.000091 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/06/16/00/ww3g_2018061600-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.193123 seconds.
+Reading Hs
+Elapsed time is 1.586408 seconds.
+Concatenating
+Elapsed time is 0.000095 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/06/17/00/ww3g_2018061700-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.110582 seconds.
+Reading Hs
+Elapsed time is 1.698322 seconds.
+Concatenating
+Elapsed time is 0.000155 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/06/18/00/ww3g_2018061800-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.097232 seconds.
+Reading Hs
+Elapsed time is 1.657074 seconds.
+Concatenating
+Elapsed time is 0.000093 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/06/19/00/ww3g_2018061900-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.150236 seconds.
+Reading Hs
+Elapsed time is 1.622994 seconds.
+Concatenating
+Elapsed time is 0.000118 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/06/20/00/ww3g_2018062000-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.087623 seconds.
+Reading Hs
+Elapsed time is 1.632389 seconds.
+Concatenating
+Elapsed time is 0.000103 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/06/21/00/ww3g_2018062100-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.234871 seconds.
+Reading Hs
+Elapsed time is 1.494093 seconds.
+Concatenating
+Elapsed time is 0.000092 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/06/22/00/ww3g_2018062200-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.186229 seconds.
+Reading Hs
+Elapsed time is 1.661580 seconds.
+Concatenating
+Elapsed time is 0.000103 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/06/23/00/ww3g_2018062300-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.160532 seconds.
+Reading Hs
+Elapsed time is 1.554572 seconds.
+Concatenating
+Elapsed time is 0.000176 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/06/24/00/ww3g_2018062400-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.082563 seconds.
+Reading Hs
+Elapsed time is 1.696797 seconds.
+Concatenating
+Elapsed time is 0.000081 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/06/25/00/ww3g_2018062500-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.170842 seconds.
+Reading Hs
+Elapsed time is 1.606317 seconds.
+Concatenating
+Elapsed time is 0.000101 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/06/26/00/ww3g_2018062600-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.236878 seconds.
+Reading Hs
+Elapsed time is 1.644971 seconds.
+Concatenating
+Elapsed time is 0.000102 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/06/27/00/ww3g_2018062700-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.161260 seconds.
+Reading Hs
+Elapsed time is 1.531242 seconds.
+Concatenating
+Elapsed time is 0.000127 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/06/28/00/ww3g_2018062800-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.099016 seconds.
+Reading Hs
+Elapsed time is 1.551360 seconds.
+Concatenating
+Elapsed time is 0.000110 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/06/29/00/ww3g_2018062900-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.989316 seconds.
+Reading Hs
+Elapsed time is 1.755343 seconds.
+Concatenating
+Elapsed time is 0.000106 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/06/30/00/ww3g_2018063000-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.211227 seconds.
+Reading Hs
+Elapsed time is 1.593322 seconds.
+Concatenating
+Elapsed time is 0.000152 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/07/01/00/ww3g_2018070100-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.086806 seconds.
+Reading Hs
+Elapsed time is 1.668402 seconds.
+Concatenating
+Elapsed time is 0.000113 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/07/02/00/ww3g_2018070200-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.191077 seconds.
+Reading Hs
+Elapsed time is 1.684894 seconds.
+Concatenating
+Elapsed time is 0.000115 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/07/03/00/ww3g_2018070300-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.113199 seconds.
+Reading Hs
+Elapsed time is 1.554645 seconds.
+Concatenating
+Elapsed time is 0.000112 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/07/04/00/ww3g_2018070400-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.929138 seconds.
+Reading Hs
+Elapsed time is 1.483744 seconds.
+Concatenating
+Elapsed time is 0.000146 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/07/05/00/ww3g_2018070500-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.960892 seconds.
+Reading Hs
+Elapsed time is 1.505197 seconds.
+Concatenating
+Elapsed time is 0.000117 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/07/06/00/ww3g_2018070600-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.934762 seconds.
+Reading Hs
+Elapsed time is 1.630416 seconds.
+Concatenating
+Elapsed time is 0.000110 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/07/07/00/ww3g_2018070700-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.044406 seconds.
+Reading Hs
+Elapsed time is 1.633968 seconds.
+Concatenating
+Elapsed time is 0.000116 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/07/08/00/ww3g_2018070800-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.124300 seconds.
+Reading Hs
+Elapsed time is 1.729503 seconds.
+Concatenating
+Elapsed time is 0.000114 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/07/09/00/ww3g_2018070900-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.062272 seconds.
+Reading Hs
+Elapsed time is 1.593472 seconds.
+Concatenating
+Elapsed time is 0.000115 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/07/10/00/ww3g_2018071000-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.110249 seconds.
+Reading Hs
+Elapsed time is 1.715884 seconds.
+Concatenating
+Elapsed time is 0.000096 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/07/11/00/ww3g_2018071100-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.989979 seconds.
+Reading Hs
+Elapsed time is 1.365369 seconds.
+Concatenating
+Elapsed time is 0.000113 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/07/12/00/ww3g_2018071200-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.104105 seconds.
+Reading Hs
+Elapsed time is 1.593394 seconds.
+Concatenating
+Elapsed time is 0.000114 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/07/13/00/ww3g_2018071300-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.179948 seconds.
+Reading Hs
+Elapsed time is 1.716064 seconds.
+Concatenating
+Elapsed time is 0.000132 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/07/14/00/ww3g_2018071400-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.040509 seconds.
+Reading Hs
+Elapsed time is 1.587798 seconds.
+Concatenating
+Elapsed time is 0.000113 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/07/15/00/ww3g_2018071500-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.988500 seconds.
+Reading Hs
+Elapsed time is 1.543691 seconds.
+Concatenating
+Elapsed time is 0.000151 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/07/16/00/ww3g_2018071600-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.112776 seconds.
+Reading Hs
+Elapsed time is 1.629203 seconds.
+Concatenating
+Elapsed time is 0.000118 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/07/17/00/ww3g_2018071700-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.091318 seconds.
+Reading Hs
+Elapsed time is 1.877459 seconds.
+Concatenating
+Elapsed time is 0.000116 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/07/18/00/ww3g_2018071800-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.222355 seconds.
+Reading Hs
+Elapsed time is 1.947686 seconds.
+Concatenating
+Elapsed time is 0.000118 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/07/19/00/ww3g_2018071900-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.910237 seconds.
+Reading Hs
+Elapsed time is 1.491856 seconds.
+Concatenating
+Elapsed time is 0.000143 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/07/20/00/ww3g_2018072000-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.172890 seconds.
+Reading Hs
+Elapsed time is 1.642713 seconds.
+Concatenating
+Elapsed time is 0.000136 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/07/21/00/ww3g_2018072100-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.232196 seconds.
+Reading Hs
+Elapsed time is 1.716817 seconds.
+Concatenating
+Elapsed time is 0.000119 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/07/22/00/ww3g_2018072200-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 4.245799 seconds.
+Reading Hs
+Elapsed time is 1.668142 seconds.
+Concatenating
+Elapsed time is 0.000112 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/07/23/00/ww3g_2018072300-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.013625 seconds.
+Reading Hs
+Elapsed time is 1.632191 seconds.
+Concatenating
+Elapsed time is 0.000108 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/07/24/00/ww3g_2018072400-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.053019 seconds.
+Reading Hs
+Elapsed time is 1.598414 seconds.
+Concatenating
+Elapsed time is 0.000134 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/07/25/00/ww3g_2018072500-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.118489 seconds.
+Reading Hs
+Elapsed time is 1.525846 seconds.
+Concatenating
+Elapsed time is 0.000098 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/07/26/00/ww3g_2018072600-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.186464 seconds.
+Reading Hs
+Elapsed time is 1.618345 seconds.
+Concatenating
+Elapsed time is 0.000124 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/07/27/00/ww3g_2018072700-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 2.990079 seconds.
+Reading Hs
+Elapsed time is 1.513473 seconds.
+Concatenating
+Elapsed time is 0.000134 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/07/28/00/ww3g_2018072800-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.338995 seconds.
+Reading Hs
+Elapsed time is 1.684954 seconds.
+Concatenating
+Elapsed time is 0.000135 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/07/29/00/ww3g_2018072900-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.081379 seconds.
+Reading Hs
+Elapsed time is 1.694099 seconds.
+Concatenating
+Elapsed time is 0.000144 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/07/30/00/ww3g_2018073000-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.406724 seconds.
+Reading Hs
+Elapsed time is 1.752244 seconds.
+Concatenating
+Elapsed time is 0.000145 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/07/31/00/ww3g_2018073100-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.001788 seconds.
+Reading Hs
+Elapsed time is 1.503713 seconds.
+Concatenating
+Elapsed time is 0.000148 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/08/01/00/ww3g_2018080100-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.421532 seconds.
+Reading Hs
+Elapsed time is 1.715482 seconds.
+Concatenating
+Elapsed time is 0.000151 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/08/02/00/ww3g_2018080200-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.388584 seconds.
+Reading Hs
+Elapsed time is 1.950915 seconds.
+Concatenating
+Elapsed time is 0.000122 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/08/03/00/ww3g_2018080300-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.209264 seconds.
+Reading Hs
+Elapsed time is 1.559637 seconds.
+Concatenating
+Elapsed time is 0.000124 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/08/04/00/ww3g_2018080400-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 2.976654 seconds.
+Reading Hs
+Elapsed time is 1.586434 seconds.
+Concatenating
+Elapsed time is 0.000166 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/08/05/00/ww3g_2018080500-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.148940 seconds.
+Reading Hs
+Elapsed time is 1.791737 seconds.
+Concatenating
+Elapsed time is 0.000101 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/08/06/00/ww3g_2018080600-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.227760 seconds.
+Reading Hs
+Elapsed time is 1.689207 seconds.
+Concatenating
+Elapsed time is 0.000126 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/08/07/00/ww3g_2018080700-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.072620 seconds.
+Reading Hs
+Elapsed time is 1.691324 seconds.
+Concatenating
+Elapsed time is 0.000128 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/08/08/00/ww3g_2018080800-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 2.967318 seconds.
+Reading Hs
+Elapsed time is 1.687564 seconds.
+Concatenating
+Elapsed time is 0.000176 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/08/09/00/ww3g_2018080900-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.406748 seconds.
+Reading Hs
+Elapsed time is 1.706855 seconds.
+Concatenating
+Elapsed time is 0.000141 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/08/10/00/ww3g_2018081000-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.249694 seconds.
+Reading Hs
+Elapsed time is 1.553460 seconds.
+Concatenating
+Elapsed time is 0.000112 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/08/11/00/ww3g_2018081100-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.145849 seconds.
+Reading Hs
+Elapsed time is 1.536636 seconds.
+Concatenating
+Elapsed time is 0.000104 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/08/12/00/ww3g_2018081200-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 2.976622 seconds.
+Reading Hs
+Elapsed time is 1.585886 seconds.
+Concatenating
+Elapsed time is 0.000113 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/08/13/00/ww3g_2018081300-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.053014 seconds.
+Reading Hs
+Elapsed time is 1.595793 seconds.
+Concatenating
+Elapsed time is 0.000110 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/08/14/00/ww3g_2018081400-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.732734 seconds.
+Reading Hs
+Elapsed time is 1.595482 seconds.
+Concatenating
+Elapsed time is 0.000115 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/08/15/00/ww3g_2018081500-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.169494 seconds.
+Reading Hs
+Elapsed time is 1.580194 seconds.
+Concatenating
+Elapsed time is 0.000144 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/08/16/00/ww3g_2018081600-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 2.987193 seconds.
+Reading Hs
+Elapsed time is 1.610797 seconds.
+Concatenating
+Elapsed time is 0.000133 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/08/17/00/ww3g_2018081700-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.022850 seconds.
+Reading Hs
+Elapsed time is 1.505933 seconds.
+Concatenating
+Elapsed time is 0.000131 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/08/18/00/ww3g_2018081800-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 2.970918 seconds.
+Reading Hs
+Elapsed time is 1.553777 seconds.
+Concatenating
+Elapsed time is 0.000149 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/08/19/00/ww3g_2018081900-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.045613 seconds.
+Reading Hs
+Elapsed time is 1.639323 seconds.
+Concatenating
+Elapsed time is 0.000144 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/08/20/00/ww3g_2018082000-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.003321 seconds.
+Reading Hs
+Elapsed time is 1.541159 seconds.
+Concatenating
+Elapsed time is 0.000133 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/08/21/00/ww3g_2018082100-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 2.973043 seconds.
+Reading Hs
+Elapsed time is 1.628715 seconds.
+Concatenating
+Elapsed time is 0.000147 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/08/22/00/ww3g_2018082200-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 2.871749 seconds.
+Reading Hs
+Elapsed time is 1.556101 seconds.
+Concatenating
+Elapsed time is 0.000141 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/08/23/00/ww3g_2018082300-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 2.971854 seconds.
+Reading Hs
+Elapsed time is 1.461311 seconds.
+Concatenating
+Elapsed time is 0.000145 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/08/24/00/ww3g_2018082400-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 2.896013 seconds.
+Reading Hs
+Elapsed time is 1.581553 seconds.
+Concatenating
+Elapsed time is 0.000150 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/08/25/00/ww3g_2018082500-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 2.792113 seconds.
+Reading Hs
+Elapsed time is 1.458280 seconds.
+Concatenating
+Elapsed time is 0.000157 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/08/26/00/ww3g_2018082600-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 2.715795 seconds.
+Reading Hs
+Elapsed time is 1.500722 seconds.
+Concatenating
+Elapsed time is 0.000134 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/08/27/00/ww3g_2018082700-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 2.997187 seconds.
+Reading Hs
+Elapsed time is 1.468924 seconds.
+Concatenating
+Elapsed time is 0.000154 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/08/28/00/ww3g_2018082800-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 2.909167 seconds.
+Reading Hs
+Elapsed time is 1.451833 seconds.
+Concatenating
+Elapsed time is 0.000141 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/08/29/00/ww3g_2018082900-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.089760 seconds.
+Reading Hs
+Elapsed time is 1.499799 seconds.
+Concatenating
+Elapsed time is 0.000155 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/08/30/00/ww3g_2018083000-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 2.913925 seconds.
+Reading Hs
+Elapsed time is 1.568564 seconds.
+Concatenating
+Elapsed time is 0.000139 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/08/31/00/ww3g_2018083100-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 2.827969 seconds.
+Reading Hs
+Elapsed time is 1.596870 seconds.
+Concatenating
+Elapsed time is 0.000136 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/09/01/00/ww3g_2018090100-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.119599 seconds.
+Reading Hs
+Elapsed time is 1.570496 seconds.
+Concatenating
+Elapsed time is 0.000139 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/09/02/00/ww3g_2018090200-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 2.893165 seconds.
+Reading Hs
+Elapsed time is 1.472122 seconds.
+Concatenating
+Elapsed time is 0.000142 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/09/03/00/ww3g_2018090300-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.040588 seconds.
+Reading Hs
+Elapsed time is 1.597818 seconds.
+Concatenating
+Elapsed time is 0.000142 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/09/04/00/ww3g_2018090400-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.040714 seconds.
+Reading Hs
+Elapsed time is 1.486586 seconds.
+Concatenating
+Elapsed time is 0.000145 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/09/05/00/ww3g_2018090500-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 2.979589 seconds.
+Reading Hs
+Elapsed time is 1.558354 seconds.
+Concatenating
+Elapsed time is 0.000145 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/09/06/00/ww3g_2018090600-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 2.889243 seconds.
+Reading Hs
+Elapsed time is 1.627140 seconds.
+Concatenating
+Elapsed time is 0.000180 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/09/07/00/ww3g_2018090700-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.036722 seconds.
+Reading Hs
+Elapsed time is 1.520246 seconds.
+Concatenating
+Elapsed time is 0.000144 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/09/08/00/ww3g_2018090800-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.375339 seconds.
+Reading Hs
+Elapsed time is 1.527211 seconds.
+Concatenating
+Elapsed time is 0.000179 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/09/09/00/ww3g_2018090900-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.046294 seconds.
+Reading Hs
+Elapsed time is 1.678973 seconds.
+Concatenating
+Elapsed time is 0.000140 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/09/10/00/ww3g_2018091000-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.223401 seconds.
+Reading Hs
+Elapsed time is 1.520709 seconds.
+Concatenating
+Elapsed time is 0.000144 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/09/11/00/ww3g_2018091100-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 2.982551 seconds.
+Reading Hs
+Elapsed time is 1.676244 seconds.
+Concatenating
+Elapsed time is 0.000146 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/09/12/00/ww3g_2018091200-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.060628 seconds.
+Reading Hs
+Elapsed time is 1.476530 seconds.
+Concatenating
+Elapsed time is 0.000144 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/09/13/00/ww3g_2018091300-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.112854 seconds.
+Reading Hs
+Elapsed time is 1.547899 seconds.
+Concatenating
+Elapsed time is 0.000164 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/09/14/00/ww3g_2018091400-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.027806 seconds.
+Reading Hs
+Elapsed time is 1.537200 seconds.
+Concatenating
+Elapsed time is 0.000146 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/09/15/00/ww3g_2018091500-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.066560 seconds.
+Reading Hs
+Elapsed time is 1.551197 seconds.
+Concatenating
+Elapsed time is 0.000147 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/09/16/00/ww3g_2018091600-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.064465 seconds.
+Reading Hs
+Elapsed time is 2.110566 seconds.
+Concatenating
+Elapsed time is 0.000158 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/09/17/00/ww3g_2018091700-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 2.905622 seconds.
+Reading Hs
+Elapsed time is 1.534174 seconds.
+Concatenating
+Elapsed time is 0.000145 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/09/18/00/ww3g_2018091800-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 2.990759 seconds.
+Reading Hs
+Elapsed time is 1.575258 seconds.
+Concatenating
+Elapsed time is 0.000146 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/09/19/00/ww3g_2018091900-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.037567 seconds.
+Reading Hs
+Elapsed time is 1.532358 seconds.
+Concatenating
+Elapsed time is 0.000147 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/09/20/00/ww3g_2018092000-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 2.943535 seconds.
+Reading Hs
+Elapsed time is 1.530287 seconds.
+Concatenating
+Elapsed time is 0.000148 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/09/21/00/ww3g_2018092100-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.010049 seconds.
+Reading Hs
+Elapsed time is 1.664013 seconds.
+Concatenating
+Elapsed time is 0.000168 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/09/22/00/ww3g_2018092200-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.073357 seconds.
+Reading Hs
+Elapsed time is 1.596669 seconds.
+Concatenating
+Elapsed time is 0.000162 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/09/23/00/ww3g_2018092300-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.064297 seconds.
+Reading Hs
+Elapsed time is 1.575281 seconds.
+Concatenating
+Elapsed time is 0.000151 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/09/24/00/ww3g_2018092400-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.201645 seconds.
+Reading Hs
+Elapsed time is 1.549014 seconds.
+Concatenating
+Elapsed time is 0.000155 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/09/25/00/ww3g_2018092500-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.196500 seconds.
+Reading Hs
+Elapsed time is 1.551845 seconds.
+Concatenating
+Elapsed time is 0.000155 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/09/26/00/ww3g_2018092600-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.332622 seconds.
+Reading Hs
+Elapsed time is 1.597336 seconds.
+Concatenating
+Elapsed time is 0.000152 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/09/27/00/ww3g_2018092700-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.197866 seconds.
+Reading Hs
+Elapsed time is 1.692396 seconds.
+Concatenating
+Elapsed time is 0.000161 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/09/28/00/ww3g_2018092800-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.249947 seconds.
+Reading Hs
+Elapsed time is 1.657928 seconds.
+Concatenating
+Elapsed time is 0.000161 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/09/29/00/ww3g_2018092900-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.190780 seconds.
+Reading Hs
+Elapsed time is 1.622617 seconds.
+Concatenating
+Elapsed time is 0.000164 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/09/30/00/ww3g_2018093000-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.240463 seconds.
+Reading Hs
+Elapsed time is 1.726143 seconds.
+Concatenating
+Elapsed time is 0.000188 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/10/01/00/ww3g_2018100100-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.167794 seconds.
+Reading Hs
+Elapsed time is 1.535923 seconds.
+Concatenating
+Elapsed time is 0.000162 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/10/02/00/ww3g_2018100200-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.213273 seconds.
+Reading Hs
+Elapsed time is 1.593272 seconds.
+Concatenating
+Elapsed time is 0.000151 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/10/03/00/ww3g_2018100300-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.155731 seconds.
+Reading Hs
+Elapsed time is 1.422348 seconds.
+Concatenating
+Elapsed time is 0.000177 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/10/04/00/ww3g_2018100400-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.059208 seconds.
+Reading Hs
+Elapsed time is 1.587105 seconds.
+Concatenating
+Elapsed time is 0.000152 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/10/05/00/ww3g_2018100500-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 2.959085 seconds.
+Reading Hs
+Elapsed time is 1.546410 seconds.
+Concatenating
+Elapsed time is 0.000159 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/10/06/00/ww3g_2018100600-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 2.931630 seconds.
+Reading Hs
+Elapsed time is 1.537720 seconds.
+Concatenating
+Elapsed time is 0.000173 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/10/07/00/ww3g_2018100700-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.283690 seconds.
+Reading Hs
+Elapsed time is 1.567980 seconds.
+Concatenating
+Elapsed time is 0.000157 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/10/08/00/ww3g_2018100800-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 2.945632 seconds.
+Reading Hs
+Elapsed time is 1.631606 seconds.
+Concatenating
+Elapsed time is 0.000155 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/10/09/00/ww3g_2018100900-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 2.987245 seconds.
+Reading Hs
+Elapsed time is 1.576106 seconds.
+Concatenating
+Elapsed time is 0.000161 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/10/10/00/ww3g_2018101000-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 3.068740 seconds.
+Reading Hs
+Elapsed time is 1.576635 seconds.
+Concatenating
+Elapsed time is 0.000160 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/10/11/00/ww3g_2018101100-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 1.968463 seconds.
+Reading Hs
+Elapsed time is 1.202573 seconds.
+Concatenating
+Elapsed time is 0.000156 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/10/12/00/ww3g_2018101200-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 2.005003 seconds.
+Reading Hs
+Elapsed time is 1.164267 seconds.
+Concatenating
+Elapsed time is 0.000162 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/10/13/00/ww3g_2018101300-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 1.985535 seconds.
+Reading Hs
+Elapsed time is 1.108116 seconds.
+Concatenating
+Elapsed time is 0.000158 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/10/14/00/ww3g_2018101400-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 2.059389 seconds.
+Reading Hs
+Elapsed time is 1.130244 seconds.
+Concatenating
+Elapsed time is 0.000156 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/10/15/00/ww3g_2018101500-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 2.054176 seconds.
+Reading Hs
+Elapsed time is 1.030180 seconds.
+Concatenating
+Elapsed time is 0.000158 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/10/16/00/ww3g_2018101600-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 2.009112 seconds.
+Reading Hs
+Elapsed time is 1.118849 seconds.
+Concatenating
+Elapsed time is 0.000161 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/10/17/00/ww3g_2018101700-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 2.106492 seconds.
+Reading Hs
+Elapsed time is 1.138119 seconds.
+Concatenating
+Elapsed time is 0.000160 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/10/18/00/ww3g_2018101800-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 2.118561 seconds.
+Reading Hs
+Elapsed time is 1.185355 seconds.
+Concatenating
+Elapsed time is 0.000177 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/10/19/00/ww3g_2018101900-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 2.207511 seconds.
+Reading Hs
+Elapsed time is 1.122933 seconds.
+Concatenating
+Elapsed time is 0.000159 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/10/20/00/ww3g_2018102000-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 2.022055 seconds.
+Reading Hs
+Elapsed time is 1.318309 seconds.
+Concatenating
+Elapsed time is 0.000177 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/10/21/00/ww3g_2018102100-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 2.140751 seconds.
+Reading Hs
+Elapsed time is 1.131841 seconds.
+Concatenating
+Elapsed time is 0.000177 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/10/22/00/ww3g_2018102200-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 2.111784 seconds.
+Reading Hs
+Elapsed time is 1.199179 seconds.
+Concatenating
+Elapsed time is 0.000178 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/10/23/00/ww3g_2018102300-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 2.151725 seconds.
+Reading Hs
+Elapsed time is 1.344300 seconds.
+Concatenating
+Elapsed time is 0.000163 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/10/24/00/ww3g_2018102400-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 171.317348 seconds.
+Reading Hs
+Elapsed time is 0.208238 seconds.
+Concatenating
+Elapsed time is 0.000140 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/10/25/00/ww3g_2018102500-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 113.801867 seconds.
+Reading Hs
+Elapsed time is 0.203614 seconds.
+Concatenating
+Elapsed time is 0.000172 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/10/26/00/ww3g_2018102600-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 114.143111 seconds.
+Reading Hs
+Elapsed time is 0.236687 seconds.
+Concatenating
+Elapsed time is 0.000157 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/10/27/00/ww3g_2018102700-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 95.236162 seconds.
+Reading Hs
+Elapsed time is 0.262145 seconds.
+Concatenating
+Elapsed time is 0.000163 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/10/28/00/ww3g_2018102800-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 118.098286 seconds.
+Reading Hs
+Elapsed time is 0.199535 seconds.
+Concatenating
+Elapsed time is 0.000137 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/10/29/00/ww3g_2018102900-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 109.758802 seconds.
+Reading Hs
+Elapsed time is 0.214985 seconds.
+Concatenating
+Elapsed time is 0.000160 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/10/30/00/ww3g_2018103000-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 114.005761 seconds.
+Reading Hs
+Elapsed time is 0.271363 seconds.
+Concatenating
+Elapsed time is 0.000237 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/10/31/00/ww3g_2018103100-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 99.622512 seconds.
+Reading Hs
+Elapsed time is 0.233736 seconds.
+Concatenating
+Elapsed time is 0.000159 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/11/01/00/ww3g_2018110100-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 104.308749 seconds.
+Reading Hs
+Elapsed time is 0.218948 seconds.
+Concatenating
+Elapsed time is 0.000166 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/11/02/00/ww3g_2018110200-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 93.183429 seconds.
+Reading Hs
+Elapsed time is 0.328711 seconds.
+Concatenating
+Elapsed time is 0.000200 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/11/03/00/ww3g_2018110300-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 122.687027 seconds.
+Reading Hs
+Elapsed time is 0.300583 seconds.
+Concatenating
+Elapsed time is 0.000166 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/11/04/00/ww3g_2018110400-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 215.722158 seconds.
+Reading Hs
+Elapsed time is 0.166485 seconds.
+Concatenating
+Elapsed time is 0.000164 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/11/05/00/ww3g_2018110500-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 114.318336 seconds.
+Reading Hs
+Elapsed time is 0.210512 seconds.
+Concatenating
+Elapsed time is 0.000221 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/11/06/00/ww3g_2018110600-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 143.336744 seconds.
+Reading Hs
+Elapsed time is 0.208440 seconds.
+Concatenating
+Elapsed time is 0.000168 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/11/07/00/ww3g_2018110700-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 138.413704 seconds.
+Reading Hs
+Elapsed time is 0.198153 seconds.
+Concatenating
+Elapsed time is 0.000346 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/11/08/00/ww3g_2018110800-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 119.653404 seconds.
+Reading Hs
+Elapsed time is 0.681693 seconds.
+Concatenating
+Elapsed time is 0.000185 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/11/09/00/ww3g_2018110900-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 116.357253 seconds.
+Reading Hs
+Elapsed time is 0.532550 seconds.
+Concatenating
+Elapsed time is 0.000170 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/11/10/00/ww3g_2018111000-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 85.866412 seconds.
+Reading Hs
+Elapsed time is 0.532030 seconds.
+Concatenating
+Elapsed time is 0.000152 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/11/11/00/ww3g_2018111100-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 91.887962 seconds.
+Reading Hs
+Elapsed time is 0.574415 seconds.
+Concatenating
+Elapsed time is 0.000175 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/11/12/00/ww3g_2018111200-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 126.177063 seconds.
+Reading Hs
+Elapsed time is 0.865914 seconds.
+Concatenating
+Elapsed time is 0.000184 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/11/13/00/ww3g_2018111300-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 92.501929 seconds.
+Reading Hs
+Elapsed time is 0.556947 seconds.
+Concatenating
+Elapsed time is 0.000180 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/11/14/00/ww3g_2018111400-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 120.172647 seconds.
+Reading Hs
+Elapsed time is 0.182970 seconds.
+Concatenating
+Elapsed time is 0.000164 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/11/15/00/ww3g_2018111500-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 86.432159 seconds.
+Reading Hs
+Elapsed time is 0.180933 seconds.
+Concatenating
+Elapsed time is 0.000182 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/11/16/00/ww3g_2018111600-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 41.541636 seconds.
+Reading Hs
+Elapsed time is 0.173678 seconds.
+Concatenating
+Elapsed time is 0.000156 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/11/17/00/ww3g_2018111700-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 110.975656 seconds.
+Reading Hs
+Elapsed time is 0.258189 seconds.
+Concatenating
+Elapsed time is 0.000210 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/11/18/00/ww3g_2018111800-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 114.433697 seconds.
+Reading Hs
+Elapsed time is 0.233156 seconds.
+Concatenating
+Elapsed time is 0.000160 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/11/19/00/ww3g_2018111900-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 125.458364 seconds.
+Reading Hs
+Elapsed time is 0.167125 seconds.
+Concatenating
+Elapsed time is 0.000196 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/11/20/00/ww3g_2018112000-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 168.889677 seconds.
+Reading Hs
+Elapsed time is 0.167003 seconds.
+Concatenating
+Elapsed time is 0.000182 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/11/21/00/ww3g_2018112100-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 55.128145 seconds.
+Reading Hs
+Elapsed time is 0.181766 seconds.
+Concatenating
+Elapsed time is 0.000169 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/11/22/00/ww3g_2018112200-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 186.260777 seconds.
+Reading Hs
+Elapsed time is 0.183712 seconds.
+Concatenating
+Elapsed time is 0.000225 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/11/23/00/ww3g_2018112300-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 68.255950 seconds.
+Reading Hs
+Elapsed time is 0.469663 seconds.
+Concatenating
+Elapsed time is 0.000178 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/11/24/00/ww3g_2018112400-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 80.198075 seconds.
+Reading Hs
+Elapsed time is 0.245442 seconds.
+Concatenating
+Elapsed time is 0.000175 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/11/25/00/ww3g_2018112500-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 120.052752 seconds.
+Reading Hs
+Elapsed time is 0.189028 seconds.
+Concatenating
+Elapsed time is 0.000192 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/11/26/00/ww3g_2018112600-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 72.889348 seconds.
+Reading Hs
+Elapsed time is 0.238267 seconds.
+Concatenating
+Elapsed time is 0.000188 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/11/27/00/ww3g_2018112700-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 150.919260 seconds.
+Reading Hs
+Elapsed time is 0.185210 seconds.
+Concatenating
+Elapsed time is 0.000208 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/11/28/00/ww3g_2018112800-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 114.372698 seconds.
+Reading Hs
+Elapsed time is 0.162336 seconds.
+Concatenating
+Elapsed time is 0.000222 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/11/29/00/ww3g_2018112900-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 128.982527 seconds.
+Reading Hs
+Elapsed time is 0.163136 seconds.
+Concatenating
+Elapsed time is 0.000208 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/11/30/00/ww3g_2018113000-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 106.939334 seconds.
+Reading Hs
+Elapsed time is 0.165216 seconds.
+Concatenating
+Elapsed time is 0.000178 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/12/01/00/ww3g_2018120100-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 98.810332 seconds.
+Reading Hs
+Elapsed time is 0.200855 seconds.
+Concatenating
+Elapsed time is 0.000194 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/12/02/00/ww3g_2018120200-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 105.747225 seconds.
+Reading Hs
+Elapsed time is 0.162933 seconds.
+Concatenating
+Elapsed time is 0.000180 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/12/03/00/ww3g_2018120300-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 90.568275 seconds.
+Reading Hs
+Elapsed time is 0.166564 seconds.
+Concatenating
+Elapsed time is 0.000175 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/12/04/00/ww3g_2018120400-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 114.074837 seconds.
+Reading Hs
+Elapsed time is 0.163056 seconds.
+Concatenating
+Elapsed time is 0.000177 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/12/05/00/ww3g_2018120500-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 99.489474 seconds.
+Reading Hs
+Elapsed time is 0.160595 seconds.
+Concatenating
+Elapsed time is 0.000162 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/12/06/00/ww3g_2018120600-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 73.442610 seconds.
+Reading Hs
+Elapsed time is 0.159376 seconds.
+Concatenating
+Elapsed time is 0.000387 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/12/07/00/ww3g_2018120700-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 59.840074 seconds.
+Reading Hs
+Elapsed time is 0.166529 seconds.
+Concatenating
+Elapsed time is 0.000189 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/12/08/00/ww3g_2018120800-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 102.015625 seconds.
+Reading Hs
+Elapsed time is 0.162409 seconds.
+Concatenating
+Elapsed time is 0.000203 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/12/09/00/ww3g_2018120900-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 90.791899 seconds.
+Reading Hs
+Elapsed time is 0.163668 seconds.
+Concatenating
+Elapsed time is 0.000178 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/12/10/00/ww3g_2018121000-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 62.757649 seconds.
+Reading Hs
+Elapsed time is 0.204600 seconds.
+Concatenating
+Elapsed time is 0.000189 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/12/11/00/ww3g_2018121100-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 27.766570 seconds.
+Reading Hs
+Elapsed time is 0.213721 seconds.
+Concatenating
+Elapsed time is 0.000179 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/12/12/00/ww3g_2018121200-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 102.662710 seconds.
+Reading Hs
+Elapsed time is 0.170505 seconds.
+Concatenating
+Elapsed time is 0.000187 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/12/13/00/ww3g_2018121300-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 99.721819 seconds.
+Reading Hs
+Elapsed time is 0.189350 seconds.
+Concatenating
+Elapsed time is 0.000222 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/12/14/00/ww3g_2018121400-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 73.653257 seconds.
+Reading Hs
+Elapsed time is 0.189648 seconds.
+Concatenating
+Elapsed time is 0.000160 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/12/15/00/ww3g_2018121500-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 90.336184 seconds.
+Reading Hs
+Elapsed time is 0.162643 seconds.
+Concatenating
+Elapsed time is 0.000199 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/12/16/00/ww3g_2018121600-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 224.897508 seconds.
+Reading Hs
+Elapsed time is 0.211220 seconds.
+Concatenating
+Elapsed time is 0.000179 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/12/17/00/ww3g_2018121700-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 113.756456 seconds.
+Reading Hs
+Elapsed time is 0.261177 seconds.
+Concatenating
+Elapsed time is 0.000187 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/12/18/00/ww3g_2018121800-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 78.392487 seconds.
+Reading Hs
+Elapsed time is 0.236470 seconds.
+Concatenating
+Elapsed time is 0.000187 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/12/19/00/ww3g_2018121900-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 134.615731 seconds.
+Reading Hs
+Elapsed time is 0.252927 seconds.
+Concatenating
+Elapsed time is 0.000177 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/12/20/00/ww3g_2018122000-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 83.622490 seconds.
+Reading Hs
+Elapsed time is 0.170482 seconds.
+Concatenating
+Elapsed time is 0.000175 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/12/21/00/ww3g_2018122100-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 231.787622 seconds.
+Reading Hs
+Elapsed time is 0.304704 seconds.
+Concatenating
+Elapsed time is 0.000186 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/12/22/00/ww3g_2018122200-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 116.138812 seconds.
+Reading Hs
+Elapsed time is 0.233806 seconds.
+Concatenating
+Elapsed time is 0.000187 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/12/23/00/ww3g_2018122300-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 90.184554 seconds.
+Reading Hs
+Elapsed time is 0.260749 seconds.
+Concatenating
+Elapsed time is 0.000183 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/12/24/00/ww3g_2018122400-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 137.764453 seconds.
+Reading Hs
+Elapsed time is 0.167039 seconds.
+Concatenating
+Elapsed time is 0.000176 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/12/25/00/ww3g_2018122500-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 114.966545 seconds.
+Reading Hs
+Elapsed time is 0.199720 seconds.
+Concatenating
+Elapsed time is 0.000232 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/12/26/00/ww3g_2018122600-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 223.627863 seconds.
+Reading Hs
+Elapsed time is 0.221606 seconds.
+Concatenating
+Elapsed time is 0.000199 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/12/27/00/ww3g_2018122700-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 106.433209 seconds.
+Reading Hs
+Elapsed time is 0.218302 seconds.
+Concatenating
+Elapsed time is 0.000200 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/12/28/00/ww3g_2018122800-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 134.245298 seconds.
+Reading Hs
+Elapsed time is 0.192979 seconds.
+Concatenating
+Elapsed time is 0.000209 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/12/29/00/ww3g_2018122900-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 207.189299 seconds.
+Reading Hs
+Elapsed time is 0.165812 seconds.
+Concatenating
+Elapsed time is 0.000256 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/12/30/00/ww3g_2018123000-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 140.802416 seconds.
+Reading Hs
+Elapsed time is 0.236603 seconds.
+Concatenating
+Elapsed time is 0.000192 seconds.
+Loading: /niwa/archive/ecoconnect/EFS//NZWAVE-HR/2018/12/31/00/ww3g_2018123100-utc_nzwave_hr+nzcsm.nc
+Reading time
+Elapsed time is 102.780012 seconds.
+Reading Hs
+Elapsed time is 0.305222 seconds.
+Concatenating
+Elapsed time is 0.000193 seconds.
+Saving: /scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/matlab/wairewa_lake_forsyth_2018010700_2018123100.mat
+>> >> >> >> >> >> >> 
