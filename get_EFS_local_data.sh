@@ -9,8 +9,10 @@ inicio=$1  #{YYYYMMDD}
 limite=$2  #{YYYYMMDD}  
 current=${inicio}
 
-PREFIX="qwqg00" # qwqg00_2018012600_10mwind.gz and qwqg00.2018013100.fields.gz
-PATH_OUT=/scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/UKMO/
+expt=NZWAVE-HR
+
+PREFIX="ww3g" # qwqg00_2018012600_10mwind.gz and qwqg00.2018013100.fields.gz
+PATH_OUT=/scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/$expt/
 
 while [ ${current} -le ${limite} ]; do
 
@@ -23,7 +25,7 @@ while [ ${current} -le ${limite} ]; do
 
   echo "Copying day: ${current}"
 
-  SOURCE=/scale_wlg_devoper/filesets/archive/ecoconnect/EFS/UKMO/${YEAR}/${MONTH}/${DAY}/00/${PREFIX}*.gz # ${current}00*.gz #"{_10mwind,.fields}.gz"
+  SOURCE=/scale_wlg_devoper/filesets/archive/ecoconnect/EFS/$expt/${YEAR}/${MONTH}/${DAY}/00/${PREFIX}*.nc # ${current}00*.gz #"{_10mwind,.fields}.gz"
 
   echo "${SOURCE}"
 
