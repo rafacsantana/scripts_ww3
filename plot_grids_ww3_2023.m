@@ -13,7 +13,7 @@ display(['Loading: ',path,file,'.mat']);
 load([path_obs,file,'.mat'])%,'time','obs')
 
 
-tstation={'Sinclair Head','Ohau Head','Mana Island','Makara'  ,'Karori Rock','Wairewa Lake Forysyth'};
+tstation={'Sinclair Head','Ohau Head','Mana Island','Makara'  ,'Karori Rock','Wairewa Lake Forsyth'};
 stations={'sinclair_head','ohau_head','mana_island','makara'  ,'karori_rock','wairewa_lake_forsyth'};
 lat_obss=[-41.366885     ,-42.256063 ,-41.083327   ,-41.203393, -41.344623  ,-43.84110];
 lon_obss=[174.716761     , 173.853341,174.763960   ,174.702391, 174.650430  ,172.71835];
@@ -36,17 +36,17 @@ gnames={'globalwave+globalum','nzwave+nzlam','nzwave_hr+nzcsm','tongawave+global
 
 % Loading GRIDS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 scrsz=[1 1 1366 768];
-scrsz=get(0,'screensize');
+%scrsz=get(0,'screensize');
 figure('position',scrsz,'color',[1 1 1],'visible','on')
 hold on
 set(gca,'fontsize',12,'fontweight','bold')
 
 colors={'b','r','k','k'};
 
-for i=[2]
+for i=[3]
 
   pname=[path,grids{i},ptime];
-  if i==2;
+  if i==3;
     fname=[pname,'ww3g_',ftime,'-utc_',gnames{i},'.nc'];
     depth=ncread(fname,'depth',[1 1 1],[Inf Inf 1]); 
   else;
@@ -63,11 +63,13 @@ for i=[2]
   
   %if i==2; return; end
 
-  if i==2;
+  if i==3;
     pcolor(lon_mod,lat_mod,depth')
     colormap(cmocean('deep'))
     shading flat;
-    colorbar
+    cb=colorbar;
+    set(get(cb,'ylabel'),'string','Depth (m)','fontsize',12,'fontweight','bold');
+
 	else;
     %grid contour
     min_lon=min(lon_mod(:)); max_lon=max(lon_mod(:));
@@ -108,7 +110,7 @@ plot_obs=1;
 if plot_obs==1;
     for i=1:length(lon_obss)
   		plot(lon_obss(i),lat_obss(i),'s','color','r','markersize',4)
-  		text(lon_obss(i),lat_obss(i),tstation{i},'fontsize',12,'color','k')%,'markersize',4)
+  		text(lon_obss(i)+.05,lat_obss(i),tstation{i},'fontsize',12,'color','k')%,'markersize',4)
     end
 end
 
@@ -116,7 +118,9 @@ end
 
 %return
 
-%title('Bathymetry = GLOBALWAVE, Cyan = TONGAWAVE. Points are from ww3 p files')
+title('Location of analysis and model bathymetry')
+ylabel('Latitude')
+xlabel('Longitude')
 
 save_fig=0;
 if save_fig==1;

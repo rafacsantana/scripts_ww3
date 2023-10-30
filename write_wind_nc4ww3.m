@@ -3,10 +3,11 @@ close all
 run('/scale_wlg_persistent/filesets/home/santanarc/scripts/niwa/matlab/startup.m')
 
 % Daily time
-time_lima=datenum(1990,1,1,0,0,0):1:datenum(1990,1,31,0,0,0); % Graham Harrington ECAN request on 18/09/2023
-time_lima=datenum(1990,1,1,0,0,0):1:datenum(2014,12,31,0,0,0); % Graham Harrington ECAN request on 18/09/2023
+time_lima=datenum(1985,1,1,0,0,0):1:datenum(1990,1,1,0,0,0); % Graham Harrington ECAN request on 18/09/2023
+%time_lima=datenum(1990,1,1,0,0,0):1:datenum(2014,12,31,0,0,0); % Graham Harrington ECAN request on 18/09/2023
 %time_lima=datenum(1992,2,29,0,0,0):1:datenum(1992,2,29,0,0,0); % Graham Harrington ECAN request on 18/09/2023
-%time_lima=datenum(2014,12,16,0,0,0):1:datenum(2014,12,31,0,0,0); % Graham Harrington ECAN request on 18/09/2023
+time_lima=datenum(2014,12,16,0,0,0):1:datenum(2014,12,31,0,0,0); % Graham Harrington ECAN request on 18/09/2023
+time_lima=datenum(2020,12,1,0,0,0):1:datenum(2022,01,31,0,0,0); % Graham Harrington ECAN request on 18/09/2023
 
 %/scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/projections/historical_proc/6hrly_global/wind/2014/wind_historical_GFDL-ESM4_CCAM_6hrly_Global_raw_2014121700.nc
 %Index exceeds the number of array elements (0).
@@ -17,13 +18,13 @@ time_lima=datenum(1990,1,1,0,0,0):1:datenum(2014,12,31,0,0,0); % Graham Harringt
 % first merge u and v files
 % cdo merge ua_historical_GFDL-ESM4_CCAM_6hrly_Global_raw.nc va_historical_GFDL-ESM4_CCAM_6hrly_Global_raw.nc wind_historical_GFDL-ESM4_CCAM_6hrly_Global_raw.nc
 
-path_in='/scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/projections/historical/6hrly_global/';
+path_in='/scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/projections/ssp370/6hrly_global/';
 path_ou='/scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/projections/historical_proc/6hrly_global/';
 
-vars=[1,2];
+vars=[2];
 
 vnames   ={'ua/','sic/'}; % (ua for wind) always with /
-prefixs  ={'ua_historical_','sic_historical_'};
+prefixs  ={'ua_ssp370_','sic_ssp370_'};
 midfixs  ={'GFDL-ESM4_CCAM_' ,'GFDL-ESM4_CCAM_'};
 sufixs   ={'6hrly_Global_raw','6hrly_Global_raw'};
 
@@ -107,13 +108,19 @@ for vr=vars
     %if td(:,1)==2014 & td(:,2)==12 & td(:,3)==31
     %end
   
-    if strcmp(prefix{1},'ua_historical_')
+    if strcmp(prefix{1},'ua_historical_') || strcmp(prefix{1},'ua_ssp370_')
   
       display(['Reading winds']); tic;
       fname=[path_in,vname{1},prefix{1},midfix{1},sufix{1},'.nc'];
       %fname=[path_in,'ua/','ua_historical_',midfix{1},sufix{1},'.nc'];
       ua=squeeze((ncread(fname,'ua', [1 1 1 it(1)],[Inf Inf Inf it(end)-it(1)+1]))); 
-      fname=[path_in,'va/','va_historical_',midfix{1},sufix{1},'.nc'];
+
+      if strcmp(prefix{1},'ua_historical_') 
+        fname=[path_in,'va/','va_historical_',midfix{1},sufix{1},'.nc'];
+      elseif strcmp(prefix{1},'ua_ssp370_')
+        fname=[path_in,'va/','va_ssp370_',midfix{1},sufix{1},'.nc'];
+      end
+
       va=squeeze((ncread(fname,'va', [1 1 1 it(1)],[Inf Inf Inf it(end)-it(1)+1]))); 
       
       path_out=[path_ou,'wind/',ptime];
@@ -133,7 +140,11 @@ for vr=vars
       netcdf.putVar(ncid,varid,timewit)
       netcdf.putAtt(ncid,varid,'standard_name',"time");
       netcdf.putAtt(ncid,varid,'calendar',"gregorian");
-      netcdf.putAtt(ncid,varid,'units',"minutes since 1959-01-01 00:00:00");
+      if strcmp(prefix{1},'ua_historical_') 
+        netcdf.putAtt(ncid,varid,'units',"minutes since 1959-01-01 00:00:00");
+      elseif strcmp(prefix{1},'ua_ssp370_')
+        netcdf.putAtt(ncid,varid,'units',"minutes since 2015-01-01 00:00:00");
+      end
       % lon
       dlon =  netcdf.defDim(ncid,'lon',length(lon));
       varid = netcdf.defVar(ncid,'lon','double',dlon);
@@ -157,7 +168,7 @@ for vr=vars
   
       netcdf.close(ncid);
   
-    elseif strcmp(prefix{1},'sic_historical_')
+    elseif strcmp(prefix{1},'sic_historical_') || strcmp(prefix{1},'sic_ssp370_')
   
       display(['Reading sic']); tic;
       sic=squeeze((ncread(fname,'sic', [1 1 it(1)],[Inf Inf it(end)-it(1)+1]))); 
@@ -180,7 +191,11 @@ for vr=vars
       netcdf.putVar(ncid,varid,timewit)
       netcdf.putAtt(ncid,varid,'standard_name',"time");
       netcdf.putAtt(ncid,varid,'calendar',"gregorian");
-      netcdf.putAtt(ncid,varid,'units',"minutes since 1959-01-01 00:00:00");
+      if strcmp(prefix{1},'sic_historical_') 
+        netcdf.putAtt(ncid,varid,'units',"minutes since 1959-01-01 00:00:00");
+      elseif strcmp(prefix{1},'sic_ssp370_')
+        netcdf.putAtt(ncid,varid,'units',"minutes since 2015-01-01 00:00:00");
+      end
       % lon
       dlon =  netcdf.defDim(ncid,'lon',length(lon));
       varid = netcdf.defVar(ncid,'lon','double',dlon);
