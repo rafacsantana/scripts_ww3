@@ -6,7 +6,8 @@ run('/scale_wlg_persistent/filesets/home/santanarc/scripts/niwa/matlab/startup.m
 time_lima=datenum(2023,8,9,0,0,0):1:datenum(2023,8,13,0,0,0); % MPI request on 28/08/2023
 time_lima=datenum(2018,1,7,0,0,0):1:datenum(2023,9,17,0,0,0); % Graham Harrington ECAN request on 18/09/2023
 time_lima=datenum(2014,7,9,0,0,0):1:datenum(2018,1,6,0,0,0); % Graham Harrington ECAN request on 02/10/2023
-time_lima=datenum(2014,7,9,0,0,0):1:datenum(2014,7,10,0,0,0); % Graham Harrington ECAN request on 18/09/2023
+time_lima=datenum(2018,1,6,0,0,0):1:datenum(2023,8,13,0,0,0); % Graham Harrington ECAN request on 18/09/2023
+time_lima=datenum(2018,1,6,0,0,0):1:datenum(2021,12,31,0,0,0); % Graham Harrington ECAN request on 18/09/2023
 
 check_file=1;
 load_atm  =0;
@@ -24,9 +25,10 @@ path_efs='/scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/';
 
 prefixes={'tn_','ww3g_'};
 gnames  ={'nzcsm','nzwave_hr+nzcsm'};
-gnames  ={'nzcsm','nzwave+nzlam'};
+%gnames  ={'nzcsm','nzwave+nzlam'};
 
-expts={'NZCSM','NZWAVE'};
+% always atm    wave  models
+expts={'NZCSM','NZWAVE-HR'};
 
 scrsz=[1 1 1366 768];
 scrsz=[2 42 958 953];
@@ -34,11 +36,10 @@ scrsz=[2 42 958 953];
   
 colors={'k','k'};
 
-tstation={'Sinclair Head','Ohau Head','Mana Island','Makara'  ,'Karori Rock','Wairewa Lake Forsyth'};
-stations={'sinclair_head','ohau_head','mana_island','makara'  ,'karori_rock','wairewa_lake_forsyth'};
-
-lat_obss=[-41.366885     ,-42.256063 ,-41.083327   ,-41.203393, -41.344623  ,-43.84110];
-lon_obss=[174.716761     , 173.853341,174.763960   ,174.702391, 174.650430  ,172.71835];
+tstation={'Sinclair Head','Ohau Head','Mana Island','Makara'  ,'Karori Rock','Wairewa Lake Forsyth','Taumutu'};
+stations={'sinclair_head','ohau_head','mana_island','makara'  ,'karori_rock','wairewa_lake_forsyth','Taumutu'};
+lat_obss=[-41.366885     ,-42.256063 ,-41.083327   ,-41.203393, -41.344623  ,-43.84110,-43.866527];
+lon_obss=[174.716761     , 173.853341,174.763960   ,174.702391, 174.650430  ,172.71835,172.381380];
 
 k=0;
 for s=length(stations)
@@ -54,7 +55,7 @@ for s=length(stations)
   lon_obs=lon_obss(s);
   lat_obs=lat_obss(s);
 
-  expt='NZWAVE';
+  expt=expts{2};
   path_expt=[path_efs,'/',expt,'/']; % GLOBALWAVE/'];%2018/01/05/00'];
   path_matlab=['/scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/',expt,'/']; % GLOBALWAVE/'];%2018/01/05/00'];
   path_dm=[path_matlab,'matlab/'];
@@ -78,7 +79,7 @@ for s=length(stations)
       ptime=datestr(t,'YYYY/mm/DD/HH/');
       ftime=datestr(t,'YYYYmmDDHH');
     
-      expt='NZWAVE';
+      expt=expts{2};
       path_expt=[path_efs,'/',expt,'/']; % GLOBALWAVE/'];%2018/01/05/00'];
       pname=[path_expt,ptime];
       fname=[pname,prefixes{2},ftime,'-utc_',gnames{2},'.nc'];
@@ -109,7 +110,7 @@ for s=length(stations)
 
       if load_atm==1
         % Wind data
-        expt='NZCSM';
+        expt=expts{1};
         path_expt=[path_efs,'/',expt,'/']; % GLOBALWAVE/'];%2018/01/05/00'];
         pname=[path_expt,ptime];
         fname=[pname,prefixes{1},ftime,'-utc_',gnames{1},'.nc'];
@@ -153,7 +154,7 @@ for s=length(stations)
     end
     lon_wave=lon_mod(ilon); lat_wave=lat_mod(ilat);
 
-    expt='NZWAVE';
+    expt=expts{2};
     path_matlab=['/scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/',expt,'/']; % GLOBALWAVE/'];%2018/01/05/00'];
     path_dm=[path_matlab,'matlab/'];
     system(['mkdir -p ',path_dm]);

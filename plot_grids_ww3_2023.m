@@ -10,13 +10,14 @@ path_obs=[path,'data/obs/'];
 file='SteepHead_SP_FullRecord_QC';
 file_obs=file;
 display(['Loading: ',path,file,'.mat']);
-load([path_obs,file,'.mat'])%,'time','obs')
+%load([path_obs,file,'.mat'])%,'time','obs')
 
 
-tstation={'Sinclair Head','Ohau Head','Mana Island','Makara'  ,'Karori Rock','Wairewa Lake Forsyth'};
-stations={'sinclair_head','ohau_head','mana_island','makara'  ,'karori_rock','wairewa_lake_forsyth'};
-lat_obss=[-41.366885     ,-42.256063 ,-41.083327   ,-41.203393, -41.344623  ,-43.84110];
-lon_obss=[174.716761     , 173.853341,174.763960   ,174.702391, 174.650430  ,172.71835];
+tstation={'Sinclair Head','Ohau Head','Mana Island','Makara'  ,'Karori Rock','Wairewa Lake Forsyth','Taumutu'};
+stations={'sinclair_head','ohau_head','mana_island','makara'  ,'karori_rock','wairewa_lake_forsyth','Taumutu'};
+lat_obss=[-41.366885     ,-42.256063 ,-41.083327   ,-41.203393, -41.344623  ,-43.84110,-43.866527];
+lon_obss=[174.716761     , 173.853341,174.763960   ,174.702391, 174.650430  ,172.71835,172.381380];
+
 
 tstation={tstation{end}};
 stations={stations{end}};
@@ -41,17 +42,20 @@ figure('position',scrsz,'color',[1 1 1],'visible','on')
 hold on
 set(gca,'fontsize',12,'fontweight','bold')
 
-colors={'b','r','k','k'};
+colors={'b','r','r','k'};
 
-for i=[3]
+gsel=3;
+
+
+for i=gsel
 
   pname=[path,grids{i},ptime];
-  if i==3;
+  %if i==3;
     fname=[pname,'ww3g_',ftime,'-utc_',gnames{i},'.nc'];
     depth=ncread(fname,'depth',[1 1 1],[Inf Inf 1]); 
-  else;
-    fname=[pname,'ww3g_',ftime,'-utc_',gnames{i},'.nc'];
-  end
+  %else;
+    %fname=[pname,'ww3g_',ftime,'-utc_',gnames{i},'.nc'];
+  %end
 
   lon_mod=double(ncread(fname,'lon'));
   lat_mod=double(ncread(fname,'lat'));
@@ -60,10 +64,7 @@ for i=[3]
   [dif ilon]=nanmin(abs(lon_mod-lon_obs));
   [dif ilat]=nanmin(abs(lat_mod-lat_obs));
   
-  
-  %if i==2; return; end
-
-  if i==3;
+  if i==gsel;
     pcolor(lon_mod,lat_mod,depth')
     colormap(cmocean('deep'))
     shading flat;
@@ -81,8 +82,8 @@ for i=[3]
     plot([min_lon max_lon],[max_lat max_lat],'color',colors{i},'linewidth',2)
 	end
 
-  if i~=2;
-    fname=[pname,'ww3p_interp_',ftime,'-utc_',gnames{i},'.nc'];
+  if i==2;
+    fname=[pname,'ww3p_',ftime,'-utc_',gnames{i},'.nc'];
     lon=ncread(fname,'lon');
   	lat=ncread(fname,'lat');
 		plot(lon,lat,'.','color',colors{i},'markersize',4)
@@ -90,12 +91,12 @@ for i=[3]
 
 end
 
-xlim([170 185]); ylim([-60 -15]) % NZ and AUS
-xlim([min(lon_obss)-.9 max(lon_obss)+.9]); % NZ and AUS
-ylim([min(lat_obss)-.9 max(lat_obss)+.9]); % NZ and AUS
+%xlim([170 185]); ylim([-60 -15]) % NZ and AUS
+%xlim([min(lon_obss)-.9 max(lon_obss)+.9]); % NZ and AUS
+%ylim([min(lat_obss)-.9 max(lat_obss)+.9]); % NZ and AUS
 %xlim([140 210]); ylim([-60 10])  % GLOBAL and TONGA
 %xlim([184.1 186.5]); ylim([-22 -15])   % GLOBAL and TONGA
-caxis([0 200])
+caxis([0 1000])
 
 plot_aus=0;
 if plot_aus==1;

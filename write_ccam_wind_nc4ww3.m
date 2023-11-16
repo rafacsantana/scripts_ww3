@@ -6,8 +6,9 @@ run('/scale_wlg_persistent/filesets/home/santanarc/scripts/niwa/matlab/startup.m
 time_lima=datenum(1985,1,1,0,0,0):1:datenum(1990,1,1,0,0,0); % Graham Harrington ECAN request on 18/09/2023
 %time_lima=datenum(1990,1,1,0,0,0):1:datenum(2014,12,31,0,0,0); % Graham Harrington ECAN request on 18/09/2023
 %time_lima=datenum(1992,2,29,0,0,0):1:datenum(1992,2,29,0,0,0); % Graham Harrington ECAN request on 18/09/2023
-time_lima=datenum(2014,12,16,0,0,0):1:datenum(2014,12,31,0,0,0); % Graham Harrington ECAN request on 18/09/2023
-time_lima=datenum(2020,12,1,0,0,0):1:datenum(2022,01,31,0,0,0); % Graham Harrington ECAN request on 18/09/2023
+time_lima=datenum(2014,01,01,0,0,0):1:datenum(2014,12,31,0,0,0); % Graham Harrington ECAN request on 18/09/2023
+%time_lima=datenum(2015,01,01,0,0,0):1:datenum(2015,12,31,0,0,0); % Graham Harrington ECAN request on 18/09/2023
+time_lima=datenum(2029,12,1,0,0,0):1:datenum(2030,12,31,0,0,0); % Graham Harrington ECAN request on 18/09/2023
 
 %/scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/projections/historical_proc/6hrly_global/wind/2014/wind_historical_GFDL-ESM4_CCAM_6hrly_Global_raw_2014121700.nc
 %Index exceeds the number of array elements (0).
@@ -18,13 +19,18 @@ time_lima=datenum(2020,12,1,0,0,0):1:datenum(2022,01,31,0,0,0); % Graham Harring
 % first merge u and v files
 % cdo merge ua_historical_GFDL-ESM4_CCAM_6hrly_Global_raw.nc va_historical_GFDL-ESM4_CCAM_6hrly_Global_raw.nc wind_historical_GFDL-ESM4_CCAM_6hrly_Global_raw.nc
 
-path_in='/scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/projections/ssp370/6hrly_global/';
 path_ou='/scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/projections/historical_proc/6hrly_global/';
 
-vars=[2];
+vars=[1,2];
 
 vnames   ={'ua/','sic/'}; % (ua for wind) always with /
-prefixs  ={'ua_ssp370_','sic_ssp370_'};
+if time_lima(1)<datenum(2015,1,1)
+  prefixs  ={'ua_historical_','sic_historical_'}; % prior to 2015/01/01
+  path_in='/scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/projections/historical/6hrly_global/';
+else
+  prefixs  ={'ua_ssp370_','sic_ssp370_'};
+  path_in='/scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/projections/ssp370/6hrly_global/';
+end
 midfixs  ={'GFDL-ESM4_CCAM_' ,'GFDL-ESM4_CCAM_'};
 sufixs   ={'6hrly_Global_raw','6hrly_Global_raw'};
 

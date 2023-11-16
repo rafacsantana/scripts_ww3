@@ -2,21 +2,29 @@ clear
 %close all
 clf('reset')
 
-time=datenum(2000,1,6,0,0,0):.5/24:datenum(2000,01,09,0,0,0);
 
 expt='luganville_3'; % 3';
+%expt='lv_era5_tc_harold_corr'; % 3';
+expt='lv_tcwindgen_tc_harold'; % 3';
+
+if strncmp(expt,'lugan',5)
+  time=datenum(2000,1,1,0,0,0):.5/24:datenum(2000,4,11,0,0,0);
+elseif strncmp(expt,'lv',2)
+  time=datenum(2020,4,6,0,0,0):.5/24:datenum(2020,4,11,0,0,0);
+end
+
 
 vname='Hsig'; % Dir, Dspr, RTpeak, Tm01
 
 vspw=4;
 vspa=40;
 
-path_fig='/scale_wlg_persistent/filesets/project/niwa03150/santanarc/delft3d/projects/VANUATU/figures/';
+path_fig='/scale_wlg_persistent/filesets/project/niwa03150/santanarc/swan/projects/VANUATU/figures/';
 
-load(['/scale_wlg_persistent/filesets/project/niwa03150/santanarc/delft3d/projects/VANUATU/',expt,'/Van.mat']);
+load(['/scale_wlg_persistent/filesets/project/niwa03150/santanarc/swan/projects/VANUATU/',expt,'/Van.mat']);
 
 % winds
-filewnd=('/scale_wlg_persistent/filesets/project/niwa03150/santanarc/delft3d/projects/VANUATU/data/TCwindgen/test_LV.nc');
+filewnd=('/scale_wlg_persistent/filesets/project/niwa03150/santanarc/swan/projects/VANUATU/data/TCwindgen/test_LV.nc');
 lonwnd =double(ncread(filewnd,'x'));
 latwnd =double(ncread(filewnd,'y'));
 timewnd=double(ncread(filewnd,'time'))./(24*3600)+datenum(2000,01,01,0,0,0); %:1/48:datenum(2000,01,18,0,0,0);
@@ -40,7 +48,7 @@ for t=time
 
   % winds
   iw=find(timewnd==t);
-  pair=double(ncread(filewnd,'P',[1 1 iw],[Inf Inf 1])')./100;
+  %pair=double(ncread(filewnd,'P',[1 1 iw],[Inf Inf 1])')./100;
   %uwnd=double(ncread(filewnd,'U',[1 1 iw],[Inf Inf 1])');
   %vwnd=double(ncread(filewnd,'V',[1 1 iw],[Inf Inf 1])');
 
@@ -53,9 +61,9 @@ for t=time
   
   %contour(Xp,Yp,tp,[round(min(dp(:))):1:round(max(dp(:)))],'k')
 
-  % winds
-  [cs,h]=contour(lonwnd,latwnd,pair,'k'); % [round(min(dp(:))):1:round(max(dp(:)))],'k');
-  clabel(cs,h,'fontsize',10,'fontweight','bold','LabelSpacing',1000)  
+  % pressure
+  %[cs,h]=contour(lonwnd,latwnd,pair,'k'); % [round(min(dp(:))):1:round(max(dp(:)))],'k');
+  %clabel(cs,h,'fontsize',10,'fontweight','bold','LabelSpacing',1000)  
 
   %waves
   lonq=Xp; latq=Yp;
@@ -69,6 +77,9 @@ for t=time
   axis equal
 
   title([vname,' and winds (max. = ',num2str(3.6*max(sqrt(uwnd(:).^2+vwnd(:).^2)),'%.2f'),' km/h) at ',datestr(t,'HH:MM dd/mm/yyyy')])
+
+  xlim([164.5 169.5])
+  ylim([-18 -13])
 
   save_fig=0;
   if save_fig==1

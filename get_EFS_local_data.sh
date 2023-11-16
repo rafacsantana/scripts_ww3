@@ -12,6 +12,7 @@ current=${inicio}
 expt=NZWAVE-HR
 
 PREFIX="ww3g" # qwqg00_2018012600_10mwind.gz and qwqg00.2018013100.fields.gz
+
 PATH_OUT=/scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/$expt/
 
 while [ ${current} -le ${limite} ]; do
