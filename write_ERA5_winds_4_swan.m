@@ -35,7 +35,7 @@ latwnd=latwnd(lai:laf);
 lonwnd=lonwnd(loi:lof);
 timewnd=timewnd(ti:tf);
 
-return
+%return
 
 % flipping latitude so it starts at -90
 latwnd=flipud(latwnd);
@@ -65,7 +65,9 @@ for i=1:length(timewnd)
     magwnd=magwnd.*cfactor;
   end
 
-  dwnd=atand(vwnd(:,:,i)./uwnd(:,:,i));
+  dwnd=atan2d(vwnd(:,:,i),uwnd(:,:,i));
+  dwnd=mod(-90-dwnd,360);
+
   uwnd(:,:,i)=magwnd.*cosd(dwnd);
   vwnd(:,:,i)=magwnd.*sind(dwnd);
 

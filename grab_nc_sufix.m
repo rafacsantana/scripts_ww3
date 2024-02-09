@@ -1,6 +1,12 @@
 function [ig,ltime]=grab_nc_sufix(expt);
+%
+%
+%
 
-      if strncmp(expt,'GLOBALWAVE-',11)
+      if strncmp(expt,'GLOBALWAVE-ERA5',11)
+        ig=1;
+        ltime=3;
+      elseif strncmp(expt,'GLOBALWAVE-',11)
         ig=1;
         ltime=9;
       elseif strncmp(expt,'GLOBALWAVE',10)

@@ -44,6 +44,8 @@ gnames={'globalwave+globalum','nzwave+nzlam','nzwave_hr+nzcsm','tongawave+global
 scrsz=[1 1 1366 768];
 scrsz=[1 1 1920 1080];
 scrsz=[1 1 1910 990];
+scrsz=[2    42   958   953];
+
 %scrsz=get(0,'screensize');
 figure('position',scrsz,'color',[1 1 1],'visible','on')
 hold on
@@ -70,7 +72,7 @@ for i=gsel
   
   if i==gsel;
     pcolor(lon_mod,lat_mod,depth')
-    contour(lon_mod,lat_mod,depth',[10 10],'k')
+    contour(lon_mod,lat_mod,depth',[30 40 50],'k')
     colormap(cmocean('deep'))
     shading flat;
     cb=colorbar;
@@ -91,10 +93,10 @@ for i=gsel
     fname=[pname,'ww3p_',ftime,'-utc_',gnames{i},'.nc'];
     lon=ncread(fname,'lon');
   	lat=ncread(fname,'lat');
-		plot(lon,lat,'.','color',colors{i},'markersize',4)
+		plot(lon,lat,'.','color',colors{i},'markersize',8)
   end
 
-  plot_obs=1;
+  plot_obs=0;
   if plot_obs==1;
       for i=1:length(lon_obss)
         [dif ilon]=nanmin(abs(lon_mod-lon_obs(i)));
@@ -107,7 +109,9 @@ for i=gsel
 
 end
 
-%xlim([170 185]); ylim([-60 -15]) % NZ and AUS
+%xlim([170 185]); ylim([-60 -15]) % North Island
+%xlim([160 183]); ylim([-55 -25]) % NZ
+%xlim([140 185]); ylim([-60 -15]) % NZ and AUS
 %xlim([min(lon_obss)-.9 max(lon_obss)+.9]); ylim([min(lat_obss)-.9 max(lat_obss)+.9]); % NZ and AUS
 %xlim([140 210]); ylim([-60 10])  % GLOBAL and TONGA
 %xlim([184.1 186.5]); ylim([-22 -15])   % GLOBAL and TONGA
@@ -116,9 +120,9 @@ end
 plot_aus=0;
 if plot_aus==1;
     fname=['~/ww3/grids/ww3.acs.g3.201612.2017','.nc'];
-    lon=ncread(fname,'longitude');
-  	lat=ncread(fname,'latitude');
-		plot(lon,lat,'.','color','m','markersize',4)
+    lon_aus=ncread(fname,'longitude');
+  	lat_aus=ncread(fname,'latitude');
+		plot(lon_aus,lat_aus,'.','color','m','markersize',4)
 end
 
 
@@ -139,4 +143,33 @@ if save_fig==1;
   saveas(gcf,[path_fig,scase],'fig');
 end
 
+
+depth=depth';
+ic=find(depth>=0 & depth<=50);
+[lon_modm,lat_modm]=meshgrid(lon_mod,lat_mod);
+%plot(lon_modm(ic),lat_modm(ic),'.b')
+
+
+
+% list of obs
+list_of_obs=1;
+if list_of_obs==1
+
+  file_obsn='/scale_wlg_persistent/filesets/project/niwa03150/santanarc/Control/nzwave-2/outsite.csv';
+  display(['Processing: ',file_obsn]);
+  ob=importdata([file_obsn]);
+  
+  lstation=ob.textdata;
+  lon_obsl(:,1)=ob.data(:,1);
+  lat_obsl(:,1)=ob.data(:,2);
+
+  for i=1:length(lon_obsl)
+      %[dif ilon]=nanmin(abs(lon_mod-lon_obs(i)));
+      %[dif ilat]=nanmin(abs(lat_mod-lat_obs(i)));
+  		plot(lon_obsl(i),lat_obsl(i)    ,'.','color','r','markersize',4)
+  		text(lon_obsl(i)+.05,lat_obsl(i),[lstation{i}],'fontsize',12,'color','k')%,'markersize',4)
+  end
+
+
+end
 

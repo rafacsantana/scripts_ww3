@@ -41,6 +41,10 @@ stations={'sinclair_head','ohau_head','mana_island','makara'  ,'karori_rock','wa
 lat_obss=[-41.366885     ,-42.256063 ,-41.083327   ,-41.203393, -41.344623  ,-43.84110,-43.866527];
 lon_obss=[174.716761     , 173.853341,174.763960   ,174.702391, 174.650430  ,172.71835,172.381380];
 
+scase='dixon-anderson';
+[tstation,lat_obss,lon_obss]=read_wave_stations(scase);
+stations=tstation;
+
 k=0;
 for s=length(stations)
   k=k+1;
@@ -99,7 +103,13 @@ for s=length(stations)
       display(['Reading Hs']); tic;
       hs=squeeze(double(ncread(fname,'hsig',          [ilon ilat 1],[1 1 49]))); hs=hs(1:end-1); toc
       tp=squeeze(double(ncread(fname,'tpeak',         [ilon ilat 1],[1 1 49]))); tp=tp(1:end-1);
-      pd=squeeze(double(ncread(fname,'peak_direction',[ilon ilat 1],[1 1 49]))); pd=pd(1:end-1);
+      ltime=49;
+      tm01=squeeze(double(ncread(fname,'tmean01',     [ilon ilat 1],[1 1 ltime]))); tm01=tm01(1:end-1);
+      tm02=squeeze(double(ncread(fname,'tmean02',     [ilon ilat 1],[1 1 ltime]))); tm02=tm02(1:end-1);
+      tm=squeeze(double(ncread(fname,'tmean',         [ilon ilat 1],[1 1 ltime]))); tm=tm(1:end-1);
+      pd=squeeze(double(ncread(fname,'peak_direction',[ilon ilat 1],[1 1 ltime]))); pd=pd(1:end-1);
+      ds=squeeze(double(ncread(fname,'directional_spread',[ilon ilat 1],[1 1 ltime]))); ds=ds(1:end-1);
+
       time_mod=[time_mod;timee];
       display(['Concatenating']); tic;
       hs_mod=[hs_mod;hs];
@@ -203,7 +213,7 @@ for s=length(stations)
     csvdata=model.data; 
     csvdata=num2cell(csvdata);
     for i=1:length(time_mod); csvtime{i,1}=datestr(time_mod(i),'yyyy-mm-ddTHH:MM:SS'); end
-    csvhead={'date','PeakPeriod','PeakDirection','Directional spread','Tm01','Tm02','Hs','Qp'};
+    csvhead={'date','PeakPeriod','PeakDirection','Directional spread','Tm01','Tm02','Hs','Wave Energy'};
 
     % concatenating str matrices
     csvall=[csvtime,csvdata];

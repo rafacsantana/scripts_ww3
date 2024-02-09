@@ -3,14 +3,14 @@ close all
 %run('/scale_wlg_persistent/filesets/home/santanarc/scripts/niwa/matlab/startup.m')
 
 % Daily time
-time_lima=datenum(1985,4,1,0,0,0):1:datenum(1987,12,31,0,0,0); % Gr
-%time_lima=datenum(1990,1,1,0,0,0):1:datenum(2014,12,31,0,0,0); %
+time_lima=datenum(1983,1,1,0,0,0):1:datenum(1985,12,31,0,0,0); % Gr
+%time_lima=datenum(2004,1,1,0,0,0):1:datenum(2020,12,31,0,0,0); %
 %time_lima=datenum(1992,2,29,0,0,0):1:datenum(1992,2,29,0,0,0); %
 %time_lima=datenum(2014,01,01,0,0,0):1:datenum(2014,12,31,0,0,0);
 %time_lima=datenum(2015,01,01,0,0,0):1:datenum(2015,12,31,0,0,0);
-%time_lima=datenum(2020,4,1,0,0,0):1:datenum(2020,12,1,0,0,0); 
+%time_lima=datenum(2023,1,1,0,0,0):1:datenum(2023,12,31,0,0,0); 
 %time_lima=datenum(2020,12,1,0,0,0):1:datenum(2020,12,31,0,0,0); 
-%time_lima=datenum(2021,1,1,0,0,0):1:datenum(2021,12,31,0,0,0); 
+%time_lima=datenum(2022,1,1,0,0,0):1:datenum(2022,12,31,0,0,0); 
 
 path_ou='/scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/ERA5/';
 path_in=path_ou; 

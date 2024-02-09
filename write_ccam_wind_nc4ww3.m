@@ -9,6 +9,7 @@ time_lima=datenum(1985,1,1,0,0,0):1:datenum(1990,1,1,0,0,0); % Graham Harrington
 time_lima=datenum(2014,01,01,0,0,0):1:datenum(2014,12,31,0,0,0); % Graham Harrington ECAN request on 18/09/2023
 %time_lima=datenum(2015,01,01,0,0,0):1:datenum(2015,12,31,0,0,0); % Graham Harrington ECAN request on 18/09/2023
 time_lima=datenum(2029,12,1,0,0,0):1:datenum(2030,12,31,0,0,0); % Graham Harrington ECAN request on 18/09/2023
+time_lima=datenum(2031,1,1,0,0,0):1:datenum(2100,12,30,0,0,0); % Graham Harrington ECAN request on 18/09/2023
 
 %/scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/projections/historical_proc/6hrly_global/wind/2014/wind_historical_GFDL-ESM4_CCAM_6hrly_Global_raw_2014121700.nc
 %Index exceeds the number of array elements (0).
@@ -21,7 +22,7 @@ time_lima=datenum(2029,12,1,0,0,0):1:datenum(2030,12,31,0,0,0); % Graham Harring
 
 path_ou='/scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/projections/historical_proc/6hrly_global/';
 
-vars=[1,2];
+vars=[2];
 
 vnames   ={'ua/','sic/'}; % (ua for wind) always with /
 if time_lima(1)<datenum(2015,1,1)

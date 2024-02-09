@@ -21,21 +21,31 @@ lat_bath=double(ncread(bath_nc,'lat'));
 [difs flonb]=nanmin(abs(lon_bath-lonf)); 
 [difs ilatb]=nanmin(abs(lat_bath-lati)); 
 [difs flatb]=nanmin(abs(lat_bath-latf));
-lon_bath=lon_bath(ilonb:flonb);
-lat_bath=lat_bath(ilatb:flatb);
-bath=ncread(bath_nc,'height',[ilonb ilatb],[flonb-ilonb+1 flatb-ilatb+1]);
+%lon_bath=lon_bath(ilonb:flonb);
+%lat_bath=lat_bath(ilatb:flatb);
+bath=ncread(bath_nc,'height');%,[ilonb ilatb],[flonb-ilonb+1 flatb-ilatb+1]);
 %bath=double(ncread(bath_nc,'height'));
 %bath=bath(ilonb:flonb,ilatb:flatb);
 [lon_bathm,lat_bathm]=meshgrid(lon_bath,lat_bath);
 lon_bathm=lon_bathm'; lat_bathm=lat_bathm';
-      
 
 
-figure
-hold on
-pcolor(lon_bath,lat_bath,bath')
-plot(lon_obs,lat_obs,'.r')
-contour(lon_bath,lat_bath,bath',[0 -20 -100],'k')
-shading flat
-colorbar
-caxis([-100 10])
+plot_map=0;
+if plot_map==1      
+  scrsz=[1 1 1366 768];
+  %scrsz=get(0,'screensize');
+  figure('position',scrsz,'color',[1 1 1],'visible','on')
+  hold on
+  set(gca,'fontsize',12,'fontweight','bold')
+  
+  
+  pcolor(lon_bath,lat_bath,bath')
+  plot(lon_obs,lat_obs,'.r')
+  contour(lon_bath,lat_bath,bath',[0 -30 -40 -50],'k')
+  shading flat
+  colorbar
+  caxis([-100 10])
+end
+
+ic=find(bath<=-30 & bath>=-50);
+
