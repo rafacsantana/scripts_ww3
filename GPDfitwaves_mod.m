@@ -6,6 +6,7 @@ load wave_height_banks_peninsula.mat
 hs_obs = hs_obs(:); time_obs = time_obs(:);
 
 cdfplot(hs_obs) % PF cdf = cumulative density function. find suitable thresholds to constrain GPthres.m. This is just a rough guide. looks like something between 2 and 6 metres would work (between 0.5 and 1)
+%return
 
 tolerance =0.0001; % sometimes gpfit doesn't like having zero values, so add a tiny (inconsequential) amount
 tthr = 3; % peaks over threshold (POT) separated by at least 3 days. Most weather systems in NZ are separated by 4-7 days
@@ -30,8 +31,9 @@ GEV(2,:) = gevinv(1-ARI2AEP(ARI),gevci(1,1),gevci(1,2),gevci(1,3));
 GEV(3,:) = gevinv(1-ARI2AEP(ARI),gevci(2,1),gevci(2,2),gevci(2,3));
 
 figure;[AMari,AMsorted] = gringorten(AM,1,1);  hold on
-semilogx(ARI,GEV(1,:),'k','LineWidth',2)
-semilogx(ARI,GEV(2,:),'--k',ARI,GEV(3,:),'--k')
+semilogx(AMari,AMsorted,'xb')
+semilogx(ARI,GEV(1,:),'b','LineWidth',2)
+semilogx(ARI,GEV(2,:),'--b',ARI,GEV(3,:),'--b')
 hold off
 title('GEV fitted to annual maxima'), xlabel('Average recurrence interval  (years)'), ylabel('H_s')
 
@@ -42,3 +44,6 @@ semilogx(AMari,AMsorted,'+b')
 hold off
 
 legend('GPD-POT','GEV-AM'); 
+
+
+

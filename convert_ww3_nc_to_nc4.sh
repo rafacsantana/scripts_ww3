@@ -39,8 +39,8 @@ while [ ${current} -le ${limite} ]; do
    #base=small_$base
   
    #nccopy -d1 classic.nc compressed.nc
-   nccopy -d9 -s ${f} ${base}.nc4
-   mv  ${base}.nc4 ${f}
+   nccopy -d9 -s ${f} ~/${base}.nc4
+   mv  ~/${base}.nc4 ${f}
   
   done
 

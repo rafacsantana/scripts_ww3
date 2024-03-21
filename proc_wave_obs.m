@@ -51,6 +51,7 @@ function [obs,time_obs,lon_obs,lat_obs]=proc_wave_obs(file,proc_obs) % ,plot_obs
 
       % 1 {'PeakPerid'}   2 {'PeakDirection'}   3 {'Directional spread'}   4 {'Tm01'}   5 {'Tm02'}   6 {'Hs'}   7 {'Qp'}  8 Tm
       % 9 wlv
+      obs(:,4)=obs(:,5);
       obs(:,8)=nan;
       obs(:,9)=nan;
   
@@ -144,13 +145,13 @@ function [obs,time_obs,lon_obs,lat_obs]=proc_wave_obs(file,proc_obs) % ,plot_obs
 
     save([file_obs,'.mat'],'time_obs','obs','lat_obs','lon_obs')
   
-  elseif proc_obs==0 %& plot_obs==1
-  
+  elseif proc_obs==0 % & plot_obs==1
+     
     display(['Loading: ',file_obs,'.mat']);
     load([file_obs,'.mat'])%,'time','obs')
-
+    
   %else
-
+    
   %  lon_obs=lon_obss(fobs);
   %  lat_obs=lat_obss(fobs);
   %  time_obs=time_lima; obs(1:length(time_lima),1:9)=0;

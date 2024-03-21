@@ -34,7 +34,7 @@ files={'Banks_Peninsula','Baring_Head','wairewa_lake_forsyth','Pelorus_Sound','T
 runs=[10];
 %runs=[2,3,4,8];
 runs=[1:5];
-runs=[1,2];
+runs=[1,2,5];
 
 expt_names={'GLOBALWAVE'          ,'NZWAVE'             ,'NZWAVE-ST6'         ,'NZWAVE-HR-NOTIDES','NZWAVE-HR',... 5
             'GLOBALWAVE-GFDL-CCAM','NZWAVE-ST4-GLOBALUM','NZWAVE-ST6-GLOBALUM','NZWAVE-GFDL-CCAM' ,'NZWAVE-ERA5',...10
@@ -54,8 +54,8 @@ proc_obs   =0;
 ck_mod_mat =1;
 save_csv   =0;
 set_xlim   =1;
-save_fig   =0;
-save_video =1;
+save_fig   =1;
+save_video =0;
 
 correct_model=1;
 

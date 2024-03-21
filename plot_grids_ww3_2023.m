@@ -51,7 +51,7 @@ set(gca,'fontsize',12,'fontweight','bold')
 
 colors={'b','r','r','k'};
 
-gsel=3;
+gsel=2; % grid selected (1=GLOBALWAVE, 2=NZWAVE, 3=NZWAVE-HR, 4=TONGAWAVE)
 
 
 for i=gsel
@@ -70,7 +70,7 @@ for i=gsel
   
   if i==gsel;
     pcolor(lon_mod,lat_mod,depth')
-    contour(lon_mod,lat_mod,depth',[10 10],'k')
+    contour(lon_mod,lat_mod,depth',[0:10:50],'k')
     colormap(cmocean('deep'))
     shading flat;
     cb=colorbar;
@@ -86,7 +86,7 @@ for i=gsel
     plot([min_lon max_lon],[max_lat max_lat],'color',colors{i},'linewidth',2)
 	end
 
-  plot_ww3p=0;
+  plot_ww3p=1;
   if plot_ww3p==1;
     fname=[pname,'ww3p_',ftime,'-utc_',gnames{i},'.nc'];
     lon=ncread(fname,'lon');
@@ -111,6 +111,7 @@ end
 %xlim([min(lon_obss)-.9 max(lon_obss)+.9]); ylim([min(lat_obss)-.9 max(lat_obss)+.9]); % NZ and AUS
 %xlim([140 210]); ylim([-60 10])  % GLOBAL and TONGA
 %xlim([184.1 186.5]); ylim([-22 -15])   % GLOBAL and TONGA
+xlim([171.5 173.3]); ylim([-44.7 -43])   % focus on lake ellesmere
 %caxis([0 1000])
 
 plot_aus=0;

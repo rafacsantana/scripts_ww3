@@ -7,7 +7,7 @@ path={
 };
 
 
-p1={'historical','ssp370'};
+p1={'historical','ssp370','ssp245'};
 p2={'6hrly_global','hourly'};
 p3={'psl','ua','va','uas','vas','sic'};
 

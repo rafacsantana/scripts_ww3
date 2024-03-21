@@ -30,7 +30,6 @@ while [ $a -lt 200000 ]; do
   echo 'waiting for '$stime' seconds ...'
   echo ''
   echo 'If the model crashes remember to RERUN the incomplete days below:'
-  echo '1997060700'
   echo ''
   date
   sleep $stime
