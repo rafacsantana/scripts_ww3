@@ -1524,9 +1524,9 @@ for fobs=stations
         if ke==5
           ylabel(['Forecasted ',tnames{dcol(i)}]);  xlabel(['Observed ',tnames{dcol(i)}])      
           if fobs==1
-            text(8.0,36,'Banks Peninsula','fontsize',14,'fontweight','bold')
+            text(8.0,36,'Banks Peninsula Hs (m)','fontsize',14,'fontweight','bold')
           elseif fobs==2
-            text(7.5,32,'Baring Head','fontsize',14,'fontweight','bold')
+            text(7.5,32,'Baring Head Hs (m)','fontsize',14,'fontweight','bold')
           end
         elseif ke==1 || ke==3 
           ylabel(['Forecasted ',tnames{dcol(i)}]);

@@ -24,13 +24,14 @@ lat_bath=double(ncread(bath_nc,'lat'));
 %lon_bath=lon_bath(ilonb:flonb);
 %lat_bath=lat_bath(ilatb:flatb);
 bath=ncread(bath_nc,'height');%,[ilonb ilatb],[flonb-ilonb+1 flatb-ilatb+1]);
+%bathc=ncread(bath_nc,'height',[ilonb ilatb],[flonb-ilonb+1 flatb-ilatb+1]);
 %bath=double(ncread(bath_nc,'height'));
 %bath=bath(ilonb:flonb,ilatb:flatb);
 [lon_bathm,lat_bathm]=meshgrid(lon_bath,lat_bath);
 lon_bathm=lon_bathm'; lat_bathm=lat_bathm';
 
 
-plot_map=0;
+plot_map=1;
 if plot_map==1      
   scrsz=[1 1 1366 768];
   %scrsz=get(0,'screensize');

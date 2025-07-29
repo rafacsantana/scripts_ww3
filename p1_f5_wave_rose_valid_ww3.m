@@ -60,7 +60,7 @@ plot_obs   =1;
 proc_obs   =0;
 ck_mod_mat =1;
 save_csv   =0;
-save_fig   =1;
+save_fig   =0;
 save_video =0;
 save_gif   =0;
 
@@ -1065,6 +1065,8 @@ for fobs=stations
       ke=ke+1;
     
       expt=expt{1};
+
+
       [ig,ltime]=grab_nc_sufix(expt);
     
       path_expt=[path_source,expt,'/']; % GLOBALWAVE/'];%2018/01/05/00'];
@@ -1083,7 +1085,7 @@ for fobs=stations
     
         if ck_mod_mat==1 && exist(filename)==2
       
-          display(['Loading: ',filename])
+          %display(['Loading: ',filename])
           load(filename)%,'time_mod','model')
       
         else
@@ -1221,6 +1223,8 @@ for fobs=stations
           data_obs=obs(is:ie,dcol(i))';
           [figure_handle, count, speeds, directions, Table] = WindRose(dp_obs,data_obs,Options);
           %title('Obs')
+          display(['Obs'])
+          [directions,sum(count,2)]
         end
         if portrait
           ax=subplot(lsub,csub,ke+1);
@@ -1232,6 +1236,8 @@ for fobs=stations
         Options = [Option, {'axes', ax, 'cmap', 'invbone','TitleString', {[lett{ke},' ',expt];''},...
         'LegendType', ltype, 'LegendPosition', 'west','LegendOrientation','vertical', 'LabLegend', vnames{dcol(i)} , 'LegendVariable', vnames{dcol(i)}, 'MaxFrequency',maxf, 'nDirections', 12, 'scalefactor', 1.0}];
         [figure_handle, count, speeds, directions, Table] = WindRose(model.data(:,2)',model.data(:,dcol(i))',Options);
+        display(['Expt: ',expt])
+        [directions,sum(count,2)]
          
       end
     

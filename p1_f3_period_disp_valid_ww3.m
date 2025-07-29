@@ -34,7 +34,7 @@ time_lima=datenum(2021,1,1,0,0,0):1:datenum(2021,12,31,0,0,0); %
 
 %time_lima=datenum(2029,12,1,0,0,0):1:datenum(2030,1,1,0,0,0); % Firts two days of output
 
-stations=[1];
+stations=[2];
 files={'Banks_Peninsula','Baring_Head','wairewa_lake_forsyth','Pelorus_Sound','Taumutu'};% 'SteepHead_SP_FullRecord_QC';
 
 runs=[10];
@@ -60,7 +60,7 @@ plot_obs   =1;
 proc_obs   =0;
 ck_mod_mat =1;
 save_csv   =0;
-save_fig   =1;
+save_fig   =0;
 save_video =0;
 save_gif   =0;
 
@@ -79,8 +79,12 @@ dcol=[1,4,5,9]; %[6,1,2]; % Tp, Tm01, Tm02
 %dcol=[6,5,8,9]; %[6,1,2]; % Tp, Tm01, Tm02
 dcol=[6,1,2]; % Hs, Tp, dir
 %dcol=[6,1,8]; % Hs, Tp, dir
-dcol=[4]; % Hs, wlv
-%dcol=[6]; % Hs, wlv
+
+if stations==1
+	dcol=[4]; % Hs, wlv
+elseif stations==2; % Hs, wlv
+	dcol=[8]; % Hs, wlv
+end
 
 % maps
 pcname ='hs'; % m_pcolor: wlv, hs, curr
@@ -240,7 +244,6 @@ for fobs=stations
       
           display(['Loading: ',filename])
           load(filename)%,'time_mod','model')
-      
         else
 
           ptime=datestr(t,'YYYY/mm/DD/HH/');
@@ -316,8 +319,8 @@ for fobs=stations
         ds_mod=[ds_mod;ds];
         wlv_mod=[wlv_mod;wlv];
         ucur_mod=[ucur_mod;ucur];
-		vcur_mod=[vcur_mod;vcur];
-		we_mod=[we_mod;we];
+				vcur_mod=[vcur_mod;vcur];
+				we_mod=[we_mod;we];
         
         clear model
      
@@ -330,10 +333,10 @@ for fobs=stations
         model.data(:,4)=tm01_mod;
         model.data(:,5)=tm02_mod;
         model.data(:,6)=hs_mod;
-		model.data(:,7)=nan;
-		model.data(:,10)=ucur_mod;
-		model.data(:,11)=vcur_mod;
-		model.data(:,12)=we_mod;
+		    model.data(:,7)=nan;
+		    model.data(:,10)=ucur_mod;
+		    model.data(:,11)=vcur_mod;
+		    model.data(:,12)=we_mod;
 	        
         %path_dm=[path_expt,'matlab/'];
         %system(['mkdir -p ',path_dm]);
@@ -376,21 +379,24 @@ for fobs=stations
         hold on
         if ke==1 & plot_obs==1
           if obs_first==1;
-	    if dcol(i)<=size(obs,2) 
+		    		if dcol(i)<=size(obs,2) 
               plot(time_obs,obs(:,dcol(i))','.','markersize',12,'color',[0 .7 0],'linewidth',2)
-	    end
+				    end
           end
-          for eix=1:length(expts); plot(nan,nan,'.','markersize',20,'color',colors{eix},'linewidth',2); end
-          plot(nan,nan,'.','markersize',20,'color',[0 .7 0],'linewidth',2)
-        end
-        plot(time_mod,model.data(:,dcol(i))','.','markersize',12,'color',colors{ke},'linewidth',2)
-        if obs_first==0; 
+          for eix=1:length(expts); 
+						plot(nan,nan,'.','markersize',20,'color',colors{eix},'linewidth',2); 
+					end
+	        plot(nan,nan,'.','markersize',20,'color',[0 .7 0],'linewidth',2)
+  	    end
+
+    	  plot(time_mod,model.data(:,dcol(i))','.','markersize',12,'color',colors{ke},'linewidth',2)
+      	if obs_first==0; 
           if ke==length(expts) & plot_obs==1
-	    if dcol(i)<=size(obs,2) 
+				    if dcol(i)<=size(obs,2) 
               plot(time_obs,obs(:,dcol(i))','.','markersize',12,'color',[0 .7 0],'linewidth',2)
-	    end
+				    end
           end
-        end
+	      end
 
         if set_xlim==1;
           xlim([time_lima(1) time_lima(end)])
@@ -413,8 +419,8 @@ for fobs=stations
           else
             legh=[legh,{[expt]}];%,' rmse=',num2str(mod_rmse,'%.2f'),' corr=',num2str(mod_corr,'%.2f'),', bias=',num2str(mod_bias,'%.2f')]}];
           end
-	elseif dcol(i)==2 || dcol(i)==1
-	  ylim([0 360])
+				elseif dcol(i)==2 || dcol(i)==1
+				  ylim([0 360])
         end
         
       end % for i=1:length(dcol)
@@ -1440,8 +1446,10 @@ for fobs=stations
           %if i==3
           %end
           grid('on')
-          xlim([0 9]) 
-          ylim([0 9])
+          if dcol==6
+            xlim([0 9]) 
+            ylim([0 9])
+          end
           %axis('equal')
 
         elseif correct_model==0;
@@ -1530,7 +1538,13 @@ for fobs=stations
           ctext='b';
         elseif fobs==2
           %xlim([2 16]); ylim([2 16])
-          xlim([0 16]); ylim([0 16])
+          if dcol==4
+	          xlim([0 16]); ylim([0 16])
+          elseif dcol==8
+	          %xlim([0 16]); ylim([0 16])
+          else
+	          xlim([0 16]); ylim([0 16])
+          end
           xd=11; yd=4; dsz=1;
           ctext='b';
         end
@@ -1540,9 +1554,9 @@ for fobs=stations
         elseif ke==1
           ylabel(['Forecasted ',tnames{dcol(i)}]);
           if fobs==1
-            text(14,16.5,'Banks Peninsula Tm01 (s)','fontsize',14,'fontweight','bold')
+            text(12,16.5,['Banks Peninsula Mean Period'],'fontsize',14,'fontweight','bold')
           elseif fobs==2
-            text(16,20,'Baring Head Tm01 (s)','fontsize',14,'fontweight','bold')
+            text(15,25,['Baring Head Mean Period'],'fontsize',14,'fontweight','bold')
           end
         elseif ke==3 
           ylabel(['Forecasted ',tnames{dcol(i)}]);
@@ -1570,7 +1584,9 @@ for fobs=stations
         box('on') 
 
       end
-    
+
+    pause(0.5) 
+
     end
     
     if ~isempty(find(dcol==6))
@@ -1582,8 +1598,10 @@ for fobs=stations
     system(['mkdir -p ',path_dm]);
     figname=[path_dm,file,'_',replace(tnames{dcol(i)},' ','_'),'_',datestr(time_lima(1),'YYYY_mm_DD_HH_MM'),'_',datestr(time_lima(end),'YYYY_mm_DD_HH_MM'),'.png'];
     display(['Plotting: ',figname]);
+    save_fig=1;
     if save_fig==1
-return
+			dcol
+			return
       display(['Saving: ',figname]); 
       export_fig(gcf,figname,'-png','-r150');
       %close

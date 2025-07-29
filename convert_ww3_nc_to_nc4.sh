@@ -1,4 +1,7 @@
-# Script to download wind data from CCMP
+# Script to convert WW3 nc to nc4
+echo "Usage"
+echo "set-roms-intel # loading netcdf libraries"
+echo "e.g.: ./convert_ww3_nc_to_nc4.sh 20000101 20001231 NZWAVE-ERA5"
 
 #set -x
 export LANG=en_US.UTF-8

@@ -59,7 +59,7 @@ plot_obs   =0;
 proc_obs   =0;
 ck_mod_mat =1;
 save_csv   =0;
-save_fig   =0;
+save_fig   =1;
 save_video =0;
 save_gif   =0;
 
@@ -159,6 +159,13 @@ lat_hr=double(ncread(fname,'lat'));
 %  lon_gebco=wrapTo360(lon_gebco);
 
 %end
+
+%path_bath='/scale_wlg_persistent/filesets/project/niwa00020/data/topography/dtm/';
+%file_bath='nzbath250_2016.nc';
+%bath_nc=[path_bath,file_bath];
+%lon_bath=double(ncread(bath_nc,'lon'));
+%lat_bath=double(ncread(bath_nc,'lat'));
+%bath=ncread(bath_nc,'height');%,[ilonb ilatb],[flonb-ilonb+1 flatb-ilatb+1]);
 
 
 if plot_coastm %|| stations==0
@@ -1684,9 +1691,10 @@ for fobs=stations
             colormap(ax(1),cmap) % parula, avhrr
             m_pcolor(lon_mod,lat_mod,data');
             if fobs==stations(end)
-              %cb=colorbar;%('southoutside');
-              %set(get(cb,'ylabel'),'string','Depth (m)','fontsize',12,'fontweight','bold');
-              %set(cb,'fontsize',12,'fontweight','bold');
+              cb=colorbar;%('southoutside');
+              set(cb,'position',[0.92         0.160746390669959        0.0111111111111111         0.713692403845267])
+              set(get(cb,'ylabel'),'string','Depth (m)','fontsize',12,'fontweight','bold');
+              set(cb,'fontsize',12,'fontweight','bold');
             end
             if strcmp(pcname,'hs')
               caxis([0 14])
@@ -1712,6 +1720,10 @@ for fobs=stations
           %clabel(cs,h,'color',[1 1 1],'fontsize',14,'fontweight','bold','LabelSpacing',2000)
           clevels=[-80 -30]; 
           if ke==1
+            % 250-m NIWA bathy
+            %[cs,h]=m_contour(lon_bath,lat_bath,bath',[clevels],'color',[1 0 0],'linewidth',2);
+            %clabel(cs,h,'color',[1 0 0],'fontsize',14,'fontweight','bold','LabelSpacing',2000) % each contour line represents 0.02 increase/decrease
+
             [cs,h]=m_contour(lon_mod,lat_mod,data',[clevels],'color',[0 .7 0],'linewidth',2);
             clabel(cs,h,'color',[0 .7 0],'fontsize',14,'fontweight','bold','LabelSpacing',2000) % each contour line represents 0.02 increase/decrease
           elseif ke==2
@@ -1730,9 +1742,9 @@ for fobs=stations
             %%m_grid('xtick',[round(loni):2:round(lonf)],'xticklabels',[round(loni):2:round(lonf)],'fontname','helvetica','fontsize',20,'fontweight','bold');
           %elseif ke==length(expts)
             m_gshhs_f('patch',[.7 .7 .7],'edgecolor','k','linewidth',.5);
-            m_grid('fontname','helvetica','fontsize',14,'fontweight','bold');
+            m_grid('fontname','helvetica','fontsize',18,'fontweight','bold');
             %title([replace(file,'_',' '),' Hs and water level at ',datestr(time(i),'HH:MM dd/mmm/yyyy')],'fontsize',14,'fontweight','bold')
-            title(['',replace(file,'_',' '),' bathymetry'],'fontsize',14,'fontweight','bold')
+            title(['',replace(file,'_',' '),' bathymetry'],'fontsize',18,'fontweight','bold')
           end
           %set(gca,'fontsize',14,'fontname','helvetica','fontweight','bold')
           %%m_contour(plon,plat,bathy',[200 2000],'w','linewidth',1);
@@ -1767,13 +1779,15 @@ for fobs=stations
 
           pd_mod=model(ke).pd;%(:,:,i);
           for o=1%:length(stations)
-            filo=files{stations(o)};
-            filo=replace(filo,'_',' ');
+            filo=files{stations(fobs)};
+            filo=replace(filo,'_',' ')
             m_plot(lon_obs(o),lat_obs(o),'.w','markersize',40)
             m_plot(lon_obs(o),lat_obs(o),'.r','markersize',30)
-            if o==1 
-              %m_text(lon_obss(o)-6,lat_obss(o)+.2,filo,'color','k','fontsize',14,'fontweight','bold') 
-            elseif o==2 
+            if fobs==1
+              m_text(172+(44/60),-[43+43/60],filo,'color','k','fontsize',14,'fontweight','bold') 
+            elseif fobs==2 
+              m_text(174+(55/60),-[41+24/60],filo,'color','k','fontsize',14,'fontweight','bold','rotation',45) 
+              m_text(174+(44/60),-[41+19.5/60],'Wellington','color','k','fontsize',14,'fontweight','bold','rotation',0) 
               %m_text(lon_obss(o)-8,lat_obss(o)+.2,filo,'color','k','fontsize',14,'fontweight','bold') 
             end
           end
@@ -1853,7 +1867,9 @@ for fobs=stations
 
 end % fobs=fstations
 
-save_fig=1
+
+%save_fig=1
+
 if save_fig==1
   display(['Saving: ',figname]);
   export_fig(gcf,figname,'-png','-r150');

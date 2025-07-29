@@ -30,10 +30,51 @@ switch scase
     lat_obss(4)=lat_obss(4)-(1*4/111);
     lat_obss(6)=lat_obss(6)-(1*4/111);
 
+  case 'port-waikato';
+    
+    tstation={'Port Waikato'}; 
+    lat_obss=-37.403755; lon_obss=174.595955;
+
+  case 'offshore-port-waikato';
+    
+    tstation={'Port Waikato'}; 
+    lat_obss=-37.379987; lon_obss=174.476688;
+
+  case 'graham-harrington'
+    tstation={'Banks_Peninsula'     ,'Waimakariri_mouth_offshore','Waimakariri_mouth_nearshore','Avon_Heathcote_estuary_mouth','Birdlings_Flat','Taumutu'};
+    %tstation={'Canterbury_wave_buoy','Waimakariri_mouth_offshore','Waimakariri_mouth_nearshore','Avon_Heathcote_estuary_mouth','Birdlings_Flat','Taumutu'};
+    lat_obss=[-43.7567              ,-43.3812                    ,-43.3846                     ,-43.553855                    ,-43.846953-8/111,-43.866527];
+    lon_obss=[173.3358              ,172.8024                    ,172.7474                     ,172.777616                    ,172.715042      ,172.381380];
+
+
+  case 'tairua'
+    tstation={'Tairua'};
+    lat_obss=-36.809946; lon_obss=176.146943;
+
+  case 'punakaiki'
+    tstation={'Punakaiki'};
+    lat_obss=-42.077336; lon_obss=171.088698;
+
+  case 'manukau_offshore'
+    tstation={'Manukau_Offshore'};
+    lat_obss=-37; lon_obss=174.7; % inside the harbour
+    lat_obss=-37.090152; lon_obss=174.399278;
+
+  case 'graveyard_hills'
+    tstation={'Graveyard_Hills'};
+    lat_obss=-42.7607; lon_obss=180.0107;
+
+  case 'cyclone_tam'
+    tstation={'Omaha'};
+    lat_obss=-36.262025; lon_obss=174.921148;
+
+  case 'kaitorete' % 
+    tstation={'Kaitorete_onshore','Kaitorete_offshore_S','Kaitorete_offshore_SE'};
+    lat_obss=[-43.910   , -45.569125, -45.237322 ]; 
+    lon_obss=[172.549597, 172.611898, 173.951905];
+
+
 end
-
-
-
 
 
 
