@@ -8,14 +8,14 @@ time_lima=datenum(1983,1,1,0,0,0):1:datenum(1984,12,31,0,0,0); % Gr
 %time_lima=datenum(1992,2,29,0,0,0):1:datenum(1992,2,29,0,0,0); %
 %time_lima=datenum(2014,01,01,0,0,0):1:datenum(2014,12,31,0,0,0);
 %time_lima=datenum(2015,01,01,0,0,0):1:datenum(2015,12,31,0,0,0);
-%time_lima=datenum(2023,1,1,0,0,0):1:datenum(2023,12,31,0,0,0); 
+time_lima=datenum(2023,1,1,0,0,0):1:datenum(2023,12,31,0,0,0); 
 %time_lima=datenum(2020,12,1,0,0,0):1:datenum(2020,12,31,0,0,0); 
 %time_lima=datenum(2022,1,1,0,0,0):1:datenum(2022,12,31,0,0,0); 
 
 path_ou='/scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/ERA5/';
 path_in=path_ou; 
 
-vars=[2];
+vars=[1,2];
 
 % ERA5_siconc_y1985.nc
 % ERA5_u10_y1985.nc

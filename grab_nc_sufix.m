@@ -15,6 +15,7 @@ function [ig,ltime]=grab_nc_sufix(expt);
       elseif strncmp(expt,'NZWAVE-HR',9)
         ig=3;
         ltime=49;
+        %ltime=97;
       elseif strncmp(expt,'NZWAVE-ERA5',11)
         ig=5;
         ltime=25;

@@ -1,15 +1,18 @@
 clear
 close all
-run('/scale_wlg_persistent/filesets/home/santanarc/scripts/niwa/matlab/startup.m')
+%run('/scale_wlg_persistent/filesets/home/santanarc/scripts/niwa/matlab/startup.m')
+tic
 
 % Daily time
 time_lima=datenum(1985,1,1,0,0,0):1:datenum(1990,1,1,0,0,0); % Graham Harrington ECAN request on 18/09/2023
 %time_lima=datenum(1990,1,1,0,0,0):1:datenum(2014,12,31,0,0,0); % Graham Harrington ECAN request on 18/09/2023
 %time_lima=datenum(1992,2,29,0,0,0):1:datenum(1992,2,29,0,0,0); % Graham Harrington ECAN request on 18/09/2023
-time_lima=datenum(2014,01,01,0,0,0):1:datenum(2014,12,31,0,0,0); % Graham Harrington ECAN request on 18/09/2023
+time_lima=datenum(2004,12,01,0,0,0):1:datenum(2014,12,31,0,0,0); % Graham Harrington ECAN request on 18/09/2023
 %time_lima=datenum(2015,01,01,0,0,0):1:datenum(2015,12,31,0,0,0); % Graham Harrington ECAN request on 18/09/2023
-time_lima=datenum(2029,12,1,0,0,0):1:datenum(2030,12,31,0,0,0); % Graham Harrington ECAN request on 18/09/2023
-time_lima=datenum(2031,1,1,0,0,0):1:datenum(2100,12,30,0,0,0); % Graham Harrington ECAN request on 18/09/2023
+time_lima=datenum(2040,11,1,0,0,0):1:datenum(2079,12,31,0,0,0); % Graham Harrington ECAN request on 18/09/2023
+%time_lima=datenum(2094,1,1,0,0,0):1:datenum(2094,3,30,0,0,0); % Graham Harrington ECAN request on 18/09/2023
+%time_lima=datenum(2013,12,24,0,0,0):1:datenum(2013,12,29,0,0,0); % climate projections
+%time_lima=datenum(2008,6,1,0,0,0):1:datenum(2008,10,29,0,0,0); % climate projections
 
 %/scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/projections/historical_proc/6hrly_global/wind/2014/wind_historical_GFDL-ESM4_CCAM_6hrly_Global_raw_2014121700.nc
 %Index exceeds the number of array elements (0).
@@ -22,18 +25,18 @@ time_lima=datenum(2031,1,1,0,0,0):1:datenum(2100,12,30,0,0,0); % Graham Harringt
 
 path_ou='/scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/projections/historical_proc/6hrly_global/';
 
-vars=[2];
+vars=[1,2];
 
-vnames   ={'ua/','sic/'}; % (ua for wind) always with /
+vnames   ={'ua/','sic/','psl/'}; % (ua for wind) always with /
 if time_lima(1)<datenum(2015,1,1)
-  prefixs  ={'ua_historical_','sic_historical_'}; % prior to 2015/01/01
+  prefixs  ={'ua_historical_','sic_historical_','psl_historical_'}; % prior to 2015/01/01
   path_in='/scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/projections/historical/6hrly_global/';
 else
-  prefixs  ={'ua_ssp370_','sic_ssp370_'};
+  prefixs  ={'ua_ssp370_','sic_ssp370_','psl_ssp370_'};
   path_in='/scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/projections/ssp370/6hrly_global/';
 end
-midfixs  ={'GFDL-ESM4_CCAM_' ,'GFDL-ESM4_CCAM_'};
-sufixs   ={'6hrly_Global_raw','6hrly_Global_raw'};
+midfixs  ={'GFDL-ESM4_CCAM_' ,'GFDL-ESM4_CCAM_' ,'GFDL-ESM4_CCAM_'};
+sufixs   ={'6hrly_Global_raw','6hrly_Global_raw','6hrly_Global_raw'};
 
 scrsz=[1 1 1366 768];
 scrsz=[2 42 958 953];
@@ -49,7 +52,6 @@ for vr=vars
   fname=[path_in,vname{1},prefix{1},midfix{1},sufix{1},'.nc'];
   display(['Loading: ',fname]);
   
-  
   % Loop in model time
   for t=time_lima
     vn=vname{1};
@@ -58,12 +60,12 @@ for vr=vars
     ftime=datestr(t,'YYYYmmDDHH');
   
     if t==time_lima(1)
-      display(['Reading lon, lat, time']); tic;
+      display(['Reading lon, lat, time']); 
       FillValue=ncreadatt(fname,vn(1:end-1),'_FillValue'); 
       lon=(ncread(fname,'lon'));
       lat=(ncread(fname,'lat'));
       timew=squeeze(double(ncread(fname,'time'))); 
-      if strcmp(prefix{1},'ua_historical_') || strcmp(prefix{1},'sic_historical_')
+      if strcmp(prefix{1},'ua_historical_') || strcmp(prefix{1},'sic_historical_') || strcmp(prefix{1},'psl_historical_')
         time_ini=datenum(1959,1,1); 
       else
         time_ini=datenum(2015,1,1); 
@@ -109,7 +111,6 @@ for vr=vars
 
     %display(['Processing times: ']) % ,num2str(timew(it)./(24*60)+time_ini)])
     %datevec(timewit./(24*60)+time_ini)
-  
  
     % need to create data for 2015/01/01 00:00
     %if td(:,1)==2014 & td(:,2)==12 & td(:,3)==31
@@ -117,7 +118,7 @@ for vr=vars
   
     if strcmp(prefix{1},'ua_historical_') || strcmp(prefix{1},'ua_ssp370_')
   
-      display(['Reading winds']); tic;
+      display(['Reading winds']); 
       fname=[path_in,vname{1},prefix{1},midfix{1},sufix{1},'.nc'];
       %fname=[path_in,'ua/','ua_historical_',midfix{1},sufix{1},'.nc'];
       ua=squeeze((ncread(fname,'ua', [1 1 1 it(1)],[Inf Inf Inf it(end)-it(1)+1]))); 
@@ -177,7 +178,7 @@ for vr=vars
   
     elseif strcmp(prefix{1},'sic_historical_') || strcmp(prefix{1},'sic_ssp370_')
   
-      display(['Reading sic']); tic;
+      display(['Reading sic']); 
       sic=squeeze((ncread(fname,'sic', [1 1 it(1)],[Inf Inf it(end)-it(1)+1]))); 
       sic=sic./100;
   
@@ -220,8 +221,55 @@ for vr=vars
   
       netcdf.close(ncid);
       
+    elseif strcmp(prefix{1},'psl_historical_') || strcmp(prefix{1},'psl_ssp370_')
+  
+      %display(['Reading psl']); tic;
+      sic=squeeze((ncread(fname,'psl', [1 1 it(1)],[Inf Inf it(end)-it(1)+1])));
+  
+      path_out=[path_ou,vname{1},ptime];
+      system(['mkdir -p ',path_out]); 
+      fda=[path_out,prefix{1},midfix{1},sufix{1},'_',ftime,'.nc'];
+      display(['Saving: ',fda]);
+  
+      if exist(fda)==2
+         system(['rm -rf ',fda]);
+      end
+
+      % creating nc and variables
+      ncid = netcdf.create(fda,'NETCDF4');
+      % time
+      dtime =  netcdf.defDim(ncid,'time',length(it));
+      varid = netcdf.defVar(ncid,'time','double',dtime);
+      netcdf.putVar(ncid,varid,timewit)
+      netcdf.putAtt(ncid,varid,'standard_name',"time");
+      netcdf.putAtt(ncid,varid,'calendar',"gregorian");
+      if strcmp(prefix{1},'psl_historical_') 
+        netcdf.putAtt(ncid,varid,'units',"minutes since 1959-01-01 00:00:00");
+      elseif strcmp(prefix{1},'psl_ssp370_')
+        netcdf.putAtt(ncid,varid,'units',"minutes since 2015-01-01 00:00:00");
+      end
+      % lon
+      dlon =  netcdf.defDim(ncid,'lon',length(lon));
+      varid = netcdf.defVar(ncid,'lon','double',dlon);
+      netcdf.putVar(ncid,varid,lon)
+      % lat
+      dlat =  netcdf.defDim(ncid,'lat',length(lat));
+      varid = netcdf.defVar(ncid,'lat','double',dlat);
+      netcdf.putVar(ncid,varid,lat)
+      % sic 
+      sicvar = netcdf.defVar(ncid,'psl','float', [dlon dlat dtime]);
+      netcdf.defVarFill(ncid,sicvar,false,FillValue);
+      netcdf.putVar(ncid,sicvar,sic)
+      netcdf.putAtt(ncid,sicvar,'standard_name',"air_pressure_at_sea_level");
+      netcdf.putAtt(ncid,sicvar,'units',"1");
+  
+      netcdf.close(ncid);
+      
     end % if strcmp(prefix
   
   end
 
 end
+
+toc
+

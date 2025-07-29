@@ -3,100 +3,166 @@ close_all=1;
 if close_all==1; close all; end
 warning off
 tic
+
+
+%/scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-ERA5/matlab/Mokohinau_1998043000_2004061000.mat
   
 % Daily time
-time_lima=datenum(1983,1,1,0,0,0):1:datenum(1983,3,31,0,0,0);    % hindcast
-%time_lima=datenum(1983,1,1,0,0,0):1:datenum(2002,12,31,0,0,0);    % hindcast
-time_lima=datenum(2014,1,1,0,0,0):1:datenum(2022,12,31,0,0,0);    % hindcast
-%time_lima=datenum(1996,1,1,0,0,0):1:datenum(2002,12,31,0,0,0);    % hindcast
+time_lima=datenum(1985,1,1,0,0,0):1:datenum(1993,12,31,0,0,0);    % 1-year 
+time_lima=datenum(1994,1,1,0,0,0):1:datenum(2003,12,31,0,0,0);    % 1-year 
+time_lima=datenum(2004,1,1,0,0,0):1:datenum(2013,12,31,0,0,0);    % 1-year 
+time_lima=datenum(2014,1,1,0,0,0):1:datenum(2023,12,31,0,0,0);    % 1-year 
+time_lima=datenum(2014,1,1,0,0,0):1:datenum(2016,12,31,0,0,0);    % 1-year 
+%time_lima=datenum(1984,1,1,0,0,0):1:datenum(2023,12,31,0,0,0);    % 40 years 
+time_lima=datenum(1984,1,1,0,0,0):1:datenum(1984,12,31,0,0,0);    % 40 years 
+time_lima=datenum(2004,1,1,0,0,0):1:datenum(2012,12,31,0,0,0);    % 1-year 
 
-%time_lima=datenum(2020,12,1,0,0,0):1:datenum(2020,12,15,0,0,0);  % 1-year experiments
-time_lima=datenum(2003,1,1,0,0,0):1:datenum(2005,12,31,0,0,0); %
+%time_lima=datenum(2023,1,1,0,0,0):1:datenum(2023,12,31,0,0,0);    % 1-year
+%time_lima=datenum(2021,1,1,0,0,0):1:datenum(2021,12,31,0,0,0);    % 1-year
+%time_lima=datenum(2018,1,31,0,0,0):1:datenum(2018,2,1,0,0,0);    % 1-year 
+%time_lima=datenum(2018,7,22,0,0,0):1:datenum(2018,7,24,0,0,0);    % Graham Harrington 
+
+time_lima=datenum(1984,1,1,0,0,0):1:datenum(2023,12,31,0,0,0);    % 40 years 
 
 %time_lima=datenum(2014,7,9,0,0,0):1:datenum(2014,9,3,0,0,0);     % initial date NZLAM hindcast
-%time_lima=datenum(2018,1,6,0,0,0):1:datenum(2023,11,15,0,0,0);   % Graham Harrington ECAN request on 18/09/2023
 
-%time_lima=datenum(2014,8,5,0,0,0):1:datenum(2014,8,17,0,0,0);    % 9-m wave event
-%time_lima=datenum(2018,1,20,0,0,0):1:datenum(2020,12,1,0,0,0);   % crossing between hindcast and ecoconnect
-%time_lima=datenum(2021,1,8,0,0,0):1:datenum(2021,1,15,0,0,0);    % Baring head wave direction, time series
-%time_lima=datenum(2021,1,13,0,0,0):1:datenum(2021,1,13,0,0,0);   % Baring head wave direction and currents, maps
-%time_lima=datenum(2021,5,20,0,0,0):1:datenum(2021,5,27,0,0,0);   % Baring Head tide and swell
-%time_lima=datenum(2021,10,19,0,0,0):1:datenum(2021,10,24,0,0,0); % Banks Peninsula head tide and swell
-%time_lima=datenum(2021,10,20,0,0,0):1:datenum(2021,10,22,0,0,0); % Banks Peninsula head tide and direction
-%time_lima=datenum(2021,10,1,0,0,0):1:datenum(2021,10,24,0,0,0);  % Banks Peninsula data assimilation
-%time_lima=datenum(2021,6,27,0,0,0):1:datenum(2021,7,2,0,0,0);    % Banks Peninsula data assimilation
+%time_lima=datenum(2018,1,6,0,0,0):1:datenum(2024,8,20,0,0,0); % NZWAVE-HR
+%time_lima=datenum(2005,1,1,0,0,0):1:datenum(2014,12,31,0,0,0);   % NZWAVE-GFDL-CCAM
+%time_lima=datenum(2005,1,1,0,0,0):1:datenum(2005,12,31,0,0,0);   % NZWAVE-GFDL-CCAM
+%time_lima=datenum(2005,12,5,0,0,0):1:datenum(2005,12,9,0,0,0);   % NZWAVE-GFDL-CCAM
+%time_lima=datenum(2005,12,10,0,0,0):1:datenum(2014,12,30,0,0,0);   % NZWAVE-GFDL-CCAM
 
-%time_lima=datenum(2029,12,1,0,0,0):1:datenum(2030,1,1,0,0,0); % climate projections
+%time_lima=datenum(2021,1,1,0,0,0):1:datenum(2021,12,31,0,0,0);    % 1-year
 
+%time_lima=datenum(2021,1,1,0,0,0):1:datenum(2021,1,3,0,0,0);    % test
+%time_lima=datenum(2002,1,15,0,0,0):1:datenum(2020,12,31,0,0,0);    % satellite L4 2002-01-15-2020-12-31.nc
+%time_lima=datenum(2002,1,15,0,0,0):1:datenum(2002,1,18,0,0,0);    % satellite L4 2002-01-15-2020-12-31.nc
+%time_lima=datenum(1995,12,01,0,0,0):1:datenum(1995,12,31,0,0,0);    % Mokohinau
+%time_lima=datenum(1998,4,30,0,0,0):1:datenum(2002,3,4,0,0,0);    % Mokohinau
+%time_lima=datenum(1999,1,1,0,0,0):1:datenum(1999,1,3,0,0,0);    % taharoa
+%time_lima=datenum(2003,3,1,0,0,0):1:datenum(2003,12,31,0,0,0);    % test
+%time_lima=datenum(2021,6,27,0,0,0):1:datenum(2021,7,1,0,0,0);    % largest wave event
+%time_lima=datenum(2022,2,13,0,0,0):1:datenum(2022,2,14,0,0,0);    % Blenheim
+%time_lima=datenum(2025,7,5,0,0,0):1:datenum(2025,7,14,0,0,0);    % Forecast change from maui to cascade
+%time_lima=datenum(2025,7,10,0,0,0):1:datenum(2025,7,10,0,0,0);    % Forecast change from maui to cascade
+
+%time_lima=datenum(2030,1,1,0,0,0):1:datenum(2039,12,31,0,0,0); % climate projections
+%%time_lima=datenum(2030,1,1,0,0,0):1:datenum(2039,12,31,0,0,0); % climate projections
+%%time_lima=datenum(2050,1,1,0,0,0):1:datenum(2069,12,31,0,0,0); % climate projections
+%time_lima=datenum(2080,1,1,0,0,0):1:datenum(2080,12,31,0,0,0); % climate projections
+%time_lima=datenum(2030,1,1,0,0,0):1:datenum(2099,12,31,0,0,0); % climate projections
+%time_lima=datenum(2005,1,1,0,0,0):1:datenum(2099,12,31,0,0,0); % climate projections
+%time_lima=datenum(2080,1,1,0,0,0):1:datenum(2091,1,1,0,0,0); % climate projections
+%time_lima=datenum(2052,7,9,0,0,0):1:datenum(2052,7,10,0,0,0); % climate projections
+
+
+
+files={'Banks_Peninsula','Baring_Head'            ,'wairewa_lake_forsyth','Pelorus_Sound'  ,'Taumutu',... 5 
+       'Mangawhai'      ,'BoP_leatherback_turtles','Hjort_Trench'        ,'Puysegur_Trench','Port_Waikato',... 10
+       'Blenheim'       ,'Mokohinau'              ,'Pukehina'            ,'Taharoa'        ,'Baring_Head_2025'}; ... 15
+
+% line below cannot be commented (variable used down there even if you are not analysing theese stations)
+scase='tairua'; % 'cyclone_tam'; % 'graveyard_hills'; %dixon-anderson'; % cant be commented (variable used down there even if not intended to be used)
+[tstation,lat_obss,lon_obss]=read_wave_stations(scase); % when no obs are available. it's used in data request for a group of stations
+%files=tstation; % comment this line if you dont want case studies from "scase"
+
+stations=1:length(files);
+%stations=[1,2,12,13,14]; % 0 = coastal stations (points)
 stations=[0]; % 0 = coastal stations (points)
-files={'Banks_Peninsula','Baring_Head','wairewa_lake_forsyth','Pelorus_Sound','Taumutu'};% 'SteepHead_SP_FullRecord_QC';
+stations=[15]; % 0 = coastal stations (points)
 
+runs=[2,15,16,14];
+runs=[14,16];
+runs=[1,2,5];
+%runs=[1];
 runs=[10];
-%runs=[3,13];
-%runs=[1:5];
-
 expt_names={'GLOBALWAVE'          ,'NZWAVE'             ,'NZWAVE-ST6'         ,'NZWAVE-HR-NOTIDES','NZWAVE-HR',... 5
             'GLOBALWAVE-GFDL-CCAM','NZWAVE-ST4-GLOBALUM','NZWAVE-ST6-GLOBALUM','NZWAVE-GFDL-CCAM' ,'NZWAVE-ERA5',...10
-            'GLOBALWAVE-ERA5'     ,'NZWAVE-ERA5-2021'   ,'NZWAVE-ST6-NZLAM'};            
-
-plot_series=0; % stations=0, plot_series=1, plot_coastm=1 to save the coastal points
+            'GLOBALWAVE-ERA5'     ,'NZWAVE-ERA5-2021'   ,'NZWAVE-ST6-NZLAM'   ,'NZWAVE-ST6-BOM'   ,'NZWAVE-ST6-DEFAULT',... 15
+            'NZWAVE-ST6-BOM-WCOR' ,}; % 20            
+% switches
+plot_series=1; % stations=0, plot_series=1, plot_coastm=1, plot_obs==0 to save the coastal points; plot_series=0, plot_coastm=1 to plot coastal points
 plot_rose  =0;
 plot_disp  =0;
 plot_eva   =0;
+plot_stats =0; % dispersion plots?
 
-plot_coastm=1; % statistical maps for coastal points
-plot_map   =0; % daily station maps
+plot_coastm=0; % statistical maps for coastal points % plot_series=0 and plot_coastm=1 to plot a coastal point
+plot_map   =0; % station maps with the model frequency
+plot_matm  =0; % matm = maps with atmospheric forcing
 plot_downs =0; % daily downscaled maps
 plot_mmap  =0; % mean model maps
 plot_mserie=0; % mean model series
 plot_amap  =0; % altimeter maps
 plot_aserie=0; % altimeter series
 
-plot_obs   =0;
-proc_obs   =0;
-ck_mod_mat =1;
+proc_obs   =1;
+ck_mod_mat =0;
+display_txt=1; % when loading data
+plot_obs   =0; % stations=0, plot_series=1, plot_coastm=1, plot_obs==0 to save the coastal points
+plot_mod   =1; % model data
+plot_harm  =0; % harmonic analysis
+plot_atm   =1; % plot atmospheric forcing
+plot_cycs  =0; % 1 all cyclones 2 = strong cyclones. plot cyclone initial and final dates onn the time series plot (plot_series)
 save_csv   =0;
+save_mat   =0;
 save_fig   =0;
 save_video =0;
 save_gif   =0;
 
 set_xlim   =1;
 obs_first  =0;
-add_stats  =1;
+add_stats  =0; % to legend
 portrait   =0;
 
-correct_model=0; % -1=scatter_kde, 0=binscatter, 1=nothing, >1 correct it
+interp_half_hour=1;
+correct_model=0 % -1=scatter_kde, 0=binscatter, 1=linear correction or nothing, >1 correct it (in development) 
+select_cpoint=0; % select one coastal point based on lon_c lat_c variables given below
 time_limab=time_lima;
 
 % series, rose, dispersion, eva
 
-dcol=[1,4,5,9]; %[6,1,2]; % Tp, Tm01, Tm02
-%dcol=[6,5,8,9]; %[6,1,2]; % Tp, Tm01, Tm02
-dcol=[6,1,2]; % Hs, Tp, dir
-%dcol=[6,1,8]; % Hs, Tp, dir
-dcol=[6]; % Hs, wlv
-%dcol=[6]; % Hs, wlv
+% variables to be plotted in the time series
+%NEVER CHANGE THIS ORDER
 % 1 {'PeakPerid'}   2 {'PeakDirection'}   3 {'Directional spread'}   4 {'Tm01'}   5 {'Tm02'}   6 {'Hs'}   7 {'Qp'}  8 Tm
 % 9 wlv 10 ucurr 11 vcurr
+dcol=[1,4,5]; % select variables from model data
+%dcol=[6,5,8,9]; %[6,1,2]; % Tp, Tm01, Tm02
+dcol=[6,2,1]; % Hs, wlv
+dcol=[9];
 
-% maps
+% maps of snapshots
 pcname ='hs'; % m_pcolor: wlv, hs, curr
 vecname='hs'; % m_vec: hs, curr
+conname='psl'; % m_contour: psl
 
-% mmaps
+% mmaps = model mean maps
 mcol=[1,3]; % selected variables from mvalm
 mvalm={'hs_m_mean','tp_m_mean','we_m_mean'}; 
 mvals={'hs_mean','tp_mean','we_mean'}; % 1=hs, 2=tp, 3=we
 
 % altimeter stats
-acol=[1:6];
-acol=[7:12];
+acol=[2]; % selected variables from avalm, avals, ovalm
+%acol=[7:12];
+%series
+crop_l4=0;
 avals={'hs_mean_rmse','hs_maxi_rmse','hs_mean_bias','hs_maxi_bias','hs_mean_corr','hs_maxi_corr',...
        'hs_mean_frmse','hs_maxi_frmse','hs_mean_fbias','hs_maxi_fbias','hs_mean_fcorr','hs_maxi_fcorr'};
+%maps
 avalm={'hs_mean_mrmse','hs_maxi_mrmse','hs_mean_mbias','hs_maxi_mbias','hs_mean_mcorr','hs_maxi_mcorr',... 
        'hs_mean_fmrmse','hs_maxi_fmrmse','hs_mean_fmbias','hs_maxi_fmbias','hs_mean_fmcorr','hs_maxi_fmcorr'}; % 
+% obs maps
+ovalm={'hs_mean_ostd','hs_maxi_ostd','hs_mean_omean','hs_maxi_omean','hs_mean_omax','hs_maxi_omax',... 
+       'hs_mean_ostd','hs_maxi_ostd','hs_mean_omean','hs_maxi_omean','hs_mean_omax','hs_maxi_omax'}; % 
 
-colors={'b','c','r','m','k','c'};
+
+if length(runs)==1
+  colors={'k','b'};
+elseif length(runs)==3
+	colors={'c','b','k'};
+else
+	colors={'c','r','m','b','k','c'};
+end
 
 for i=1:length(runs)
   expts{i}=expt_names{runs(i)};
@@ -105,7 +171,10 @@ end
 %sufixes in netcdf files
 gnames={'globalwave+globalum','nzwave+nzlam','nzwave_hr+nzcsm','tongawave+globalum','nzwave_era5'};
 
-path_source=['/scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/']; % GLOBALWAVE/'];%2018/01/05/00'];
+%path_source=['/scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/']; % GLOBALWAVE/'];%2018/01/05/00'];
+%path_source=['/silverdale/esi/research/project/niwa03150/santanarc/hindcast/']; % GLOBALWAVE/'];%2018/01/05/00'];
+path_source=['/esi/project/niwa03150/santanarc/hindcast/']; % GLOBALWAVE/'];%2018/01/05/00'];
+%path_source=['~/EFS/']; 
 path_santanarc='/scale_wlg_persistent/filesets/project/niwa03150/santanarc/';
 path_obs=[path_santanarc,'data/obs/'];
 path_fig='/scale_wlg_nobackup/filesets/nobackup/niwa03150/santanarc/figures/';
@@ -113,22 +182,6 @@ path_fig='/scale_wlg_nobackup/filesets/nobackup/niwa03150/santanarc/figures/';
 % stations or grids - stations are bad in Baring_Head
 ww3pre={'ww3p_interp','ww3g'};
 ww3pre=ww3pre{2};
-
-% Loading satellite obs
-if plot_aserie || plot_amap
-  atype='cmems_l4';
-  % cmems_l4  
-  if strcmp(atype,'cmems_l4')
-    path_cop='/scale_wlg_persistent/filesets/project/niwa03150/santanarc/data/copernicus-l4-wave-data/';
-    file_cop=[path_cop,'cmems_obs-wave_glo_phy-swh_my_multi-l4-2deg_P1D_multi-vars_143.00E-185.00E_53.00S-21.00S_2002-01-15-2020-12-31.nc'];
-    time_cop=ncread(file_cop,'time')+datenum('1950-01-01');
-    lon_cop=ncread(file_cop,'longitude');
-    lat_cop=ncread(file_cop,'latitude');
-    hs_cop_mean=ncread(file_cop,'VAVH_DAILY_MEAN');
-    hs_cop_maxi=ncread(file_cop,'VAVH_DAILY_MAX');
-  end
-
-end
 
 %fname=[pname,ww3pre,'_',ftime,'-utc_',gnames{ig},'.nc'];
 fname='/scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE/2021/01/01/00/ww3g_2021010100-utc_nzwave+nzlam.nc';
@@ -140,6 +193,85 @@ fname='/scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/NZWAVE-HR/2
 depth_hr=double(ncread(fname,'depth',[1 1 1],[Inf Inf 1]));
 lon_hr=double(ncread(fname,'lon'));
 lat_hr=double(ncread(fname,'lat'));
+
+% Loading satellite obs
+if plot_aserie || plot_amap || correct_model==2
+  atype='cmems_l4';
+  %atype='cmems_nrt';
+  atype='cmems_merged_2deg';
+  atype='cmems_l4_05deg';
+  % cmems_l4  
+  if strcmp(atype,'cmems_l4')
+    path_cop='/scale_wlg_persistent/filesets/project/niwa03150/santanarc/data/copernicus-l4-wave-data/';
+    file_cop=[path_cop,'cmems_obs-wave_glo_phy-swh_my_multi-l4-2deg_P1D_multi-vars_143.00E-185.00E_53.00S-21.00S_2002-01-15-2020-12-31.nc'];
+    time_cop=ncread(file_cop,'time')+datenum('1950-01-01');
+    lon_cop=ncread(file_cop,'longitude');
+    lat_cop=ncread(file_cop,'latitude');
+    hs_cop_mean=ncread(file_cop,'VAVH_DAILY_MEAN');
+    hs_cop_maxi=ncread(file_cop,'VAVH_DAILY_MAX');
+
+  elseif strcmp(atype,'cmems_nrt')
+    path_cop='/scale_wlg_persistent/filesets/project/niwa03150/santanarc/data/copernicus-2021-wave-data/';
+    file_cop=[path_cop,'cmems_obs-wave_glo_phy-swh_nrt_multi-l4-2deg_P1D_multi-vars_143.00E-185.00E_53.00S-21.00S_2021-01-01-2021-12-31.nc'];
+    %ncdisp(file_cop)
+    %return
+    time_cop=ncread(file_cop,'time')+datenum('1950-01-01');
+    lon_cop=ncread(file_cop,'longitude');
+    lat_cop=ncread(file_cop,'latitude');
+    hs_cop_mean=ncread(file_cop,'VAVH_DAILY_MEAN');
+    hs_cop_maxi=ncread(file_cop,'VAVH_DAILY_MAX');
+    % cropping l4 data for NZWAVE-HR area
+  elseif strcmp(atype,'cmems_merged_2deg')
+
+    path_cop='/scale_wlg_persistent/filesets/project/niwa03150/santanarc/data/copernicus-l4-wave-data/';
+    file_cop=[path_cop,'cmems_obs-wave_glo_phy-swh_my_multi-l4-2deg_P1D_multi-vars_143.00E-185.00E_53.00S-21.00S_2002-01-15-2020-12-31.nc'];
+    time_cop=ncread(file_cop,'time')+datenum('1950-01-01');
+    lon_cop=ncread(file_cop,'longitude');
+    lat_cop=ncread(file_cop,'latitude');
+    hs_cop_mean=ncread(file_cop,'VAVH_DAILY_MEAN');
+    hs_cop_maxi=ncread(file_cop,'VAVH_DAILY_MAX');
+
+    path_cop='/scale_wlg_persistent/filesets/project/niwa03150/santanarc/data/copernicus-2021-wave-data/';
+    file_cop=[path_cop,'cmems_obs-wave_glo_phy-swh_nrt_multi-l4-2deg_P1D_multi-vars_143.00E-185.00E_53.00S-21.00S_2021-01-01-2021-12-31.nc'];
+    time_cop2=ncread(file_cop,'time')+datenum('1950-01-01');
+    lon_cop2=ncread(file_cop,'longitude');
+    lat_cop2=ncread(file_cop,'latitude');
+    hs_cop_mean2=ncread(file_cop,'VAVH_DAILY_MEAN');
+    hs_cop_maxi2=ncread(file_cop,'VAVH_DAILY_MAX');
+
+    time_cop=cat(1,time_cop,time_cop2);
+    hs_cop_mean=cat(3,hs_cop_mean,hs_cop_mean2);
+    hs_cop_maxi=cat(3,hs_cop_maxi,hs_cop_maxi2);
+
+    clear time_cop2 lon_cop2 lat_cop2 hs_cop_mean2 hs_cop_maxi2
+    % cropping l4 data for NZWAVE-HR area
+
+
+  elseif strcmp(atype,'cmems_l4_05deg')
+    path_cop='/scale_wlg_persistent/filesets/project/niwa03150/santanarc/data/copernicus-l4-05deg-wave-data/';
+    file_cop=[path_cop,'cmems_obs-wave_glo_phy-swh_my_multi-l4-0.5deg_P1D-i_1746675133375.nc'];
+    time_cop=ncread(file_cop,'time')./(60*60*24)+datenum('1970-01-01');
+    lon_cop=ncread(file_cop,'longitude');
+    lat_cop=ncread(file_cop,'latitude');
+    hs_cop_mean=ncread(file_cop,'VAVH_INST');
+
+
+  end
+
+  [dif ilonc]=nanmin(abs(lon_cop-min(lon_hr))); [dif flonc]=nanmin(abs(lon_cop-max(lon_hr)));
+  [dif ilatc]=nanmin(abs(lat_cop-min(lat_hr))); [dif flatc]=nanmin(abs(lat_cop-max(lat_hr)));
+  if crop_l4
+    lon_cop=lon_cop(ilonc:flonc);
+    lat_cop=lat_cop(ilatc:flatc);
+    hs_cop_mean=hs_cop_mean(ilonc:flonc,ilatc:flatc,:);
+	  hs_cop_maxi=hs_cop_maxi(ilonc:flonc,ilatc:flatc,:);
+  end
+
+  [lon_copm,lat_copm]=meshgrid(lon_cop,lat_cop);
+
+  time_cop=time_cop+0.5; % wave data is centered at 12UTC (noon) % https://data.marine.copernicus.eu/product/WAVE_GLO_PHY_SWH_L4_MY_014_007/description
+
+end
 
 if plot_downs %|| plot_coastm
 %if plot_map || plot_mmap || plot_downs || plot_coastm
@@ -158,32 +290,86 @@ if plot_downs %|| plot_coastm
 
 end
 
+if plot_matm
 
-if plot_coastm || stations==0
+  path_ssp='/scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/projections/historical_proc/6hrly_global/';
+  file_ssp='psl_ssp370_GFDL-ESM4_CCAM_6hrly_Global_raw_2030033000.nc';
+  file_ssp=[path_ssp,'psl/2030/',file_ssp];
+  lon_ssp=ncread(file_ssp,'lon');
+  lat_ssp=ncread(file_ssp,'lat');
+  [lon_sspm,lat_sspm]=meshgrid(lon_ssp,lat_ssp);
+  
+end
+
+if plot_cycs>=1
+
+  if plot_cycs==1
+
+    % reading track file
+    path_tr='/scale_wlg_persistent/filesets/project/niwa03150/santanarc/data/ccam_cyclone_tracks/tracks/ssp370/GFDL-ESM4/';
+    file_tr=[path_tr,'cyclone_traj_GFDL-ESM4_2015_2099_TCs'];
+    tr=importdata([file_tr,'.csv']);
+    time_tr=datenum(tr.data(:,2),tr.data(:,3),tr.data(:,4),tr.data(:,5),0,0);
+    id_tr=tr.data(:,1);
+
+
+  end
+
+
+  if plot_cycs==2
+
+    % reading track file
+    path_tr='/scale_wlg_persistent/filesets/project/niwa03150/santanarc/data/ccam_cyclone_tracks/maxes/';
+    if time_lima(1)<datenum(2015,1,1)
+      file_tr=[path_tr,'GFDL-ESM4_historical_nz_maxes_1985_2014'];
+    else
+      file_tr=[path_tr,'GFDL-ESM4_ssp370_nz_maxes_2070_2099'];
+    end
+    tr=importdata([file_tr,'.csv']);
+    tr.textdata(1,:);
+    for i=2:length(tr.textdata)
+      time_tr(i-1)=datenum(tr.textdata{i,4},'YYYY-mm-ddTHH:MM:SS.000000000');
+      id_tr(i-1)=str2num(tr.textdata{i,2});
+    end
+
+  end
+ 
+end
+
+
+
+if plot_coastm || stations(1)==0
 
   % finding the closest points to the coast
-  np=1; % number of the closest points 
+  np=4; % 4 number of the closest points 
   xl=[390,605]; yl=[180,520];
-  xl=[390,700]; yl=[180,520]; % including the Chatam Islands
+  %xl=[390,700]; yl=[180,520]; % including the Chatham Islands
+  %xl=[460,540]; yl=[240,326]; % only Canterbury coast
   dep=depth_mod(xl(1):xl(2),yl(1):yl(2));
+  %figure; hold on; imagesc(dep'); colorbar; caxis([0 50]);  return
 
   % finding y points in the x direction
+  jumpc=3;
   k=0;
-  for i=1:size(dep,1)
+  for i=1:jumpc:size(dep,1)
     [ngap,igap,fgap,sizegap] = findgap(dep(i,:)');
     if ngap>0
       for j=1:ngap; k=k+1;
-        points=[igap(j)-np:igap(j)-1,fgap(j)+1:fgap(j)+np];
+        %points=[igap(j)-np:igap(j)-1,fgap(j)+1:fgap(j)+np]; % from the coast to the np closest points
+        points=[igap(j)-np,fgap(j)+np]; % just the np closest points
+        %points=[fgap(j)+np]; % just the np closest points
         yp(k).p=points;
         xp(k).p(1:length(points))=i;
         end; end; end
   % finding x points in the y direction
   k=0;
-  for i=1:size(dep,2)
+  for i=1:jumpc:size(dep,2)
     [ngap,igap,fgap,sizegap] = findgap(dep(:,i));
     if ngap>0
       for j=1:ngap; k=k+1;
-        points=[igap(j)-np:igap(j)-1,fgap(j)+1:fgap(j)+np];
+        %points=[igap(j)-np:igap(j)-1,fgap(j)+1:fgap(j)+np];
+        points=[igap(j)-np,fgap(j)+np];
+        %points=[fgap(j)+np];
         xpp(k).p=points;
         ypp(k).p(1:length(points))=i;
         end; end; end
@@ -201,8 +387,104 @@ if plot_coastm || stations==0
   % cleaning repeated pair of points
 	points=[xpoints',ypoints'];
   points=unique(points,'rows');
+  % adding the initial xl and yl points
   points(:,1)=points(:,1)+xl(1)-1;
   points(:,2)=points(:,2)+yl(1)-1;
+
+  % removing points too close to the coast
+  rm_closep=1;
+  if rm_closep==1
+    ik=[];
+    for i=1:length(points)
+      npp=1; % 1 is remove less than 2		
+      %depsq=depth_mod(points(i,1)-np+2:points(i,1)+np-2,points(i,2)-np+2:points(i,2)+np-2);
+      depsq=depth_mod(points(i,1)-npp:points(i,1)+npp,points(i,2)-npp:points(i,2)+npp);
+    	if sum(isnan(depsq(:)))>0
+        ik=[ik;i]; 
+      end   
+    end	
+	  points(ik,:)=[];
+  end
+
+  % extra manual points
+  if np==4 & npp==2 & jumpc==1 
+    
+		xpoints=[451 285;426 270;479 328;491 354;493 357;495 357;454 203;459 209;460 211;484 259;511 280;553 330;588 388;599 403;
+             604 434;561 439;510 517;500 516;520 395;521 381;528 374];
+    points=[points;xpoints];
+  elseif np==4 & npp==1 & jumpc==3
+    
+		xpoints=[451 285;426 270;479 328;491 354;493 357;495 357;454 203;459 209;460 211;484 259;511 280;553 330;588 388;599 403;
+             604 434;561 439;510 517;500 516;520 395;521 381;528 374;511 269;549 475;559 458];
+    points=[points;xpoints];
+  end
+  % cleaning repeated pair of points
+  points=unique(points,'rows');
+
+  selected_coastal_points=1;
+
+  if selected_coastal_points==1;
+    points=load('canterbury_coastal_points.txt');
+    points=flipud(points);
+    pointsa=load('canterbury_coastal_points_all.txt');
+    clatlon=load('canterbury_coastal_latlon.txt');
+    [lon_modm,lat_modm]=meshgrid(lon_mod,lat_mod); lon_modm=lon_modm'; lat_modm=lat_modm';
+    i50=find(depth_mod>49 & depth_mod<55);
+  end
+
+  %return
+  %points=points(1:3,:)
+
+  plot_selected_coastal_points=0;
+
+  if plot_selected_coastal_points==1;
+    figure('position',[2    50   958   945])
+    hold on; 
+    imagesc(lon_mod,lat_mod,depth_mod'); shading flat; colorbar; caxis([0 1000])
+    contour(lon_mod,lat_mod,depth_mod',[0 0],'k');
+    %plot(lon_modm(i50),lat_modm(i50),'.r','markersize',10); 
+    plot(clatlon(:,2),clatlon(:,1),'.m','markersize',10); 
+    plot(lon_mod(pointsa(:,1)),lat_mod(pointsa(:,2)),'.','color',[0 .7 0],'markersize',10);
+    plot(lon_mod(points(:,1)),lat_mod(points(:,2)),'.k','markersize',10); 
+    for i=1:length(points); text(lon_mod(points(i,1)),lat_mod(points(i,2)),num2str(i),'color',[0 0 0],'fontsize',10); end
+    xlim([170 175]); ylim([-46 -40])
+    %imagesc(depth_mod'); shading flat; colorbar; caxis([0 100])
+    %contour(depth_mod',[50 50],'r');
+    %plot((points(:,1)),(points(:,2)),'.k','markersize',30); xlim([xl(1) xl(2)]); ylim([yl(1) yl(2)])
+
+
+    figure('color',[1 1 1],'position',[9    50   768   945])
+    gx = geoaxes;
+    geobasemap(gx,'streets-light')% 'grayland')%'streets-light'); %
+    %'darkwater', 'grayland', 'bluegreen', 'grayterrain', 'colorterrain', 'landcover', 'streets', 'streets-light', 'streets-dark', 'satellite', 'topographic', 'none'
+    geolimits(gx,[-45.2 -41.6],[171 174.2])  
+    set(gx,'fontsize',12,'fontweight','bold')
+    hold on
+    geoscatter(gx,clatlon(:,1),clatlon(:,2),'Marker','o','MarkerFaceColor',[.7 0 .7], 'MarkerEdgeColor','black')%,'MarkerSize',10); 
+    %geoplot(clatlon(:,1),clatlon(:,2),'Marker','o','MarkerFaceColor','magenta', 'MarkerEdgeColor','black','MarkerSize',10);
+    geoscatter(gx,lat_mod(points(:,2)),lon_mod(points(:,1)),'Marker','o','MarkerFaceColor',[0 .7 0], 'MarkerEdgeColor','black'); 
+    geoscatter(gx,-43.7567,173.3358,'Marker','o','MarkerFaceColor',[0 0 1], 'MarkerEdgeColor','black'); 
+    text(-43.7567,173.3358+0.05,'Wave buoy','color',[0 0 0],'fontsize',10,'fontweight','bold');
+
+    for i=1:length(points); text(lat_mod(points(i,2)),lon_mod(points(i,1))+0.05,num2str(i),'color',[0 0 0],'fontsize',10,'fontweight','bold'); end
+    for i=1:length(clatlon); text(clatlon(i,1),clatlon(i,2)-0.12,num2str(i),'color',[0 0 0],'fontsize',8,'fontweight','bold'); end
+
+    path_dm=strcat(path_fig,'ECAN/');
+    system(['mkdir -p ',path_dm]);
+    figname=[path_dm,'ECAN_coastal_stations_jp_map'];
+    display(['Plotting: ',figname]);
+    if save_fig==1
+      display(['Saving: ',figname]);
+      export_fig(gcf,[figname,'.png'],'-png','-r150');
+      saveas(gcf,[figname,'.fig'],'fig')
+      %close
+      %clf('reset')
+    end
+
+    return
+
+  end
+
 
   % selecting from spectral points
   spec_points=0;
@@ -221,20 +503,57 @@ if plot_coastm || stations==0
     figure; hold on; plot(lon_spe(c,1),lat_spe(c,1),'.'); xlim([165 180]); ylim([-50 -30])
 	end
 
+  % selected coastal point 
+  lon_c=174.921148; % Omaha
+  lat_c=-36.262025;
+  if select_cpoint
+    [dis]=sqrt((lon_mod(points(:,1))-lon_c).^2 + (lat_mod(points(:,2))-lat_c).^2);
+    [dif iloc]=nanmin(abs(dis));
+  end
 
 end
 
 lon_obss=[]; lat_obss=[];
 
+
 if plot_coastm==1 & plot_series==0
 	stations=1:length(points);
+  if select_cpoint
+   	stations=iloc;
+  end
 end
 
-return
+
+write_coastal_points_nc=0;
+if write_coastal_points_nc==1;
+
+  path_expt=[path_source,'NZWAVE-ERA5/']; 
+  path_dm=[path_expt,'matlab/'];
+  system(['mkdir -p ',path_dm]);
+  filename=[path_dm,'nzwave_coastal_points_np_',num2str(np),'_jump_',num2str(jumpc),'_removing_',num2str(npp),'.nc'];
+  display(['Saving: ',filename])
+  if exist(filename)==2
+   system(['rm -rf ',filename]);
+  end
+  
+  lon_points=lon_mod(points(:,1)); lat_points=lat_mod(points(:,2));
+  coastal_points=points;
+  
+  nccreate(filename,'lon_points','Dimensions',{'lon_points',length(lon_points)},'Datatype','double','Format','classic');
+  ncwrite(filename,'lon_points',lon_points);
+  nccreate(filename,'lat_points','Dimensions',{'lat_points',length(lat_points)},'Datatype','double','Format','classic');
+  ncwrite(filename,'lat_points',lat_points);
+  nccreate(filename,'coastal_points','Dimensions',{'lon_points',length(lon_points),'pair_ij',2},'Datatype','double','Format','classic');
+  ncwrite(filename,'coastal_points',coastal_points);
+
+  return
+
+end
+
 
 % biggest loop on stations
 for fobs=stations
-  
+    
   % OBS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   if plot_coastm==1 & plot_series==0
     file=['i',num2str(points(fobs,1)),'_j',num2str(points(fobs,2)),'_grid_point_'];
@@ -245,14 +564,19 @@ for fobs=stations
     file=files{fobs};
     file=replace(file,' ','_');
     file_obs=[path_obs,file];
-    [obs,time_obs,lon_obs,lat_obs]=proc_wave_obs(file,proc_obs); %,plot_obs);   
+    [obs,time_obs,lon_obs,lat_obs]=proc_wave_obs(file,proc_obs,time_lima,scase); %,plot_obs);   
   end
   
   if plot_series
-  
-    scrsz=[1 1 1366 768];
-    %scrsz=get(0,'screensize');
-    
+   
+    if portrait
+      scrsz=[2    42   958   953];
+    else
+      scrsz=[1 41 1920 962];
+      %scrsz=[1 1 1366 768];
+      %scrsz=get(0,'screensize');
+    end
+ 
     if close_all==1; figure('position',scrsz,'color',[1 1 1],'visible','on'); end
     hold on
     set(gca,'fontsize',12,'fontweight','bold')
@@ -271,220 +595,274 @@ for fobs=stations
       [ig,ltime]=grab_nc_sufix(expt);
     
       path_expt=[path_source,expt,'/']; % GLOBALWAVE/'];%2018/01/05/00'];
-      
       path_dm=[path_expt,'matlab/'];
       system(['mkdir -p ',path_dm]);
       %filename=[path_dm,file,'_',datestr(time_lima(1),'YYYYmmDDHH'),'_',datestr(time_lima(end),'YYYYmmDDHH'),'.mat'];
       hs_mod=[];tp_mod=[]; pd_mod=[];time_mod=[];
-      tm01_mod=[];tm_mod=[]; pd_mod=[]; we_mod=[];
+      tm01_mod=[];tm_mod=[]; md_mod=[]; we_mod=[];
       tm02_mod=[];ds_mod=[]; wlv_mod=[];time_mod=[];
       ucur_mod=[];vcur_mod=[]; 
 
-      checkin=0;  
-      % Loop in model time
-      for t=time_lima
-        %tic
-        if plot_coastm==1 & plot_series==0 % plot_series=0 needed to save the coastal points
-          file=['i',num2str(points(fobs,1)),'_j',num2str(points(fobs,2)),'_grid_point_'];
-        elseif plot_coastm==1 & plot_series==1
-          file=['bla'];
-          %file=['i',num2str(points(fobs,1)),'_j',num2str(points(fobs,2)),'_grid_point_'];
-        else
-          file=files{fobs};
-          file=replace(file,' ','_');
-          file_obs=[path_obs,file];
-          [obs,time_obs,lon_obs,lat_obs]=proc_wave_obs(file,proc_obs); %,plot_obs);   
-        end
-        filename=[path_dm,file,'_',datestr(t,'YYYYmmDDHH'),'.mat'];
-    
-        if ck_mod_mat==1 && exist(filename)==2
-          display(['Loading: ',filename])
-          load(filename)%,'time_mod','model')
-          if exist('ucur','var')~=1
-            wlv=nan(size(hs)); ucur=nan(size(hs)); vcur=nan(size(hs));
-          end 
- 
-        elseif fobs==0 %plot_coastm==1
+      % checking if the whole time series is saved as matlab file
+      filename=[path_dm,file,'_',datestr(time_lima(1),'YYYYmmDDHH'),'_',datestr(time_lima(end),'YYYYmmDDHH'),'.mat'];
+      if ck_mod_mat==1 && exist(filename)==2
 
-          ptime=datestr(t,'YYYY/mm/DD/HH/');
-          ftime=datestr(t,'YYYYmmDDHH');
-          pname=[path_expt,ptime];
-          fname=[pname,ww3pre,'_',ftime,'-utc_',gnames{ig},'.nc'];
-          display(['Loading: ',fname]);
+        disp(['Loading: ',filename]); % loading long timeseries rather than daily files
+        load(filename); % loading long timeseries rather than daily files
 
-          if checkin==0; % t==time_lima(1)
-            checkin=1; 
-            lon_mod=double(ncread(fname,'lon'));
-            lat_mod=double(ncread(fname,'lat'));
+      else
+
+        checkin=0;  
+        % Loop in model time
+        for t=time_lima
+          %tic
+          if plot_coastm==1 & plot_series==0 % plot_series=0 needed to save the coastal points
+            file=['i',num2str(points(fobs,1)),'_j',num2str(points(fobs,2)),'_grid_point_'];
+          elseif plot_coastm==1 & plot_series==1
+            file=['bla'];
+            %file=['i',num2str(points(fobs,1)),'_j',num2str(points(fobs,2)),'_grid_point_'];
+          elseif ke==1 & t==time_lima(1)
+            %file=files{fobs};
+            %file=replace(file,' ','_');
+            %file_obs=[path_obs,file];
+            %[obs,time_obs,lon_obs,lat_obs]=proc_wave_obs(file,proc_obs); %,plot_obs);   
           end
 
-         	stations=1:length(points);
-          for fobss=stations
-            %tic; 
+          filename=[path_dm,file,'_',datestr(t,'YYYYmmDDHH'),'.mat'];
+    
+          if ck_mod_mat==1 && exist(filename)==2
+            if display_txt==1; display(['Loading: ',filename]); end
+            load(filename)%,'time_mod','model')
+            if exist('ucur','var')~=1
+              wlv=nan(size(hs)); ucur=nan(size(hs)); vcur=nan(size(hs));
+              we=nan(size(hs)); ucur=nan(size(hs)); vcur=nan(size(hs));
+            end 
+ 
+          elseif fobs==0 %plot_coastm==1, working on the coastal points
 
-            file=['i',num2str(points(fobss,1)),'_j',num2str(points(fobss,2)),'_grid_point_'];
-            filename=[path_dm,file,'_',datestr(t,'YYYYmmDDHH'),'.mat'];
-            display(['Checking: ',filename])
+            ptime=datestr(t,'YYYY/mm/DD/HH/');
+            ftime=datestr(t,'YYYYmmDDHH');
+            pname=[path_expt,ptime];
+            fname=[pname,ww3pre,'_',ftime,'-utc_',gnames{ig},'.nc'];
+            display(['Loading: ',fname]);
 
-            if ck_mod_mat==0 || exist(filename)~=2
+            if checkin==0; % t==time_lima(1)
+              checkin=1; 
+              lon_mod=double(ncread(fname,'lon'));
+              lat_mod=double(ncread(fname,'lat'));
+            end
 
-              lon_obs=lon_mod(points(fobss,1));
-						  lat_obs=lat_mod(points(fobss,2));
+           	stations=1:length(points);
+            for fobss=stations
+              %tic; 
+
+              file=['i',num2str(points(fobss,1)),'_j',num2str(points(fobss,2)),'_grid_point_'];
+              filename=[path_dm,file,'_',datestr(t,'YYYYmmDDHH'),'.mat'];
+              %display(['Checking: ',filename])
+
+              if ck_mod_mat==0 || exist(filename)~=2
+
+                lon_obs=lon_mod(points(fobss,1));
+			  			  lat_obs=lat_mod(points(fobss,2));
+                [dif ilon]=nanmin(abs(lon_mod-lon_obs));
+                [dif ilat]=nanmin(abs(lat_mod-lat_obs));
+                dis=sqrt((lon_mod(ilon)-lon_obs).^2 + (lat_mod(ilat)-lat_obs).^2)*111;
+                %display(['Distance between obs ',file,' and grid point is: ',num2str(dis),' km'])
+            
+                time=squeeze(double(ncread(fname,'time')))./24+t; time=time(1:ltime-1);
+                if strncmp(ww3pre,'ww3p',4)
+                elseif strncmp(ww3pre,'ww3g',4)
+                  hs=squeeze(double(ncread(fname,'hsig',          [ilon ilat 1],[1 1 ltime]))); hs=hs(1:end-1);
+                  tp=squeeze(double(ncread(fname,'tpeak',         [ilon ilat 1],[1 1 ltime]))); tp=tp(1:end-1);
+                  %tm01=squeeze(double(ncread(fname,'tmean01',     [ilon ilat 1],[1 1 ltime]))); tm01=tm01(1:end-1);
+                  %tm02=squeeze(double(ncread(fname,'tmean02',     [ilon ilat 1],[1 1 ltime]))); tm02=tm02(1:end-1);
+                  tm=squeeze(double(ncread(fname,'tmean',         [ilon ilat 1],[1 1 ltime]))); tm=tm(1:end-1);
+                  pd=squeeze(double(ncread(fname,'peak_direction',[ilon ilat 1],[1 1 ltime]))); pd=pd(1:end-1);
+                  %ds=squeeze(double(ncread(fname,'directional_spread',[ilon ilat 1],[1 1 ltime]))); ds=ds(1:end-1);
+                  md=squeeze(double(ncread(fname,'mean_direction',[ilon ilat 1],[1 1 ltime]))); md=md(1:end-1);
+                  %if strcmp(expt,'NZWAVE-HR')
+                  %  wlv=squeeze(double(ncread(fname,'wlv',          [ilon ilat 1],[1 1 ltime-1]))); 
+                  %  model(ke).wlv=wlv;
+                  %  ucur=squeeze(double(ncread(fname,'ucur',        [ilon ilat 1],[1 1 ltime-1]))); 
+                  %  model(ke).ucur=ucur;
+                  %  vcur=squeeze(double(ncread(fname,'vcur',        [ilon ilat 1],[1 1 ltime-1]))); 
+                  %  model(ke).vcur=vcur;
+                  %else
+                  %  wlv=nan(size(hs));
+                  %  ucur=nan(size(hs));
+                  %  vcur=nan(size(hs));
+                  %end
+                end % if strncmp(ww3pre,'ww3p',4)
+                %wave energy (we) = (1/16)*rho*g*(hs.^2); % https://www.coastalwiki.org/wiki/Shallow-water_wave_theory#Introduction
+                we=(1/16)*1025*9.8*(hs.^2);    
+
+                display(['Saving:   ',filename])
+                save(filename,'time','tp','hs','pd','tm','md')%,'ds','tm01','tm02','pd','tm','wlv','ucur','vcur','we')
+              end %if ck_mod_mat==0 || exist(filename)~=2
+              %toc
+            end % for fobss=stations
+        
+          else
+
+            ptime=datestr(t,'YYYY/mm/DD/HH/');
+            ftime=datestr(t,'YYYYmmDDHH');
+          
+            pname=[path_expt,ptime];
+          
+            fname=[pname,ww3pre,'_',ftime,'-utc_',gnames{ig},'.nc'];
+            %fname=[pname,'ww3g_',ftime,'-utc_',gnames{1},'.nc'];
+            display(['Loading: ',fname]);
+    
+            if checkin==0; % t==time_lima(1)
+              checkin=1; 
+              lon_mod=double(ncread(fname,'lon'));
+              lat_mod=double(ncread(fname,'lat'));
+              % coastal points
+              if plot_coastm==1
+                lon_obs=lon_mod(points(fobs,1));
+			  				lat_obs=lat_mod(points(fobs,2));
+              end
               [dif ilon]=nanmin(abs(lon_mod-lon_obs));
               [dif ilat]=nanmin(abs(lat_mod-lat_obs));
-              dis=sqrt((lon_mod(ilon)-lon_obs).^2 + (lat_mod(ilat)-lat_obs).^2)*111;
-              %display(['Distance between obs ',file,' and grid point is: ',num2str(dis),' km'])
-          
-              time=squeeze(double(ncread(fname,'time')))./24+t; time=time(1:ltime-1);
-              if strncmp(ww3pre,'ww3p',4)
-              elseif strncmp(ww3pre,'ww3g',4)
-                hs=squeeze(double(ncread(fname,'hsig',          [ilon ilat 1],[1 1 ltime]))); hs=hs(1:end-1);
-                tp=squeeze(double(ncread(fname,'tpeak',         [ilon ilat 1],[1 1 ltime]))); tp=tp(1:end-1);
-                %tm01=squeeze(double(ncread(fname,'tmean01',     [ilon ilat 1],[1 1 ltime]))); tm01=tm01(1:end-1);
-                %tm02=squeeze(double(ncread(fname,'tmean02',     [ilon ilat 1],[1 1 ltime]))); tm02=tm02(1:end-1);
-                %tm=squeeze(double(ncread(fname,'tmean',         [ilon ilat 1],[1 1 ltime]))); tm=tm(1:end-1);
-                pd=squeeze(double(ncread(fname,'peak_direction',[ilon ilat 1],[1 1 ltime]))); pd=pd(1:end-1);
-                %ds=squeeze(double(ncread(fname,'directional_spread',[ilon ilat 1],[1 1 ltime]))); ds=ds(1:end-1);
-                if strcmp(expt,'NZWAVE-HR')
-                  wlv=squeeze(double(ncread(fname,'wlv',          [ilon ilat 1],[1 1 ltime-1]))); 
-                  model(ke).wlv=wlv;
-                  ucur=squeeze(double(ncread(fname,'ucur',        [ilon ilat 1],[1 1 ltime-1]))); 
-                  model(ke).ucur=ucur;
-                  vcur=squeeze(double(ncread(fname,'vcur',        [ilon ilat 1],[1 1 ltime-1]))); 
-                  model(ke).vcur=vcur;
-                else
-                  wlv=nan(size(hs));
-                  ucur=nan(size(hs));
-                  vcur=nan(size(hs));
-                end
+    
+              if strcmp(file,'SteepHead_SP_FullRecord_QC')
+                %ilon=ilon+3;
+              elseif strcmp(file,'wairewa_lake_forsyth') & ig==2 % NZWAVE
+                ilat=ilat-2;
               end
-              %wave energy (we) = (1/16)*rho*g*(hs.^2); % https://www.coastalwiki.org/wiki/Shallow-water_wave_theory#Introduction
-              we=(1/16)*1025*9.8*(hs.^2);    
-
-              display(['Saving:   ',filename])
-              save(filename,'time','tp','hs','pd')%,'ds','tm01','tm02','pd','tm','wlv','ucur','vcur','we')
-            end %if ck_mod_mat==0 || exist(filename)~=2
-            %toc
-          end % for fobss=stations
-      
-        else
-
-          ptime=datestr(t,'YYYY/mm/DD/HH/');
-          ftime=datestr(t,'YYYYmmDDHH');
-        
-          pname=[path_expt,ptime];
-        
-          fname=[pname,ww3pre,'_',ftime,'-utc_',gnames{ig},'.nc'];
-          %fname=[pname,'ww3g_',ftime,'-utc_',gnames{1},'.nc'];
-          display(['Loading: ',fname]);
-    
-          if checkin==0; % t==time_lima(1)
-            checkin=1; 
-            lon_mod=double(ncread(fname,'lon'));
-            lat_mod=double(ncread(fname,'lat'));
-            % coastal points
-            if plot_coastm==1
-              lon_obs=lon_mod(points(fobs,1));
-							lat_obs=lat_mod(points(fobs,2));
+              ilon, ilat
+              dis=sqrt((lon_mod(ilon)-lon_obs).^2 + (lat_mod(ilat)-lat_obs).^2)*111;
+              display(['Distance between obs ',file,' and grid point is: ',num2str(dis),' km'])
+            end % if checkin==0;
+            
+            time=squeeze(double(ncread(fname,'time')))./24+t; time=time(1:ltime-1);
+            if strncmp(ww3pre,'ww3p',4)
+              hs=squeeze(double(ncread(fname,'hsig',          [ilon 1],[1 ltime]))); hs=hs(1:end-1)';
+              tp=squeeze(double(ncread(fname,'tpeak',         [ilon 1],[1 ltime]))); tp=tp(1:end-1)';
+              tm01=squeeze(double(ncread(fname,'tmean01',     [ilon 1],[1 ltime]))); tm01=tm01(1:end-1)';
+              tm=squeeze(double(ncread(fname,'tmean',         [ilon 1],[1 ltime]))); tm=tm(1:end-1)';
+              pd=squeeze(double(ncread(fname,'peak_direction',[ilon 1],[1 ltime]))); pd=pd(1:end-1)';
+            elseif strncmp(ww3pre,'ww3g',4)
+              hs=squeeze(double(ncread(fname,'hsig',          [ilon ilat 1],[1 1 ltime]))); hs=hs(1:end-1);
+              tp=squeeze(double(ncread(fname,'tpeak',         [ilon ilat 1],[1 1 ltime]))); tp=tp(1:end-1);
+              tm01=squeeze(double(ncread(fname,'tmean01',     [ilon ilat 1],[1 1 ltime]))); tm01=tm01(1:end-1);
+              tm02=squeeze(double(ncread(fname,'tmean02',     [ilon ilat 1],[1 1 ltime]))); tm02=tm02(1:end-1);
+              tm=squeeze(double(ncread(fname,'tmean',         [ilon ilat 1],[1 1 ltime]))); tm=tm(1:end-1);
+              pd=squeeze(double(ncread(fname,'peak_direction',[ilon ilat 1],[1 1 ltime]))); pd=pd(1:end-1);
+              md=squeeze(double(ncread(fname,'mean_direction',[ilon ilat 1],[1 1 ltime]))); md=md(1:end-1);
+              ds=squeeze(double(ncread(fname,'directional_spread',[ilon ilat 1],[1 1 ltime]))); ds=ds(1:end-1);
+              try
+                vinfo = ncinfo(fname, 'wlv'); wlv_exist=1;
+              catch; wlv_exist=0; disp('wlv not found');
+              end 
+              if wlv_exist==1; %strcmp(expt,'NZWAVE-HR')
+                wlv=squeeze(double(ncread(fname,'wlv',          [ilon ilat 1],[1 1 ltime-1]))); 
+                model(ke).wlv=wlv;
+                ucur=squeeze(double(ncread(fname,'ucur',        [ilon ilat 1],[1 1 ltime-1]))); 
+                model(ke).ucur=ucur;
+                vcur=squeeze(double(ncread(fname,'vcur',        [ilon ilat 1],[1 1 ltime-1]))); 
+                model(ke).vcur=vcur;
+              else
+                wlv=nan(size(hs));
+                ucur=nan(size(hs));
+                vcur=nan(size(hs));
+              end
             end
-            [dif ilon]=nanmin(abs(lon_mod-lon_obs));
-            [dif ilat]=nanmin(abs(lat_mod-lat_obs));
-    
-            if strcmp(file,'SteepHead_SP_FullRecord_QC')
-              %ilon=ilon+3;
-            elseif strcmp(file,'wairewa_lake_forsyth') & ig==2 % NZWAVE
-              ilat=ilat-2;
+            %wave energy (we) = (1/16)*rho*g*(hs.^2); % https://www.coastalwiki.org/wiki/Shallow-water_wave_theory#Introduction
+            we=(1/16)*1025*9.8*(hs.^2);    
+
+            if save_mat==1
+              display(['Saving: ',filename])
+              save(filename,'time','tp','pd','md','ds','tm01','tm02','hs','tm','wlv','ucur','vcur','we')
             end
-            dis=sqrt((lon_mod(ilon)-lon_obs).^2 + (lat_mod(ilat)-lat_obs).^2)*111;
-            display(['Distance between obs ',file,' and grid point is: ',num2str(dis),' km'])
-          end
+  
+          end % if ck_mod_mat==1 && exist(filename)==2
           
-          time=squeeze(double(ncread(fname,'time')))./24+t; time=time(1:ltime-1);
-          if strncmp(ww3pre,'ww3p',4)
-            hs=squeeze(double(ncread(fname,'hsig',          [ilon 1],[1 ltime]))); hs=hs(1:end-1)';
-            tp=squeeze(double(ncread(fname,'tpeak',         [ilon 1],[1 ltime]))); tp=tp(1:end-1)';
-            tm01=squeeze(double(ncread(fname,'tmean01',     [ilon 1],[1 ltime]))); tm01=tm01(1:end-1)';
-            tm=squeeze(double(ncread(fname,'tmean',         [ilon 1],[1 ltime]))); tm=tm(1:end-1)';
-            pd=squeeze(double(ncread(fname,'peak_direction',[ilon 1],[1 ltime]))); pd=pd(1:end-1)';
-          elseif strncmp(ww3pre,'ww3g',4)
-            hs=squeeze(double(ncread(fname,'hsig',          [ilon ilat 1],[1 1 ltime]))); hs=hs(1:end-1);
-            tp=squeeze(double(ncread(fname,'tpeak',         [ilon ilat 1],[1 1 ltime]))); tp=tp(1:end-1);
-            tm01=squeeze(double(ncread(fname,'tmean01',     [ilon ilat 1],[1 1 ltime]))); tm01=tm01(1:end-1);
-            tm02=squeeze(double(ncread(fname,'tmean02',     [ilon ilat 1],[1 1 ltime]))); tm02=tm02(1:end-1);
-            tm=squeeze(double(ncread(fname,'tmean',         [ilon ilat 1],[1 1 ltime]))); tm=tm(1:end-1);
-            pd=squeeze(double(ncread(fname,'peak_direction',[ilon ilat 1],[1 1 ltime]))); pd=pd(1:end-1);
-            ds=squeeze(double(ncread(fname,'directional_spread',[ilon ilat 1],[1 1 ltime]))); ds=ds(1:end-1);
-            if strcmp(expt,'NZWAVE-HR')
-              wlv=squeeze(double(ncread(fname,'wlv',          [ilon ilat 1],[1 1 ltime-1]))); 
-              model(ke).wlv=wlv;
-              ucur=squeeze(double(ncread(fname,'ucur',        [ilon ilat 1],[1 1 ltime-1]))); 
-              model(ke).ucur=ucur;
-              vcur=squeeze(double(ncread(fname,'vcur',        [ilon ilat 1],[1 1 ltime-1]))); 
-              model(ke).vcur=vcur;
-            else
-              wlv=nan(size(hs));
-              ucur=nan(size(hs));
-              vcur=nan(size(hs));
-            end
+          if plot_coastm==0 
+            time_mod=[time_mod;time];
+            hs_mod=[hs_mod;hs];
+            tp_mod=[tp_mod;tp];
+            tm01_mod=[tm01_mod;tm01];
+            tm02_mod=[tm02_mod;tm02];
+            tm_mod=[tm_mod;tm];
+            pd_mod=[pd_mod;pd];
+            md_mod=[md_mod;md];
+            ds_mod=[ds_mod;ds];
+            wlv_mod=[wlv_mod;wlv];
+            if exist('ucur','var')==1
+              ucur_mod=[ucur_mod;ucur];
+	  	        vcur_mod=[vcur_mod;vcur];
+		          we_mod=[we_mod;we];
+            end  
+
+            %clear model
+            %model.data(:,1)=tp_mod;
+            %model.data(:,2)=pd_mod;
+            %model.data(:,6)=hs_mod;
+            %model.data(:,4)=tm01_mod;
+            %model.data(:,5)=tm02_mod;
+            %model.data(:,3)=ds_mod;
+		        %model.data(:,7)=md_mod;
+            %model.data(:,8)=tm_mod;
+            %model.data(:,9)=wlv_mod; % we_mod
+            %if exist('ucur','var')==1
+		        %  model.data(:,10)=ucur_mod;
+		        %  model.data(:,11)=vcur_mod;
+		        %  model.data(:,12)=we_mod;
+	          %end
+  
           end
-          %wave energy (we) = (1/16)*rho*g*(hs.^2); % https://www.coastalwiki.org/wiki/Shallow-water_wave_theory#Introduction
-          we=(1/16)*1025*9.8*(hs.^2);    
-
-          display(['Saving: ',filename])
-          save(filename,'time','tp','pd','ds','tm01','tm02','hs','tm','wlv','ucur','vcur','we')
-  
-        end % if ck_mod_mat==1 && exist(filename)==2
-        
-        if plot_coastm==0 
-          time_mod=[time_mod;time];
-          hs_mod=[hs_mod;hs];
-          tp_mod=[tp_mod;tp];
-          tm01_mod=[tm01_mod;tm01];
-          tm02_mod=[tm02_mod;tm02];
-          tm_mod=[tm_mod;tm];
-          pd_mod=[pd_mod;pd];
-          ds_mod=[ds_mod;ds];
-          wlv_mod=[wlv_mod;wlv];
-          if exist('ucur','var')==1
-            ucur_mod=[ucur_mod;ucur];
-	  	      vcur_mod=[vcur_mod;vcur];
-		        we_mod=[we_mod;we];
-          end  
-          clear model
-           
-          % 1 {'PeakPerid'}   2 {'PeakDirection'}   3 {'Directional spread'}   4 {'Tm01'}   5 {'Tm02'}   6 {'Hs'}   7 {'Qp'}  8 Tm
-          model.data(:,9)=wlv_mod; % we_mod
-          model.data(:,8)=tm_mod;
-          model.data(:,1)=tp_mod;
-          model.data(:,2)=pd_mod;
-          model.data(:,3)=ds_mod;
-          model.data(:,4)=tm01_mod;
-          model.data(:,5)=tm02_mod;
-          model.data(:,6)=hs_mod;
-		      model.data(:,7)=nan;
-          if exist('ucur','var')==1
-		        model.data(:,10)=ucur_mod;
-		        model.data(:,11)=vcur_mod;
-		        model.data(:,12)=we_mod;
-	        end
-  
-          %path_dm=[path_expt,'matlab/'];
-          %system(['mkdir -p ',path_dm]);
-          %display(['Saving: ',filename])
-          %save(filename,'time_mod','model')
-
-        end
  
-      end % for t=time_lima
+        end % for t=time_lima
 
-      if plot_coastm==1
-        display(['Finished processing coastal stations from: ',datestr(time_lima(1)),' to ',datestr(time_lima(end))]) 
-        toc
-        return
-      end
+        if plot_coastm==1
+          display(['Finished processing coastal stations from: ',datestr(time_lima(1)),' to ',datestr(time_lima(end))]) 
+          toc
+          return
+        end
 
-    
+        % interpolating to half hourly intervals
+        interp_half_hour=0;
+        if interp_half_hour==1;
+          time_modi=time_mod(1):1/24/2:time_mod(end);
+          for i=1:size(model.data,2)
+        	  datai(:,i)=interp1(time_mod,model.data(:,i),time_modi);
+        	end
+          time_mod=time_modi;
+        	model.data=datai;
+        end
+
+        if save_mat==1
+          fda=[filename(1:end-14),datestr(time_lima(1),'YYYYmmDDHH'),'_',datestr(time_lima(end),'YYYYmmDDHH'),'.mat'];
+          display(['Saving: ',fda]);
+          save(fda,'time_mod','tp_mod','pd_mod','md_mod','ds_mod','tm01_mod','tm02_mod','hs_mod','tm_mod','wlv_mod','ucur_mod','vcur_mod')% ,'we',model)
+        end
+
+      end % if the whole time series file is saved just load it
+
+      clear model
+      model.data(:,1)=tp_mod;
+      model.data(:,2)=pd_mod;
+      model.data(:,6)=hs_mod;
+      model.data(:,4)=tm01_mod;
+      model.data(:,5)=tm02_mod;
+      model.data(:,3)=ds_mod;
+		  model.data(:,7)=md_mod;
+      model.data(:,8)=tm_mod;
+      if exist('ucur','var')==1
+        model.data(:,9)=wlv_mod; % we_mod
+		    model.data(:,10)=ucur_mod;
+		    model.data(:,11)=vcur_mod;
+		    %model.data(:,12)=we_mod;
+			else
+        model.data(:,9)=nan; % we_mod
+		    model.data(:,10)=nan;
+		    model.data(:,11)=nan;
+		    %model.data(:,12)=we_mod;
+	    end
+ 
       if save_csv==1
+
     
         fda=[filename(1:end-14),datestr(time_lima(1),'YYYYmmDDHH'),'_',datestr(time_lima(end),'YYYYmmDDHH'),'.csv'];
         display(['Saving: ',fda]);
@@ -493,12 +871,16 @@ for fobs=stations
         system(['rm -rf ',fda]);
         end
     
-        model.data(:,7)=nan;
         csvdata=model.data;
         csvdata=num2cell(csvdata);
         for i=1:length(time_mod); csvtime{i,1}=datestr(time_mod(i),'yyyy-mm-ddTHH:MM:SS'); end
-        csvhead={'date','PeakPeriod','PeakDirection','Directional spread','Tm01','Tm02','Hs','Qp','Tm','Water level','U current','V current','Wave Energy (J/m2)'};
-    
+        if exist('ucur','var')==1
+          csvhead={'date','Peak Period','Peak Direction','Directional spread','Mean period Tm01','Mean period Tm02','Hs','Meand Direction','Mean period Tm','Water level','U current','V current','Wave Energy (J/m2)'};
+        else
+          %csvhead={'date','Peak Period','Peak Direction','Hs','Mean period Tm01','Mean period Tm02','Directional spread','Meand Direction','Mean period Tm'};
+          csvhead={'date','Peak Period','Peak Direction','Hs'};
+        end
+
         % concatenating str matrices
         csvall=[csvtime,csvdata];
         %csvall=[csvhead;csvall];
@@ -508,9 +890,10 @@ for fobs=stations
         fclose('all');
 
       end
-    
+
       % Plotting %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
       tnames={'Peak Period',    'Peak Direction',    'Directional spread',   'Tm01','Tm02','Significant Wave Height (Hs)','Qp','Tm','Water Level','U current','V current','Wave Energy (J/m2)'};
+      %tnames={'Peak Period','Peak Direction','Hs','Mean period Tm01','Mean period Tm02','Directional spread','Meand Direction','Mean period Tm','Water level','U current','V current','Wave Energy (J/m2)'};
       for i=1:length(dcol)
         
         subplot(length(dcol),1,i);
@@ -520,65 +903,159 @@ for fobs=stations
         if ke==1 & plot_obs==1
   	      if obs_first==1;
 				    if dcol(i)<=size(obs,2) 
-              plot(time_obs,obs(:,dcol(i))','.','markersize',12,'color',[0 .7 0],'linewidth',2)
+              plot(datetime(datevec(time_obs)),obs(:,dcol(i))','.','markersize',12,'color',[0 .7 0],'linewidth',2)
 	   				end
           end
-          for eix=1:length(expts); plot(nan,nan,'.','markersize',12,'color',colors{eix},'linewidth',2); end
-        	  plot(nan,nan,'.','markersize',12,'color',[0 .7 0],'linewidth',2)
+          if plot_mod==1
+            for eix=1:length(expts); plot(datetime(datevec(nan)),nan,'.','markersize',12,'color',colors{eix},'linewidth',2); 
+            end
+          end
+       	  plot(datetime(datevec(nan)),nan,'.','markersize',12,'color',[0 .7 0],'linewidth',2)
+      	end
+
+        plot(datetime(datevec(time_mod)),model.data(:,dcol(i))','.','markersize',12,'color',colors{ke},'linewidth',2)
+
+        if obs_first==0; 
+        	if ke==length(expts) & plot_obs==1
+	    			if dcol(i)<=size(obs,2) 
+            	plot(datetime(datevec(time_obs)),obs(:,dcol(i))','.','markersize',12,'color',[0 .7 0],'linewidth',2)
+	   			  end
         	end
-        	plot(time_mod,model.data(:,dcol(i))','.','markersize',12,'color',colors{ke},'linewidth',2)
-        	if obs_first==0; 
-          	if ke==length(expts) & plot_obs==1
-	    				if dcol(i)<=size(obs,2) 
-              	plot(time_obs,obs(:,dcol(i))','.','markersize',12,'color',[0 .7 0],'linewidth',2)
-	   				  end
-          	end
-        	end
+        end
+
+        % computing harmonic analysis of wave variables with t_tide and plotting its timeseries
+        if plot_harm==1
+          const_name={'M2 ','S2 '};%,'S2','N2','K2','K1','O1','P1','Q1','MF','MM','M4','MS4','MN4'};
+          if plot_obs==1 & ke==1 
+            % cropping observations according to time_lima
+            [dif it]=nanmin(abs(time_obs-time_lima(1))); [dif ft]=nanmin(abs(time_obs-time_lima(end)));
+            time_harm=time_obs(it):1/24/2:time_obs(ft);
+            data_obs=interp1(time_obs,obs(1:end,dcol(i)),time_harm); % [dif it]=nanmin(abs(time_obs-time_lima(1))); [dif ft]=nanmin(abs(time_obs-time_lima(end)));
+				    [tidestruc,data_oharm]=t_tide(data_obs,'interval',(time_harm(2)-time_harm(1))*24,'start time',time_harm(1),'latitude',lat_obs,'synthesis',1); %,'output','none'););
+				    %[tidestruc,data_harm]=t_predic(time_obs,tidestruc,'synthesis',1);
+				    plot(datetime(datevec(time_harm)),data_oharm,'.','markersize',12,'color',[1 0 0],'linewidth',2)
+            % saving amplitude of selected constituents (const_name) 
+					  [in,jn]=size(tidestruc.name);
+            for ii=1:length(const_name)
+              for iii=1:in
+                if strcmp([tidestruc.name(iii),tidestruc.name(iii+in),tidestruc.name(iii+(in*2))],const_name{ii})==1; c_ind=iii;
+                end
+              end
+              tide_amp(ii,ke)=tidestruc.tidecon(c_ind,1); % mod_amp(lat,lon,constante)
+            end
+          end
+          if plot_mod==1 
+            % cropping observations according to time_lima
+            data_mod=model.data(:,dcol(i)); 
+				    [tidestruc,data_mharm]=t_tide(data_mod,'interval',(time_mod(2)-time_mod(1))*24,'start time',time_mod(1),'latitude',lat_obs,'synthesis',1); %,'output','none'););
+				    %[tidestruc,data_harm]=t_predic(time_obs,tidestruc,'synthesis',1);
+				    plot(datetime(datevec(time_mod)),data_mharm,'.','markersize',12,'color',[0 0 0],'linewidth',2)
+            % saving amplitude of selected constituents (const_name) for each experiment (ke)
+					  [in,jn]=size(tidestruc.name);
+            for ii=1:length(const_name)
+              for iii=1:in
+                if strcmp([tidestruc.name(iii),tidestruc.name(iii+in),tidestruc.name(iii+(in*2))],const_name{ii})==1; c_ind=iii;
+                end
+              end
+              tide_amp(ii,ke+1)=tidestruc.tidecon(c_ind,1); % mod_amp(lat,lon,constante)
+            end
+          end
+        end
 
         if set_xlim==1;
-          xlim([time_lima(1) time_lima(end)])
+          xlim([datetime(datevec(time_lima(1))) datetime(datevec(time_lima(end)+1))])
         end
       
         %if i==3
-          datetick('x','dd/mmm/yyyy','keeplimits')
+          %datetick('x','dd/mmm/yyyy','keeplimits')
         %end
+
         title([replace(file,'_',' '),' ',tnames{dcol(i)}])
         grid('on')
         if plot_obs==1 
 	        modeli=interp1(time_mod,model.data(:,dcol(i)),time_obs);
           if (dcol(i)~=2 || dcol(i)~=1) & i==1
-            mod_rmse=nanrmse(obs(:,dcol(i)),modeli');
-            mod_corr=nancorr(obs(:,dcol(i)),modeli');
+            mod_rmse=nanrmse(obs(:,dcol(i)),modeli(:));
+            mod_corr=nancorr(obs(:,dcol(i)),modeli(:));
             mod_bias=nanmean(modeli')-nanmean(obs(:,dcol(i)));
             if add_stats
               legh=[legh,{[expt,' rmse=',num2str(mod_rmse,'%.2f'),' corr=',num2str(mod_corr,'%.2f'),', bias=',num2str(mod_bias,'%.2f')]}];
             else
               legh=[legh,{[expt]}];%,' rmse=',num2str(mod_rmse,'%.2f'),' corr=',num2str(mod_corr,'%.2f'),', bias=',num2str(mod_bias,'%.2f')]}];
             end
-				  elseif dcol(i)==2 || dcol(i)==1
+				  elseif dcol(i)==2 
 				    ylim([0 360])
           end
         else
           legh=[legh,{[expt]}];%,' rmse=',num2str(mod_rmse,'%.2f'),' corr=',num2str(mod_corr,'%.2f'),', bias=',num2str(mod_bias,'%.2f')]}];
         end
+
+
+        if plot_cycs>=1
+          if ke==length(expts)
+          	ylims=get(gca,'ylim');
+						% plotting cyclone initial and final dates
+          	u_id=unique(id_tr);
+          	for j=1:length(u_id)
+
+	    				ids=find(id_tr==u_id(j));
+	   					plot(datetime(datevec([time_tr(ids(1)) time_tr(ids(1))]))    ,[ylims(1) ylims(2)],'--b','linewidth',0.5)
+	   					plot(datetime(datevec([time_tr(ids(end)) time_tr(ids(end))])),[ylims(1) ylims(2)],'--r','linewidth',0.5)
+
+	   			  end
+					end
+			  end
+
+
         
       end % for i=1:length(dcol)
     
     end % for expt=expts
 
-    if obs_first==0; 
-      legh=[legh,{['Obs.']}]; %,' rmse=',num2str(mod_rmse,'%.2f'),' corr=',num2str(mod_corr,'%.2f'),', bias=',num2str(mod_bias,'%.2f')]}];
+    if plot_obs==1
+	    if obs_first==0; 
+  	      legh=[legh,{['Obs.']}]; %,' rmse=',num2str(mod_rmse,'%.2f'),' corr=',num2str(mod_corr,'%.2f'),', bias=',num2str(mod_bias,'%.2f')]}];
+        end
     end
-
+        
+    if plot_cycs>=1
+  	    legh=[legh,{['Cyc starts'],['Cyc ends']}]; %,' rmse=',num2str(mod_rmse,'%.2f'),' corr=',num2str(mod_corr,'%.2f'),', bias=',num2str(mod_bias,'%.2f')]}];	end
+    end
+    
     %if ~isempty(find(dcol==6))
     %  subplot(length(dcol),1,find(dcol==6));
       subplot(length(dcol),1,1);
       legend([legh],'location','best')
     %end
-    
+
+
+    path_dm=strcat(path_fig,expt,'/');
+    system(['mkdir -p ',path_dm]);
+    figname=[path_dm,file,'_wave_series_',replace(tnames{dcol(i)},' ','_'),'_',datestr(time_lima(1),'YYYY_mm_DD_HH_MM'),'_',datestr(time_lima(end),'YYYY_mm_DD_HH_MM')];
+    display(['Plotting: ',figname]);
     if save_fig==1
-      %export_fig(gcf,'steephead_period','-png','-r150');
+      display(['Saving: ',figname]);
+      export_fig(gcf,[figname,'.png'],'-png','-r150');
+      saveas(gcf,[figname,'.fig'],'fig')
+      %close
+      %clf('reset')
     end
+
+
+    if plot_harm==1
+       disp(' ')
+       disp([replace(file,'_',' '),' ',tnames{dcol(i)}])
+      for ii=1:length(const_name)
+        if plot_obs
+        	display(['Amplitude of ',const_name{ii},' in obs: ',num2str(tide_amp(ii,1))])
+        end
+        for ke=1:length(expts)
+      	  display(['Amplitude of ',const_name{ii},' in ',expts{ke},': ',num2str(tide_amp(ii,ke+1))])
+      	end
+      end
+    end
+
+
 
   end % if plot_series
 
@@ -749,55 +1226,67 @@ for fobs=stations
       hs_mod=[];tp_mod=[]; pd_mod=[];time_mod=[];
       tm01_mod=[];tm_mod=[]; pd_mod=[]; we_mod=[];
       tm02_mod=[];ds_mod=[]; wlv_mod=[];time_mod=[];
-    
-      checkin=0;  
-      % Loop in model time
-      for t=time_lima
 
-        filename=[path_dm,file,'_',datestr(t,'YYYYmmDDHH'),'.mat'];
+      % checking if the whole time series is saved as matlab file
+      filename=[path_dm,file,'_',datestr(time_lima(1),'YYYYmmDDHH'),'_',datestr(time_lima(end),'YYYYmmDDHH'),'.mat'];
+      if exist(filename)==2
+
+        display(['Loading: ',filename])
+        load(filename); % loading long timeseries rather than daily files
+
+      else
     
-        if ck_mod_mat==1 && exist(filename)==2
-      
-          display(['Loading: ',filename])
-          load(filename)%,'time_mod','model')
-      
-        else
-          display(['NOT FOUND: ',filename])
-          display(['Run with plot_series=1 first'])
-          return
+        checkin=0;  
+        % Loop in model time
+        for t=time_lima
+
+          filename=[path_dm,file,'_',datestr(t,'YYYYmmDDHH'),'.mat'];
+    
+          if exist(filename)==2
+        
+            display(['Loading: ',filename])
+            load(filename)%,'time_mod','model')
+        
+          else
+            display(['NOT FOUND: ',filename])
+            display(['Run with plot_series=1 first'])
+            return
   
-        end % if ck_mod_mat==1 && exist(filename)==2
+          end % if ck_mod_mat==1 && exist(filename)==2
     
-        time_mod=[time_mod;time];
-        hs_mod=[hs_mod;hs];
-        tp_mod=[tp_mod;tp];
-        tm01_mod=[tm01_mod;tm01];
-        tm02_mod=[tm02_mod;tm02];
-        tm_mod=[tm_mod;tm];
-        pd_mod=[pd_mod;pd];
-        ds_mod=[ds_mod;ds];
-        wlv_mod=[wlv_mod;wlv];
-        %we_mod=[we_mod;we];
+          time_mod=[time_mod;time];
+          hs_mod=[hs_mod;hs];
+          tp_mod=[tp_mod;tp];
+          tm01_mod=[tm01_mod;tm01];
+          tm02_mod=[tm02_mod;tm02];
+          tm_mod=[tm_mod;tm];
+          pd_mod=[pd_mod;pd];
+          ds_mod=[ds_mod;ds];
+          wlv_mod=[wlv_mod;wlv];
+          %we_mod=[we_mod;we];
+          
+          
+          %path_dm=[path_expt,'matlab/'];
+          %system(['mkdir -p ',path_dm]);
+          %display(['Saving: ',filename])
+          %save(filename,'time_mod','model')
         
-        clear model
+        end % for t=time_lima
+
+      end
+
+      clear model
      
-        % 1 {'PeakPerid'}   2 {'PeakDirection'}   3 {'Directional spread'}   4 {'Tm01'}   5 {'Tm02'}   6 {'Hs'}   7 {'Qp'}  8 Tm
-        model.data(:,9)=wlv_mod; % we_mod
-        model.data(:,8)=tm_mod;
-        model.data(:,1)=tp_mod;
-        model.data(:,2)=pd_mod;
-        model.data(:,3)=ds_mod;
-        model.data(:,4)=tm01_mod;
-        model.data(:,5)=tm02_mod;
-        model.data(:,6)=hs_mod;
-        
-        %path_dm=[path_expt,'matlab/'];
-        %system(['mkdir -p ',path_dm]);
-        %display(['Saving: ',filename])
-        %save(filename,'time_mod','model')
-      
-      end % for t=time_lima
-      
+      % 1 {'PeakPerid'}   2 {'PeakDirection'}   3 {'Directional spread'}   4 {'Tm01'}   5 {'Tm02'}   6 {'Hs'}   7 {'Qp'}  8 Tm
+      model.data(:,9)=wlv_mod; % we_mod
+      model.data(:,8)=tm_mod;
+      model.data(:,1)=tp_mod;
+      model.data(:,2)=pd_mod;
+      model.data(:,3)=ds_mod;
+      model.data(:,4)=tm01_mod;
+      model.data(:,5)=tm02_mod;
+      model.data(:,6)=hs_mod;
+ 
       tnames={'Peak Period (s)',    'Peak Direction (^o)',    'Directional spread (^o)',   'Tm01 (m)','Tm02 (m)','Hs (m)','Qp (^o)','Tm (s)','Water Level (m)'};
       for i=1:length(dcol)
         
@@ -886,7 +1375,7 @@ for fobs=stations
           colormap(flipud(cmocean('matter')))
 
           if ke==length(expts)
-	        h=colorbar;
+	          h=colorbar;
           	set(h,'position',[0.915 0.24 0.011 0.44])
             set(get(h,'ylabel'),'string','Bin counts','fontsize',14,'fontweight','bold');
           else
@@ -1014,85 +1503,99 @@ for fobs=stations
       hs_mod=[];tp_mod=[]; pd_mod=[];time_mod=[];
       tm01_mod=[];tm_mod=[]; pd_mod=[]; we_mod=[];
       tm02_mod=[];ds_mod=[]; wlv_mod=[];time_mod=[];
-    
-      checkin=0;  
-      % Loop in model time
-      for t=time_lima
 
-        filename=[path_dm,file,'_',datestr(t,'YYYYmmDDHH'),'.mat'];
-    
-        if ck_mod_mat==1 && exist(filename)==2
-      
-          display(['Loading: ',filename])
-          load(filename)%,'time_mod','model')
-      
-        else
-					
-          display(['NOT FOUND: ',filename])
-					return
+      % checking if the whole time series is saved as matlab file
+      filename=[path_dm,file,'_',datestr(time_lima(1),'YYYYmmDDHH'),'_',datestr(time_lima(end),'YYYYmmDDHH'),'.mat'];
+      if ck_mod_mat==1 && exist(filename)==2
 
-        end % if ck_mod_mat==1 && exist(filename)==2
+        disp(['Loading: ',filename]); % loading long timeseries rather than daily files
+        load(filename); % loading long timeseries rather than daily files
+
+      else
     
-        time_mod=[time_mod;time];
-        hs_mod=[hs_mod;hs];
-        tp_mod=[tp_mod;tp];
-        tm01_mod=[tm01_mod;tm01];
-        tm02_mod=[tm02_mod;tm02];
-        tm_mod=[tm_mod;tm];
-        pd_mod=[pd_mod;pd];
-        ds_mod=[ds_mod;ds];
-        wlv_mod=[wlv_mod;wlv];
-        %we_mod=[we_mod;we];
+        checkin=0;  
+        % Loop in model time
+        for t=time_lima
+
+          filename=[path_dm,file,'_',datestr(t,'YYYYmmDDHH'),'.mat'];
+    
+          if ck_mod_mat==1 && exist(filename)==2
         
-        clear model
+            display(['Loading: ',filename])
+            load(filename)%,'time_mod','model')
+        
+          else
+			  		
+            display(['NOT FOUND: ',filename])
+			  		return
+
+          end % if ck_mod_mat==1 && exist(filename)==2
+    
+          time_mod=[time_mod;time];
+          hs_mod=[hs_mod;hs];
+          tp_mod=[tp_mod;tp];
+          tm01_mod=[tm01_mod;tm01];
+          tm02_mod=[tm02_mod;tm02];
+          tm_mod=[tm_mod;tm];
+          pd_mod=[pd_mod;pd];
+          ds_mod=[ds_mod;ds];
+          wlv_mod=[wlv_mod;wlv];
+          %we_mod=[we_mod;we];
+          
+        
+        end % for t=time_lima
+
+      end
+
+      clear model
      
-        % 1 {'PeakPerid'}   2 {'PeakDirection'}   3 {'Directional spread'}   4 {'Tm01'}   5 {'Tm02'}   6 {'Hs'}   7 {'Qp'}  8 Tm
-        model.data(:,9)=wlv_mod; % we_mod
-        model.data(:,8)=tm_mod;
-        model.data(:,1)=tp_mod;
-        model.data(:,2)=pd_mod;
-        model.data(:,3)=ds_mod;
-        model.data(:,4)=tm01_mod;
-        model.data(:,5)=tm02_mod;
-        model.data(:,6)=hs_mod;
-        
-        %path_dm=[path_expt,'matlab/'];
-        %system(['mkdir -p ',path_dm]);
-        %display(['Saving: ',filename])
-        %save(filename,'time_mod','model')
+      % 1 {'PeakPerid'}   2 {'PeakDirection'}   3 {'Directional spread'}   4 {'Tm01'}   5 {'Tm02'}   6 {'Hs'}   7 {'Qp'}  8 Tm
+      model.data(:,9)=wlv_mod; % we_mod
+      model.data(:,8)=tm_mod;
+      model.data(:,1)=tp_mod;
+      model.data(:,2)=pd_mod;
+      model.data(:,3)=ds_mod;
+      model.data(:,4)=tm01_mod;
+      model.data(:,5)=tm02_mod;
+      model.data(:,6)=hs_mod;
       
-      end % for t=time_lima
-    
+      %path_dm=[path_expt,'matlab/'];
+      %system(['mkdir -p ',path_dm]);
+      %display(['Saving: ',filename])
+      %save(filename,'time_mod','model')
+ 
       tnames={'Peak Period',    'Peak Direction',    'Directional spread',   'Tm01','Tm02','Significant Wave Height (Hs)','Qp','Tm','Water Level'};
       for i=1:length(dcol)
         
         %cdfplot(hs_obs) % PF cdf = cumulative density function. find suitable thresholds to constrain GPthres.m. This is just a rough guide. looks like something between 2 and 6 metres would work (between 0.5 and 1)
         tolerance =0.0001; % sometimes gpfit doesn't like having zero values, so add a tiny (inconsequential) amount
-        tthr = 3; % peaks over threshold (POT) separated by at least 3 days. Most weather systems in NZ are separated by 4-7 days
-        ARI = [1 2 5 10 20 50 100]; % This specifies the Average Recurrence Intervals (ARI) for output. Change these to what you like.
+        tthr = 5; % peaks over threshold (POT) separated by at least 3 days. Most weather systems in NZ are separated by 4-7 days
+        ARI = [1 2 5 10 20 50 100 200 500 1000]; % This specifies the Average Recurrence Intervals (ARI) for output. Change these to what you like.
          
         disp(['GPD fitted to peaks over threshold']);
         disp(['DO NOT click on figures while plots are being made']);
         %figure; clf
         %semilogx([0 0],[0 0],'r',[0 0],[0 0],'b'); hold on;
-        if ke==1
+        fign=99;
+        if ke==1 & plot_obs==1
 
           ax=figure; % subplot(lsub,csub,ke);
           set(gca,'fontsize',12,'fontweight','bold')
           hold on
-          fign=99;
  
           data_obs=obs(:,dcol(i)); 
           data = data_obs(:); time = time_obs(:);
+          figure; cdfplot(data) % cumulative density function. find suitable thresholds to constrain GPthres.m. This is just a rough guide.
           ythr = GPthres(time,data+tolerance,2,6,0.1,tthr,1); % Automate threshold selection
           disp(['GPD threshold selected: H_s = ' num2str(ythr) ' m'])
           [GPD,gpp,gpci,Sy,ARI_POT,POT_sorted] = GPDfit(data+tolerance,time,tthr,ythr,ARI); % PF
           close
           figure(fign)
           semilogx([0 0],[0 0],'color',[0 .7 0]); hold on;
-          semilogx([0 0],[0 0],'k');
-          if correct_model==1
-          semilogx([0 0],[0 0],'b'); hold on;
+          semilogx([0 0],[0 0],colors{ke});
+          if correct_model>=1
+            semilogx([0 0],[0 0],colors{ke+1})%,'linewidth',2);
+            hold on;
           end
 
           semilogx(ARI_POT,POT_sorted,'o','color',[0 .7 0]),
@@ -1100,12 +1603,34 @@ for fobs=stations
           semilogx(ARI,GPD(1,:),'-', 'color',[0 .7 0])
           semilogx(ARI,GPD(2,:),'--','color',[0 .7 0])
           semilogx(ARI,GPD(3,:),'--','color',[0 .7 0])
-          title('GPD fitted to peaks over threshold'), xlabel('Average recurrence interval (years)'), ylabel('H_s')
+          %title(['GPD fitted to peaks over threshold. ',datestr(time_lima(1),'YYYY'),'-',datestr(time_lima(end),'YYYY')])
+          title([replace(file,'_',' '),' GPD fitted to peaks over threshold'])
+          xlabel('Average recurrence interval (years)'), ylabel('Significant Wave Height')
+
+          %% Compare to annual maxima method. Don't need this but sometimes useful to
+          %AMy = AMcalc(time_obs,hs_obs,1); AM = AMy(:,3);
+          %[gev,gevci] = gevfit(AM);
+          %GEV = gevinv(1-ARI2AEP(ARI),gev(1),gev(2),gev(3));
+          %GEV(2,:) = gevinv(1-ARI2AEP(ARI),gevci(1,1),gevci(1,2),gevci(1,3));
+          %GEV(3,:) = gevinv(1-ARI2AEP(ARI),gevci(2,1),gevci(2,2),gevci(2,3));
+          %
+          %figure;[AMari,AMsorted] = gringorten(AM,1,1);  hold on
+          %semilogx(ARI,GEV(1,:),'k','LineWidth',2)
+          %semilogx(ARI,GEV(2,:),'--k',ARI,GEV(3,:),'--k')
+          %hold off
+          %title('GEV fitted to annual maxima'), xlabel('Average recurrence interval  (years)'), ylabel('H_s')
+          %
+          %figure(2)
+          %hold on
+          %semilogx(ARI,GEV(1,:),'r'), semilogx(ARI,GEV(2,:),'--r',ARI,GEV(3,:),'--r'),
+          %semilogx(AMari,AMsorted,'+r')
+          %hold off
 
         end
 
         data = model.data(:,dcol(i)); time = time_mod(:);
         data=data(:);
+        figure; cdfplot(data) % cumulative density function. find suitable thresholds to constrain GPthres.m. This is just a rough guide.
         ythr = GPthres(time,data+tolerance,2,6,0.1,tthr,1); % Automate threshold selection
         disp(['GPD threshold selected: H_s = ' num2str(ythr) ' m']);
         figure;
@@ -1117,6 +1642,8 @@ for fobs=stations
         semilogx(ARI,GPD(1,:),'-', 'color',colors{ke})
         semilogx(ARI,GPD(2,:),'--','color',colors{ke})
         semilogx(ARI,GPD(3,:),'--','color',colors{ke})
+        title([replace(file,'_',' '),' GPD fitted to peaks over threshold'])
+        xlabel('Average recurrence interval (years)'), ylabel('Significant Wave Height')
 
         %return
  
@@ -1139,10 +1666,10 @@ for fobs=stations
         %semilogx(AMari,AMsorted,'+b')
         %hold off
         if correct_model==0;
-          legend('Obs.',expt);
-        end
+          %legend('Obs.',expt);
+          legend(expt);
 
-        if correct_model==1;
+        elseif correct_model==1;
           modeli=interp1(time_mod,model.data(:,dcol(i)),time_obs)';
           xplot=modeli; yplot=obs(:,dcol(i));
  
@@ -1162,10 +1689,253 @@ for fobs=stations
           %plot(obsi,modc,'.','color',[0 0 0],'linewidth',2)
           %plot([0 9],[0 9*pc(1)+pc(2)],'k','linewidth',2)
 
+          corr_method=2;
+
+          if corr_method==1           
+
+            p=polyfit(obsi,modi',1);
+            modc=model.data(:,dcol(i)).*(1+(1-p(1)));% + p(2);
+
+          elseif corr_method==2
+
+            Ref_data=obsi(:);
+            Biased_data=modi(:);
+            bias=sum(Biased_data-Ref_data)/length(Biased_data); %Bias value before bais correction
+            %% CDF Matching (Eq. 1) of [2]
+            %Prob_ref = Prob_data(Ref_data)';  %Query points
+            Prob_ref=((1:length(Ref_data))./length(Ref_data+1))';
+            %Prof_biased =  Prob_data(Biased_data)'; %Sample points
+            Prob_biased=((1:length(Biased_data))./length(Biased_data+1))';
+            Biased_interpolated= interp1(Prob_biased,sort(Biased_data),sort(Prob_ref)); %1-D linear interpolation of biased data according to the reference data
+            % interp1q returns interpolated values of a 1-D function at specific query points using linear interpolation
+            n=3; %degree of the polynomial
+            p= polyfit(Biased_interpolated,sort(Ref_data)-Biased_interpolated, n); % Polynomial fitting between the biased data and difference of referenced and interpolated data.
+            Corrected_Data= polyval(p,Biased_data)+ Biased_data; % Evaluates the polynomial p at each point in Biased_data plus the Biased_data
+            modc = polyval(p,model.data(:,dcol(i)))+ model.data(:,dcol(i)); % Evaluates the polynomial p at each point in Biased_data plus the Biased_data
+            bias_after=sum(Corrected_Data-Ref_data)/length(Corrected_Data); %Bias value after bais correction
+            %% Plotting
+            figure
+            plot(sort(Ref_data), Prob_ref , 'k-', 'linewidth',1.5)
+            hold on
+            plot(sort(Biased_data),Prob_biased, 'k--','linewidth',1.5)
+            hold on
+            plot( sort(Corrected_Data),Prob_data(Corrected_Data), 'k:', 'linewidth',1.5)
+            xlabel('Variable')
+            ylabel('CDF')
+            leg=legend ('Reference data','Biased data','Corrected data');
+            set(leg,'location','best')
+            set(gcf,'color','white')
+            
+            %% Reference
+            %[1] Singh, A.; Gaurav, K.; Meena, G.K.; Kumar, S. Estimation of Soil Moisture Applying Modified Dubois Model to Sentinel-1; A Regional Study from Central India. Remote Sens. 2020, 12, 2266.
+            %[2] Reichle, R.H.; Koster, R.D. Bias reduction in short records of satellite soil moisture. Geophys. Res. Lett. 2004, 31, L19501.
+
+ 
+          end
+
+        elseif correct_model==2;
+
+          % select ij from and read the time series from satellite data
+          [dif iloncop]=nanmin(abs(lon_cop-lon_obs)); [dif ilatcop]=nanmin(abs(lat_cop-lat_obs));
+
+          if strcmp(atype,'cmems_l4')==1 || strcmp(atype,'cmems_nrt')==1 || strcmp(atype,'cmems_merged_2deg')==1
+            %iloncop=iloncop+1;
+            ilatcop=ilatcop-1;
+          end
+
+          % plotting pcolor map of satelite location   
+          figure(4)
+					set(gcf,'Position', [1 53 1920 954]); 
+					hold on
+          pcolor(lon_copm',lat_copm',nanmean(hs_cop_mean,3))
+					shading flat
+					plot(lon_obs,lat_obs,'k.','markersize',10)
+					plot(lon_cop(iloncop),lat_cop(ilatcop),'r.','markersize',10)
+					%plot(lon_mod,lat_mod,'k.','markersize',10)
+
+          
+          %[dis]=sqrt((lon_cop-lon_obs).^2 + (lat_cop-lat_obs).^2);
+          %hs_cmax=squeeze(hs_cop_maxi(iloncop,ilatcop,:));
+          hs_cmea=squeeze(hs_cop_mean(iloncop,ilatcop,:));
+          %hs_cop=(hs_cmax+hs_cmea)./2;
+          hs_cop=hs_cmea;
+					%time_cop=time_cop+.5;
+          time_lima=time_lima+.5;
+
+          if strcmp(atype,'cmems_l4')==1 || strcmp(atype,'cmems_nrt')==1 || strcmp(atype,'cmems_merged_2deg')==1
+            % computing daily mean and max
+            k=0;
+            for t=time_lima(1:end)
+              k=k+1;
+              it=find(time_mod>=t & time_mod<=t+1);
+					  	hs_m(k)=nanmax(hs_mod(it));
+					  end
+            modeli=interp1(time_lima,hs_m,time_cop)';
+            time_m=time_lima;
+
+          elseif strcmp(atype,'cmems_l4_05deg')
+            modeli=interp1(time_mod,hs_mod,time_cop)';
+            hs_m=modeli;
+            time_m=time_cop;
+          end
+
+          obsi=hs_cop;
+          xplot=modeli; yplot=hs_cop;
+ 
+          inan=isnan(modeli); obsi(inan)=nan;  
+          inan=isnan(obsi); modeli(inan)=nan;
+          modi=modeli; inan=isnan(modi); modi(inan)=[]; 
+          inan=isnan(obsi); obsi(inan)=[];  
+
+
+          corr_method=2;
+
+          if corr_method==1           
+
+            p=polyfit(obsi,modi',1);
+            modc=model.data(:,dcol(i)).*(1+(1-p(1)));% + p(2);
+
+          elseif corr_method==2
+
+%return
+            [modc]=bias_correction(obsi,modi,model.data(:,dcol(i)),1);
+
+
+            %Ref_data=obsi(:);
+            %Biased_data=modi(:);
+            %bias=sum(Biased_data-Ref_data)/length(Biased_data); %Bias value before bais correction
+            %%% CDF Matching (Eq. 1) of [2]
+            %%Prob_ref = Prob_data(Ref_data)';  %Query points
+            %Prob_ref=((1:length(Ref_data))./length(Ref_data+1))';
+            %Prob_biased = Prob_ref; 
+            %%Prof_biased =  Prob_data(Biased_data)'; %Sample points
+            %%Prob_biased=((1:length(Biased_data))./length(Biased_data+1))';
+            %%Biased_interpolated= interp1(Prob_biased,sort(Biased_data),sort(Prob_ref)); %1-D linear interpolation of biased data according to the reference data
+            %Biased_interpolated=sort(Biased_data); %1-D linear interpolation of biased data according to the reference data
+            %% interp1q returns interpolated values of a 1-D function at specific query points using linear interpolation
+            %n=3; %degree of the polynomial
+            %p= polyfit(Biased_interpolated,sort(Ref_data)-Biased_interpolated, n); % Polynomial fitting between the biased data and difference of referenced and interpolated data.
+            %Corrected_Data= polyval(p,Biased_data)+ Biased_data; % Evaluates the polynomial p at each point in Biased_data plus the Biased_data
+
+            %modc = polyval(p,model.data(:,dcol(i))) + model.data(:,dcol(i)); % Evaluates the polynomial p at each the original timeseires 
+
+            %curve_fitted = polyval(p,Biased_interpolated); % Evaluates the polynomial p at each point in Biased_data plus the Biased_data
+
+            %bias_after=sum(Corrected_Data-Ref_data)/length(Corrected_Data); %Bias value after bais correction
+            %%% Plotting
+            %figure
+            %plot(sort(Ref_data), Prob_ref , 'k-', 'linewidth',1.5)
+            %hold on
+            %plot(sort(Biased_data),Prob_biased, 'k--','linewidth',1.5)
+            %hold on
+            %plot( sort(Corrected_Data),Prob_data(Corrected_Data), 'k:', 'linewidth',1.5)
+            %xlabel('Variable')
+            %ylabel('CDF')
+            %leg=legend ('Reference data','Biased data','Corrected data');
+            %set(leg,'location','best')
+            %set(gcf,'color','white')
+
+            %figure; hold on
+            %plot(Biased_interpolated,sort(Ref_data)-Biased_interpolated,'b')
+            %plot(Biased_interpolated,curve_fitted,'k')
+            %xlabel('Variable')
+            %ylabel('Corrections')
+            %leg=legend ('Reference - Model','Corrections');
+            %set(leg,'location','best')
+            %set(gcf,'color','white')
+
+            
+            %% Reference
+            %[1] Singh, A.; Gaurav, K.; Meena, G.K.; Kumar, S. Estimation of Soil Moisture Applying Modified Dubois Model to Sentinel-1; A Regional Study from Central India. Remote Sens. 2020, 12, 2266.
+            %[2] Reichle, R.H.; Koster, R.D. Bias reduction in short records of satellite soil moisture. Geophys. Res. Lett. 2004, 31, L19501.
+
+ 
+          end
+
+
+					figure
+					set(gcf,'Position', [1 53 1920 954]); 
+					hold on;
+          legh={};
+					plot(datetime(datevec(time_obs)),obs(:,6),'.-g','linewidth',1); legh=[legh,{['Obs']}];
+          if strcmp(atype,'cmems_l4')==1 || strcmp(atype,'cmems_nrt')==1 || strcmp(atype,'cmems_merged_2deg')==1
+					  plot(datetime(datevec(time_cop)),hs_cmax,'.-r','linewidth',1); legh=[legh,{['Sat max']}];
+          end
+					plot(datetime(datevec(time_cop)),hs_cmea,'.-b','linewidth',1); legh=[legh,{['Sat mean or 12pm']}];
+					plot(datetime(datevec(time_mod)),hs_mod,'k','linewidth',2); legh=[legh,{['Model hourly']}];
+					plot(datetime(datevec(time_m)),hs_m,'.-k','linewidth',2); legh=[legh,{['Model mean or 12pm']}];
+          xlim([datetime(datevec(time_cop(1))) datetime(datevec(time_cop(end)))])
+          %xlim([datetime(2021,6,15) datetime(2021,8,15)])
+
+					%figure(3)
+					plot(datetime(datevec(time_mod)),modc,'color',[0 1 1],'linewidth',2); legh=[legh,{['Model corrected']}];
+					plot(datetime(datevec(time_mod)),modc-hs_mod,'color',[.7 .7 .7],'linewidth',2); legh=[legh,{['Model correction']}];
+          title([files{fobs},'. Correction varies between: ',num2str(nanmin(modc-hs_mod,'omitnan'),'%.2f'),' and ',num2str(nanmax(modc-hs_mod,'omitnan'),'%.2f')])
+          legend(legh)
+
+          % uncomment all at once to reveal useful stuff
+
+          %model_wave_height=modi; satellite_wave_height=obsi;
+          %% Assuming model_wave_height and satellite_wave_height are your data vectors
+          %mdl = fitlm(model_wave_height, satellite_wave_height);
+          %disp(mdl);
+          %% Plot the initial fit
+          %figure; hold on;
+          %plot(mdl);
+          %xlabel('Model Wave Height');
+          %ylabel('Observed Wave Height');
+          %title('Initial Linear Regression Fit');          
+          %plot([0 9],[0 9],'k','linewidth',2)
+          %% Corrected wave height using the linear model
+          %corrected_wave_height = predict(mdl, model_wave_height);
+          %scatter(corrected_wave_height, satellite_wave_height,'.k');
+          %new_mdl = fitlm(corrected_wave_height, satellite_wave_height);
+          %disp(new_mdl);
+          %%residuals = mdl.Residuals.Raw;
+          %%figure; hold on
+          %%plot(model_wave_height, residuals, 'o');
+          %%xlabel('Model Wave Height');
+          %%ylabel('Residuals');
+          %%title('Residuals vs. Model Wave Height');
+          %mdl_poly = fitlm(model_wave_height, satellite_wave_height, 'quadratic');
+          %disp(mdl_poly);
+          %% Plot the polynomial fit
+          %figure; hold on;
+          %plot(mdl_poly);
+          %xlabel('Model Wave Height');
+          %ylabel('Observed Wave Height');
+          %title('Quadratic Polynomial Regression Fit');
+          %plot([0 9],[0 9],'k','linewidth',2)
+          %% Corrected wave height using the linear model
+          %qcorrected_wave_height = predict(mdl_poly, model_wave_height);
+          %scatter(qcorrected_wave_height, satellite_wave_height,'.k');
+          %new_mdl = fitlm(qcorrected_wave_height, satellite_wave_height);
+          %disp(new_mdl);
+          %
+          %% Alternatively, if using a log-transformed model:
+          %%corrected_wave_height = exp(predict(mdl_log, log_model_wave_height));
+          %
+          %%figure;
+          %%scatter(corrected_wave_height, satellite_wave_height);
+          %%xlabel('Corrected Wave Height');
+          %%ylabel('Satellite Wave Height');
+          %%title('Corrected vs. Satellite Wave Height');
+          %%% Calculate the new R-squared value
+          %%new_mdl = fitlm(corrected_wave_height, satellite_wave_height);
+          %%disp(new_mdl.Rsquared.Adjusted);
+          %modc=corrected_wave_height;
+
+        end
+
+
+        if correct_model>=1;
+
           data=modc; time=time_mod;
-          ythr = GPthres(time,data+tolerance,2,6,0.1,tthr,1); % Automate threshold selection
+
+          figure; cdfplot(data);
+          ythr = GPthres(time,data+tolerance,1,6,0.1,tthr,1); % Automate threshold selection
           disp(['GPD threshold selected: H_s = ' num2str(ythr) ' m']);
-          figure;
+					figure
           [GPD,gpp,gpci,Sy,ARI_POT,POT_sorted] = GPDfit(data+tolerance,time,tthr,ythr,ARI); % PF
           close
           figure(fign)
@@ -1174,7 +1944,11 @@ for fobs=stations
           semilogx(ARI,GPD(1,:),'-', 'color',colors{ke+1})
           semilogx(ARI,GPD(2,:),'--','color',colors{ke+1})
           semilogx(ARI,GPD(3,:),'--','color',colors{ke+1})
-          legend('Obs.',expt,['corrected ',expt]);
+          if plot_obs==1
+            legend('Obs.',expt,['corrected ',expt]);
+          else
+            legend(expt,['corrected ',expt]);
+          end
 
         end
 
@@ -1184,72 +1958,75 @@ for fobs=stations
         %semilogx([0 0],[0 0],'r',[0 0],[0 0],'b'); hold on;
         if ke==1
 
-          ax=figure; % subplot(lsub,csub,ke);
-          set(gca,'fontsize',12,'fontweight','bold')
-          hold on
-          fign=98;
-          % Compare to annual maxima method. Don't need this but sometimes useful to
-          data_obs=obs(:,dcol(i)); 
-          data = data_obs(:); time = time_obs(:);
-          AMy = AMcalc(time,data,1); AM = AMy(:,3);
-          [gev,gevci] = gevfit(AM);
-          GEV = gevinv(1-ARI2AEP(ARI),gev(1),gev(2),gev(3));
-          GEV(2,:) = gevinv(1-ARI2AEP(ARI),gevci(1,1),gevci(1,2),gevci(1,3));
-          GEV(3,:) = gevinv(1-ARI2AEP(ARI),gevci(2,1),gevci(2,2),gevci(2,3));
+          plot_gev=0;
 
-          figure;[AMari,AMsorted] = gringorten(AM,1,1);  hold on; 
-					close
-          semilogx(AMari,AMsorted,'xb')
-          semilogx(ARI,GEV(1,:),'k','LineWidth',2)
-          semilogx(ARI,GEV(2,:),'--k',ARI,GEV(3,:),'--k')
-          hold off
-          title('GEV fitted to annual maxima'), xlabel('Average recurrence interval  (years)'), ylabel('H_s')
+          if plot_gev==1
+            ax=figure; % subplot(lsub,csub,ke);
+            set(gca,'fontsize',12,'fontweight','bold')
+            hold on
+            fign=98;
+            % Compare to annual maxima method. Don't need this but sometimes useful to
+            data_obs=obs(:,dcol(i)); 
+            data = data_obs(:); time = time_obs(:);
+            AMy = AMcalc(time,data,1); AM = AMy(:,3);
+            [gev,gevci] = gevfit(AM);
+            GEV = gevinv(1-ARI2AEP(ARI),gev(1),gev(2),gev(3));
+            GEV(2,:) = gevinv(1-ARI2AEP(ARI),gevci(1,1),gevci(1,2),gevci(1,3));
+            GEV(3,:) = gevinv(1-ARI2AEP(ARI),gevci(2,1),gevci(2,2),gevci(2,3));
 
-          %
-          %figure(2)
-          %hold on
-          %semilogx(ARI,GEV(1,:),'b'), semilogx(ARI,GEV(2,:),'--b',ARI,GEV(3,:),'--b'),
-          %semilogx(AMari,AMsorted,'+b')
-          %hold off
-return
- 
+            figure;[AMari,AMsorted] = gringorten(AM,1,1);  hold on; 
+					  close
+            semilogx(AMari,AMsorted,'xb')
+            semilogx(ARI,GEV(1,:),'k','LineWidth',2)
+            semilogx(ARI,GEV(2,:),'--k',ARI,GEV(3,:),'--k')
+            hold off
+            %title('GEV fitted to annual maxima'), xlabel('Average recurrence interval  (years)'), ylabel('H_s')
+
+            %
+            %figure(2)
+            %hold on
+            %semilogx(ARI,GEV(1,:),'b'), semilogx(ARI,GEV(2,:),'--b',ARI,GEV(3,:),'--b'),
+            %semilogx(AMari,AMsorted,'+b')
+            %hold off
+					end
+
 
         end
 
-        data = model.data(:,dcol(i)); time = time_mod(:);
-        data=data(:);
-        ythr = GPthres(time,data+tolerance,2,6,0.1,tthr,1); % Automate threshold selection
-        disp(['GPD threshold selected: H_s = ' num2str(ythr) ' m']);
-        figure;
-        [GPD,gpp,gpci,Sy,ARI_POT,POT_sorted] = GPDfit(data+tolerance,time,tthr,ythr,ARI); % PF
-        close
-        figure(fign)
-        semilogx(ARI_POT,POT_sorted,'o','color',colors{ke}),
-        hold on
-        semilogx(ARI,GPD(1,:),'-', 'color',colors{ke})
-        semilogx(ARI,GPD(2,:),'--','color',colors{ke})
-        semilogx(ARI,GPD(3,:),'--','color',colors{ke})
+        %data = model.data(:,dcol(i)); time = time_mod(:);
+        %data=data(:);
+        %ythr = GPthres(time,data+tolerance,2,6,0.1,tthr,1); % Automate threshold selection
+        %disp(['GPD threshold selected: H_s = ' num2str(ythr) ' m']);
+        %figure;
+        %[GPD,gpp,gpci,Sy,ARI_POT,POT_sorted] = GPDfit(data+tolerance,time,tthr,ythr,ARI); % PF
+        %close
+        %figure(fign)
+        %semilogx(ARI_POT,POT_sorted,'o','color',colors{ke}),
+        %hold on
+        %semilogx(ARI,GPD(1,:),'-', 'color',colors{ke})
+        %semilogx(ARI,GPD(2,:),'--','color',colors{ke})
+        %semilogx(ARI,GPD(3,:),'--','color',colors{ke})
 
         %return
  
-        % Compare to annual maxima method. Don't need this but sometimes useful to
-        AMy = AMcalc(time_obs,hs_obs,1); AM = AMy(:,3);
-        %[gev,gevci] = gevfit(AM);
-        %GEV = gevinv(1-ARI2AEP(ARI),gev(1),gev(2),gev(3));
-        %GEV(2,:) = gevinv(1-ARI2AEP(ARI),gevci(1,1),gevci(1,2),gevci(1,3));
-        %GEV(3,:) = gevinv(1-ARI2AEP(ARI),gevci(2,1),gevci(2,2),gevci(2,3));
-        %
-        %figure;[AMari,AMsorted] = gringorten(AM,1,1);  hold on
-        %semilogx(ARI,GEV(1,:),'k','LineWidth',2)
-        %semilogx(ARI,GEV(2,:),'--k',ARI,GEV(3,:),'--k')
-        %hold off
-        %title('GEV fitted to annual maxima'), xlabel('Average recurrence interval  (years)'), ylabel('H_s')
-        %
-        %figure(2)
-        %hold on
-        %semilogx(ARI,GEV(1,:),'b'), semilogx(ARI,GEV(2,:),'--b',ARI,GEV(3,:),'--b'),
-        %semilogx(AMari,AMsorted,'+b')
-        %hold off
+        %% Compare to annual maxima method. Don't need this but sometimes useful to
+        %AMy = AMcalc(time_obs,hs_obs,1); AM = AMy(:,3);
+        %%[gev,gevci] = gevfit(AM);
+        %%GEV = gevinv(1-ARI2AEP(ARI),gev(1),gev(2),gev(3));
+        %%GEV(2,:) = gevinv(1-ARI2AEP(ARI),gevci(1,1),gevci(1,2),gevci(1,3));
+        %%GEV(3,:) = gevinv(1-ARI2AEP(ARI),gevci(2,1),gevci(2,2),gevci(2,3));
+        %%
+        %%figure;[AMari,AMsorted] = gringorten(AM,1,1);  hold on
+        %%semilogx(ARI,GEV(1,:),'k','LineWidth',2)
+        %%semilogx(ARI,GEV(2,:),'--k',ARI,GEV(3,:),'--k')
+        %%hold off
+        %%title('GEV fitted to annual maxima'), xlabel('Average recurrence interval  (years)'), ylabel('H_s')
+        %%
+        %%figure(2)
+        %%hold on
+        %%semilogx(ARI,GEV(1,:),'b'), semilogx(ARI,GEV(2,:),'--b',ARI,GEV(3,:),'--b'),
+        %%semilogx(AMari,AMsorted,'+b')
+        %%hold off
         if correct_model==0;
           legend('Obs.',expt);
         end
@@ -1293,6 +2070,13 @@ return
       end
     
     end
+
+    figure(99)
+    ylimset=get(gca,'ylim');
+    if ylimset(2)>15; ylim([0 15]); end
+    figure(fign)
+    grid('on')
+
     
     if ~isempty(find(dcol==6))
       %subplot(length(dcol),1,find(dcol==6));
@@ -1304,6 +2088,169 @@ return
     end
 
   end % if plot_eva
+
+
+  if plot_stats
+  
+    scrsz=[1 1 1366 768];
+    %scrsz=get(0,'screensize');
+    %scrsz=[2    42   958   953];
+    scrsz=[1 1 1910 990];
+    figure('position',scrsz,'color',[1 1 1],'visible','on')
+    hold on
+    set(gca,'fontsize',12,'fontweight','bold')
+
+    
+    %legh={'Obs'}; legt={'Obs'};
+    legr=[]; legb=[]; legc=[];
+     
+    ke=0;
+    for expt=expts
+      ke=ke+1;
+    
+      expt=expt{1};
+      [ig,ltime]=grab_nc_sufix(expt);
+    
+      path_expt=[path_source,expt,'/']; % GLOBALWAVE/'];%2018/01/05/00'];
+      
+      path_dm=[path_expt,'matlab/'];
+      system(['mkdir -p ',path_dm]);
+      %filename=[path_dm,file,'_',datestr(time_lima(1),'YYYYmmDDHH'),'_',datestr(time_lima(end),'YYYYmmDDHH'),'.mat'];
+      hs_mod=[];tp_mod=[]; pd_mod=[];time_mod=[];
+      tm01_mod=[];tm_mod=[]; pd_mod=[]; we_mod=[];
+      tm02_mod=[];ds_mod=[]; wlv_mod=[];time_mod=[];
+
+      % checking if the whole time series is saved as matlab file
+      filename=[path_dm,file,'_',datestr(time_lima(1),'YYYYmmDDHH'),'_',datestr(time_lima(end),'YYYYmmDDHH'),'.mat'];
+      if ck_mod_mat==1 && exist(filename)==2
+
+        disp(['Loading: ',filename]); % loading long timeseries rather than daily files
+        load(filename); % loading long timeseries rather than daily files
+
+      else
+    
+        checkin=0;  
+        % Loop in model time
+        for t=time_lima
+
+          filename=[path_dm,file,'_',datestr(t,'YYYYmmDDHH'),'.mat'];
+    
+          if ck_mod_mat==1 && exist(filename)==2
+        
+            display(['Loading: ',filename])
+            load(filename)%,'time_mod','model')
+        
+          else
+			  		
+            display(['NOT FOUND: ',filename])
+			  		return
+
+          end % if ck_mod_mat==1 && exist(filename)==2
+    
+          time_mod=[time_mod;time];
+          hs_mod=[hs_mod;hs];
+          tp_mod=[tp_mod;tp];
+          tm01_mod=[tm01_mod;tm01];
+          tm02_mod=[tm02_mod;tm02];
+          tm_mod=[tm_mod;tm];
+          pd_mod=[pd_mod;pd];
+          ds_mod=[ds_mod;ds];
+          wlv_mod=[wlv_mod;wlv];
+          %we_mod=[we_mod;we];
+          
+        
+        end % for t=time_lima
+
+      end
+
+      clear model
+     
+      % 1 {'PeakPerid'}   2 {'PeakDirection'}   3 {'Directional spread'}   4 {'Tm01'}   5 {'Tm02'}   6 {'Hs'}   7 {'Qp'}  8 Tm
+      model.data(:,9)=wlv_mod; % we_mod
+      model.data(:,8)=tm_mod;
+      model.data(:,1)=tp_mod;
+      model.data(:,2)=pd_mod;
+      model.data(:,3)=ds_mod;
+      model.data(:,4)=tm01_mod;
+      model.data(:,5)=tm02_mod;
+      model.data(:,6)=hs_mod;
+      
+
+      tnames={'Peak Period',    'Peak Direction',    'Directional spread',   'Tm01','Tm02','Significant Wave Height (Hs)','Qp','Tm','Water Level'};
+      for i=1:length(dcol)
+
+        obsi=obs(:,dcol(i)); obsi=obsi(:)'; 
+        tobs=floor(time_obs);
+        modi = model.data(:,dcol(i)); modi=modi(:);
+        tmod=floor(time_mod);
+
+        obsi=interp1(time_obs,obsi,time_mod);
+
+        %modeli=interp1(time_mod,model.data(:,dcol(i)),time_obs);
+        %inan=isnan(modeli); obs(inan,dcol(i))=nan;
+        %inan=isnan(obs(:,dcol(i))); modeli(inan)=nan;
+        %modi=modeli; inan=isnan(modi); modi(inan)=[];
+        %obsi=obs(:,dcol(i)); inan=isnan(obsi); obsi(inan)=[];
+
+        % loop to calculate daily rmse correlation and bias
+        k=0;
+        for t = time_lima
+           k=k+1;
+           % findind times in time_mod and time_obs that are on the same day as t
+           [io]=find(tmod==t);
+
+           d_rmse(k)=nanrmse(obsi(io),modi(io));
+           d_corr(k)=nancorr(obsi(io),modi(io)');
+           d_bias(k)=nanmean(obsi(io)-modi(io));
+
+        end
+
+        % ploting daily rmse correlation and bias
+        for s=1:3
+	        if s==1
+	          yplot=d_rmse;
+	          ylab='RMSE';
+            legr=[legr,{[expt,' mean=',num2str(nanmean(d_rmse),'%.2f')]}];
+	        elseif s==2
+	          yplot=d_corr;
+	          ylab='Correlation';
+            legc=[legc,{[expt,' mean=',num2str(nanmean(d_corr),'%.2f')]}];
+	        elseif s==3
+	          yplot=d_bias;
+	          ylab='Bias';
+            legb=[legb,{[expt,' mean=',num2str(nanmean(d_bias),'%.2f')]}];
+	        end
+
+	        subplot(3,1,s)
+					hold on
+	        plot(time_lima,yplot,'.-','color',colors{ke},'linewidth',2,'markersize',10)
+	        ylabel(ylab)
+					datetick('x','dd/mmm/yy','keepticks')
+
+	        title([tnames{dcol(i)}])
+	        if ke==length(expts)
+            if s==1; legend([legr],'location','best'); end
+            if s==2; legend([legc],'location','best'); end
+            if s==3; legend([legb],'location','best'); end
+
+	        end
+
+				end
+        
+      end
+    
+    end
+    
+    if ~isempty(find(dcol==6))
+      %subplot(length(dcol),1,find(dcol==6));
+      %legend([legh],'location','best')
+    end
+    
+    if save_fig==1
+      %export_fig(gcf,'steephead_period','-png','-r150');
+    end
+
+  end % if plot_stats
 
 
   if plot_map
@@ -1333,6 +2280,320 @@ return
 
         [ig,ltime]=grab_nc_sufix(expt);
  
+      
+        path_expt=[path_source,expt,'/']; % GLOBALWAVE/'];%2018/01/05/00'];
+    
+        pname=[path_expt,ptime];
+        
+        fname=[pname,ww3pre,'_',ftime,'-utc_',gnames{ig},'.nc'];
+        %fname=[pname,'ww3g_',ftime,'-utc_',gnames{1},'.nc'];
+        display(['Loading: ',fname]);
+    
+        if checkin==0; % t==time_lima(1)
+          checkin=1; 
+          if strcmp(expt,'NZWAVE-HR')
+            depth_mod=double(ncread(fname,'depth',[1 1 1],[Inf Inf 1]));
+            %wlv_mod=double(ncread(fname,'wlv',[1 1 1],[Inf Inf 1]));
+            %depth_mod=depth_mod-wlv_mod;
+          end
+
+          lon_mod=double(ncread(fname,'lon'));
+          lat_mod=double(ncread(fname,'lat'));
+          [dif ilon]=nanmin(abs(lon_mod-lon_obs));
+          [dif ilat]=nanmin(abs(lat_mod-lat_obs));
+
+          [lon_modm,lat_modm]=meshgrid(lon_mod,lat_mod);
+ 
+          if strcmp(file,'SteepHead_SP_FullRecord_QC')
+            %ilon=ilon+3;
+          elseif strcmp(file,'wairewa_lake_forsyth') & ig==2 % NZWAVE
+            ilat=ilat-2;
+          end
+    
+          dis=sqrt((lon_mod(ilon)-lon_obs).^2 + (lat_mod(ilat)-lat_obs).^2)*110;
+          display(['Distance between obs and grid point is: ',num2str(dis),' km'])
+        end
+        
+        display(['Reading nc variables']); tic
+        time=squeeze(double(ncread(fname,'time')))./24+t; time=time(1:ltime-1);
+        hs=squeeze(double(ncread(fname,'hsig',          [1 1 1],[Inf Inf ltime-1]))); 
+        tp=squeeze(double(ncread(fname,'tpeak',         [1 1 1],[Inf Inf ltime-1]))); 
+        %tm01=squeeze(double(ncread(fname,'tmean01',     [1 1 1],[Inf Inf ltime-1]))); 
+        %tm=squeeze(double(ncread(fname,'tmean',         [1 1 1],[Inf Inf ltime-1]))); 
+        pd=squeeze(double(ncread(fname,'peak_direction',[1 1 1],[Inf Inf ltime-1]))); 
+        if strcmp(expt,'NZWAVE-HR-bla')
+          wlv=squeeze(double(ncread(fname,'wlv',          [1 1 1],[Inf Inf ltime-1]))); 
+          model(ke).wlv=wlv;
+          ucur=squeeze(double(ncread(fname,'ucur',        [1 1 1],[Inf Inf ltime-1]))); 
+          model(ke).ucur=ucur;
+          vcur=squeeze(double(ncread(fname,'vcur',        [1 1 1],[Inf Inf ltime-1]))); 
+          model(ke).vcur=vcur;
+        else
+          model(ke).wlv=nan(size(hs));
+          model(ke).ucur=nan(size(hs));
+          model(ke).vcur=nan(size(hs));
+        end
+        display(['Finished reading nc variables']); toc
+
+        model(ke).time=time;
+        model(ke).hs=hs;
+        model(ke).tp=tp;
+        model(ke).pd=pd;
+        %model(ke).=;
+
+      end % for expt=expts
+
+      time=model(1).time;
+      tnames={'Peak Period',    'Peak Direction',    'Directional spread',   'Tm01','Tm02 or Tm','Significant Wave Height (Hs)','Qp'};
+
+      if plot_obs
+        % converting to u and v before interpolating
+        pd_obs=obs(:,2); hs_obs=obs(:,6);
+        pd=mod(-90-pd_obs,360); u_obs=cosd(pd).*hs_obs; v_obs=sind(pd).*hs_obs;
+        u_obsl=interp1(time_obs,u_obs,time); v_obsl=interp1(time_obs,v_obs,time);
+        u_obsc=interp1(time_obs,u_obs,time,'cubic'); v_obsc=interp1(time_obs,v_obs,time,'cubic');
+        dp_obs=270-atan2(v_obsc,u_obsc)*180/pi;
+        dp_obs(dp_obs>360)=dp_obs(dp_obs>360)-360;
+
+        pd_obs=dp_obs;
+        hs_obs=sqrt(u_obsc.^2+v_obsc.^2);
+        %hs_obs=interp1(time_obs,obs(:,6),time);
+        tp_obs=interp1(time_obs,obs(:,1),time);
+      end
+
+      for i=1:length(time)
+ 
+        ke=0;
+        for expt=expts
+          ke=ke+1;
+
+          display(['Ploting map']); tic
+          ax(ke)=subplot(1,length(expts),ke);
+          hold on
+          focus_on_station=0;
+          if focus_on_station==1
+            m_proj('lambert','long', [lon_obs-.3 lon_obs+.25],'lat',[lat_obs-.25 lat_obs+.25]);
+          else
+	          m_proj('lambert','long', [nanmin(lon_mod(:)) nanmax(lon_mod(:))],'lat',[nanmin(lat_mod(:)) nanmax(lat_mod(:))]);
+					end
+
+          if strcmp(pcname,'hs')
+            data=model(ke).hs(:,:,i);
+            cmap=cmocean('thermal');
+            cmap=avhrr; % cmocean('thermal');
+          elseif strcmp(pcname,'wlv')
+            data=model(ke).wlv(:,:,i);
+            pd_mod=model(ke).pd(:,:,i);
+            pd=mod(-90-pd_mod,360);
+            u_mod=cosd(pd).*data; v_mod=sind(pd).*data;
+            cmap=cmocean('balance');
+          elseif strcmp(pcname,'curr')
+            u_mod=model(ke).ucur(:,:,i);
+            v_mod=model(ke).vcur(:,:,i);
+            data=sqrt(u_mod.^2+v_mod.^2);
+            cmap=cmocean('tempo');
+          end
+          %colormap(ax(1),gwbreal)
+          %m_pcolor(lon_ccmp,lat_ccmp,wsc_ccmp');
+          %set(get(cs,'ylabel'),'string','N/m^3','fontsize',20,'fontweight','bold');
+          %caxis([-2E-06 2E-06])
+          colormap(ax(ke),cmap) % parula, avhrr
+          m_pcolor(lon_mod,lat_mod,data');
+          %caxis([0 .13])
+          cb=colorbar;%('southoutside');
+          set(get(cb,'ylabel'),'string','','fontsize',12,'fontweight','bold');
+          set(cb,'fontsize',12,'fontweight','bold');
+
+          if strcmp(pcname,'hs')
+            caxis([0 12])
+          elseif strcmp(pcname,'wlv')
+            caxis([-2 2])
+          elseif strcmp(pcname,'curr')
+            caxis([0 2])
+          end
+
+          %%set(cs,'position','south');
+          %shading interp
+          %%caxis([nanmin(t_avhrr(:)) nanmax(t_avhrr(:))]); % 12 25
+
+          %[cs,h]=m_contour(lon_bath,lat_bath,bath',[-1000 -1000],'color',[1 1 1],'linewidth',2);
+          %clabel(cs,h,'color',[1 1 1],'fontsize',14,'fontweight','bold','LabelSpacing',2000)
+          if strncmp(expt,'NZWAVE',6)
+            [cs,h]=m_contour(lon_mod,lat_mod,-depth_mod',[-2 -20 -50 -100 -200],'color',[1 1 1],'linewidth',2);
+            clabel(cs,h,'color',[1 1 1],'fontsize',10,'fontweight','bold','LabelSpacing',2000)
+          else
+            [cs,h]=m_contour(lon_geb,lat_geb,-depth_geb',[-200 -1000],'color',[1 1 1],'linewidth',2);
+            clabel(cs,h,'color',[0 0 0],'fontsize',10,'fontweight','bold','LabelSpacing',2000)
+          end
+
+          %[cs,h]=m_contour(lon_aviso,lat_aviso,z_aviso_avg,'color','k');
+          %[cs,h]=m_contour(lon_aviso,lat_aviso,z_aviso_avg,[.76:.04:.88],'color','k');
+          %clabel(cs,h,'color',[0 0 0],'fontsize',14,'fontweight','bold','LabelSpacing',2000) % each contour line represents 0.02 increase/decrease
+
+          m_gshhs_i('patch',[.7 .7 .7],'edgecolor','k','linewidth',.5);
+          %%m_grid('fontname','helvetica','fontsize',22,'fontweight','bold');
+          %%m_grid('xtick',[round(loni):2:round(lonf)],'xticklabels',[round(loni):2:round(lonf)],'fontname','helvetica','fontsize',20,'fontweight','bold');
+          m_grid('fontname','helvetica','fontsize',14,'fontweight','bold');
+          %title([replace(file,'_',' '),' Hs and ',pcname,' at ',datestr(time(i),'HH:MM dd/mmm/yyyy')],'fontsize',14,'fontweight','bold')
+          title(strcat([expt{1},' ',pcname,' at ',datestr(time(i),'HH:MM dd/mmm/yyyy')]),'fontsize',14,'fontweight','bold')
+          %title(['Wave hindcast Hs at ',datestr(time(i),'HH:MM dd/mmm/yyyy')],'fontsize',14,'fontweight','bold')
+
+          %set(gca,'fontsize',14,'fontname','helvetica','fontweight','bold')
+          %%m_contour(plon,plat,bathy',[200 2000],'w','linewidth',1);
+          %%caxis([0 .5])
+
+          % getting u and v
+          if strcmp(vecname,'wlv')
+          elseif strcmp(vecname,'hs')
+            dat=model(ke).hs(:,:,i);
+            pd_mod=model(ke).pd(:,:,i);
+            pd=mod(-90-pd_mod,360);
+            u_mod=cosd(pd).*dat; v_mod=sind(pd).*dat;
+          elseif strcmp(vecname,'curr')
+            u_mod=model(ke).ucur(:,:,i);
+            v_mod=model(ke).vcur(:,:,i);
+          end
+
+          if focus_on_station==1
+            v_spa=1; vsize=6;
+          else
+            v_spa=20; vsize=20;
+					end
+          if strcmp(vecname,'hs')
+            [hp ht]=m_vec(vsize,lon_modm(1:v_spa:end,1:v_spa:end),lat_modm(1:v_spa:end,1:v_spa:end),u_mod(1:v_spa:end,1:v_spa:end)',v_mod(1:v_spa:end,1:v_spa:end)','k','shaftwidth',.75,'headwidth',3,'headangle',60,'headlength',3.5);
+            if plot_obs
+              [hp ht]=m_vec(vsize,lon_obs+.1,lat_obs+.14,2,0,'k','shaftwidth',.75,'headwidth',3,'headangle',60,'headlength',3.5,'key',[num2str(2.0),' m']);
+            end
+            set(ht,'fontsize',14,'fontweight','bold')
+          elseif strcmp(vecname,'curr')
+            [hp ht]=m_vec(5,lon_modm(1:v_spa:end,1:v_spa:end),lat_modm(1:v_spa:end,1:v_spa:end),u_mod(1:v_spa:end,1:v_spa:end)',v_mod(1:v_spa:end,1:v_spa:end)','k','shaftwidth',.75,'headwidth',3,'headangle',60,'headlength',3.5)
+            if plot_obs
+              [hp ht]=m_vec(5,lon_obs+.1,lat_obs+.14,2,0,'k','shaftwidth',.75,'headwidth',3,'headangle',60,'headlength',3.5,'key',[num2str(2.0),' m/s']);
+            end
+            set(ht,'fontsize',14,'fontweight','bold')
+          end
+
+          if plot_obs
+            pd_mod=model(ke).pd(:,:,i);
+            m_text(lon_obs+.1,lat_obs+.2,['Mod dp: ',num2str(pd_mod(ilon,ilat),'%.1f'),'^o'],'fontsize',14,'fontweight','bold') 
+            m_text(lon_obs+.1,lat_obs+.18,['Obs dp: ',num2str(pd_obs(i),'%.2f'),'^o'],'fontsize',14,'fontweight','bold') 
+          end
+
+          % model single vector 
+          data=model(ke).hs(:,:,i);
+          pd_mod=model(ke).pd(:,:,i);
+          pd=mod(-90-pd_mod,360);
+          u_mod=cosd(pd).*data; v_mod=sind(pd).*data;
+          m_vec(vsize,lon_mod(ilon),lat_mod(ilat),u_mod(ilon,ilat),v_mod(ilon,ilat),'m','shaftwidth',2,'headwidth',6,'headangle',60,'headlength',8)
+          [hp ht]=m_vec(vsize,lon_obs-.2,lat_obs-.2,2,0                            ,'m','shaftwidth',2,'headwidth',6,'headangle',60,'headlength',8,'key',[num2str(2.0),' m']);
+          set(ht,'fontsize',14,'fontweight','bold')
+           
+          % obs single vector 
+          if plot_obs
+            pd=mod(-90-pd_obs,360);
+            u_obs=cosd(pd).*hs_obs; v_obs=sind(pd).*hs_obs;
+            m_vec(vsize,lon_obs,lat_obs,u_obsc(i),v_obsc(i),'m'                          ,'shaftwidth',2,'headwidth',6,'headangle',60,'headlength',8)
+            %m_vec(10,lon_obs,lat_obs,u_obsl(i),v_obsl(i),'c','shaftwidth',.75,'headwidth',3,'headangle',60,'headlength',3.5)
+					end	
+
+          display(['Finished ploting map']); toc
+
+          %if dcol(i)==6
+          %  mod_rmse=nanrmse(obs(:,dcol(i)),modeli');
+          %  mod_bias=nanmean(modeli')-nanmean(obs(:,dcol(i)));
+          %  legh=[legh,{[expt,' rmse=',num2str(mod_rmse,'%.2f'),', bias=',num2str(mod_bias,'%.2f')]}];
+          %end
+
+        end % for expt=expts
+				pause(0.5)
+
+        path_dm=strcat(path_fig,expt{1},'/');
+        system(['mkdir -p ',path_dm]);
+        figname=[path_dm,file,'_',pcname,'_',vecname,'_',datestr(time(i),'YYYY_mm_DD_HH_MM'),'.png'];
+        display(['Plotting: ',figname]);
+        if save_fig==1
+          display(['Saving: ',figname]);
+          export_fig(gcf,figname,'-png','-r150');
+          %close
+          %clf('reset')	
+				end
+
+        if save_video==1 
+
+          if i==1 & t==time_lima(1)
+            videoName = [path_dm,'/',file,'_',pcname,'_',vecname,'_',datestr(time_lima(1),'yyyymmdd_HHMMSS'),'_',datestr(time_lima(end),'yyyymmdd_HHMMSS'),''];
+            display(['Saving video name: ',videoName])
+            vidObj = VideoWriter(videoName,'Uncompressed AVI');
+            %vidObj = VideoWriter(videoName,'Motion JPEG 2000');
+            set(vidObj,'FrameRate',5)
+            open(vidObj);
+          end
+          display(['Printing frame time: ',datestr(time(i),'yyyymmdd_HHMMSS')]);
+          pause(0.5)
+          M = getframe(gcf);
+          writeVideo(vidObj,M);
+
+        end
+
+        if save_gif==1 
+          gifName = [path_dm,'/',file,'_',pcname,'_',vecname,'_',datestr(time_lima(1),'yyyymmdd_HHMMSS'),'_',datestr(time_lima(end),'yyyymmdd_HHMMSS'),'.gif'];
+          display(['Saving GIF: ',gifName]);
+          drawnow
+          frame = getframe(1);
+          im = frame2im(frame);
+          [imind,cm] = rgb2ind(im,256);
+          if i == 1 & t==time_lima(1);
+            imwrite(imind,cm,gifName,'gif', 'Loopcount',inf,'DelayTime',.2);
+          else
+            imwrite(imind,cm,gifName,'gif','WriteMode','append','DelayTime',.2);
+          end
+				end
+
+        if save_fig==1 || save_video==1 || save_gif==1
+          clf('reset')
+          set(gcf,'color',[1 1 1])
+				else
+				  pause(0.5)
+				end
+
+      end % for i=1:length(time)
+
+    end % for t=time_lima
+    
+    if save_video==1 
+      close(vidObj);
+    end
+
+    %close 
+
+  end % if plot_map
+
+  if plot_matm
+
+    scrsz=[1 1 1366 768];
+    scrsz=[1 1 1920 1080];
+    %scrsz=get(0,'screensize');
+    
+    figure('position',scrsz,'color',[1 1 1],'visible','on')
+    hold on
+    set(gca,'fontsize',12,'fontweight','bold')
+      
+    legh={'Obs'}; legt={'Obs'};
+
+    checkin=0;  
+    % Loop in desired time
+    for t=time_lima
+    
+      ptime=datestr(t,'YYYY/mm/DD/HH/');
+      ftime=datestr(t,'YYYYmmDDHH');
+    
+      ke=0;
+      for expt=expts
+        ke=ke+1;
+      
+        expt=expt{1};
+
+        [ig,ltime]=grab_nc_sufix(expt);
       
         path_expt=[path_source,expt,'/']; % GLOBALWAVE/'];%2018/01/05/00'];
     
@@ -1399,20 +2660,39 @@ return
       time=model(1).time;
       tnames={'Peak Period',    'Peak Direction',    'Directional spread',   'Tm01','Tm02 or Tm','Significant Wave Height (Hs)','Qp'};
 
-      % converting to u and v before interpolating
-      pd_obs=obs(:,2); hs_obs=obs(:,6);
-      pd=mod(-90-pd_obs,360); u_obs=cosd(pd).*hs_obs; v_obs=sind(pd).*hs_obs;
-      u_obsl=interp1(time_obs,u_obs,time); v_obsl=interp1(time_obs,v_obs,time);
-      u_obsc=interp1(time_obs,u_obs,time,'cubic'); v_obsc=interp1(time_obs,v_obs,time,'cubic');
-      dp_obs=270-atan2(v_obsc,u_obsc)*180/pi;
-      dp_obs(dp_obs>360)=dp_obs(dp_obs>360)-360;
+      if plot_obs
+        % converting to u and v before interpolating
+        pd_obs=obs(:,2); hs_obs=obs(:,6);
+        pd=mod(-90-pd_obs,360); u_obs=cosd(pd).*hs_obs; v_obs=sind(pd).*hs_obs;
+        u_obsl=interp1(time_obs,u_obs,time); v_obsl=interp1(time_obs,v_obs,time);
+        u_obsc=interp1(time_obs,u_obs,time,'cubic'); v_obsc=interp1(time_obs,v_obs,time,'cubic');
+        dp_obs=270-atan2(v_obsc,u_obsc)*180/pi;
+        dp_obs(dp_obs>360)=dp_obs(dp_obs>360)-360;
 
-      pd_obs=dp_obs;
-      hs_obs=sqrt(u_obsc.^2+v_obsc.^2);
-      %hs_obs=interp1(time_obs,obs(:,6),time);
-      tp_obs=interp1(time_obs,obs(:,1),time);
+        pd_obs=dp_obs;
+        hs_obs=sqrt(u_obsc.^2+v_obsc.^2);
+        %hs_obs=interp1(time_obs,obs(:,6),time);
+        tp_obs=interp1(time_obs,obs(:,1),time);
+      end
+
+      for i=1:6:length(time)
+
+        ptime=datestr(time(i),'YYYY/');
+        ftime=datestr(time(i),'YYYYmmDD');
+
+        path_sp=[path_ssp,'psl/',ptime];
+        %file_sp=[path_sp,prefix{1},midfix{1},sufix{1},'_',ftime,'00.nc'];
+        if time_lima(1)<datenum('2015-01-01 00:00:00')
+      	  file_sp=[path_sp,'psl_historical_GFDL-ESM4_CCAM_6hrly_Global_raw_',ftime,'00.nc'];
+          time_sp=ncread(file_sp,'time')./(24*60) + datenum('1959-01-01 00:00:00');
+      	else
+      	  file_sp=[path_sp,'psl_ssp370_GFDL-ESM4_CCAM_6hrly_Global_raw_',ftime,'00.nc'];
+          time_sp=ncread(file_sp,'time')./(24*60) + datenum('2015-01-01 00:00:00');
+      	end
+        psl=ncread(file_sp,'psl')./100;
         
-      for i=1:length(time)
+        [dif i_sp]=nanmin(abs(time_sp-time(i))); 
+        psl=psl(:,:,i_sp);
  
         ke=0;
         for expt=expts
@@ -1421,12 +2701,15 @@ return
           display(['Ploting map']); tic
           ax(ke)=subplot(1,length(expts),ke);
           hold on
-          m_proj('lambert','long', [lon_obs-.3 lon_obs+.25],'lat',[lat_obs-.25 lat_obs+.25]);
+          %m_proj('lambert','long', [lon_obs-.3 lon_obs+.25],'lat',[lat_obs-.25 lat_obs+.25]);
+          m_proj('lambert','long', [nanmin(lon_mod(:)) nanmax(lon_mod(:))],'lat',[nanmin(lat_mod(:)) nanmax(lat_mod(:))]);
 
           if strcmp(pcname,'hs')
             data=model(ke).hs(:,:,i);
             cmap=cmocean('thermal');
-            caxis([-2 2])
+            cmin=0; cint=.5; cmax=7;
+            cmap=mycmap(cmap,cmin,cint,cmax);
+
           elseif strcmp(pcname,'wlv')
             data=model(ke).wlv(:,:,i);
             pd_mod=model(ke).pd(:,:,i);
@@ -1452,12 +2735,30 @@ return
           set(cb,'fontsize',12,'fontweight','bold');
 
           if strcmp(pcname,'hs')
-            caxis([0 4])
+          %  caxis([0 4])
           elseif strcmp(pcname,'wlv')
             caxis([-2 2])
           elseif strcmp(pcname,'curr')
             caxis([0 2])
           end
+          colormap(cmap)
+          caxis([cmin cmax+cint]);
+
+          if strncmp(conname,'psl',3)
+            [cs,h]=m_contour(lon_sspm,lat_sspm,psl','color',[1 1 1],'linewidth',2);
+            clabel(cs,h,'color',[1 1 1],'fontsize',10,'fontweight','bold','LabelSpacing',2000)
+          end
+
+          plot_track=1;
+          if plot_track
+            [dif i_tr]=nanmin(abs(time_tr-time(i))); 
+            if time_tr(i_tr)==time(i); 
+              loc=find(id_tr(:)==id_tr(i_tr));
+              m_plot(tr.data(loc(1):i_tr,1),tr.data(loc(1):i_tr,2),'m','linewidth',2)
+              m_plot(tr.data(i_tr,1),tr.data(i_tr,2),'.m','markersize',20)
+            end
+          end
+
 
           %%set(cs,'position','south');
           %shading interp
@@ -1465,11 +2766,11 @@ return
 
           %[cs,h]=m_contour(lon_bath,lat_bath,bath',[-1000 -1000],'color',[1 1 1],'linewidth',2);
           %clabel(cs,h,'color',[1 1 1],'fontsize',14,'fontweight','bold','LabelSpacing',2000)
-          if strcmp(expt,'NZWAVE-HR')
-            [cs,h]=m_contour(lon_mod,lat_mod,-depth_mod',[-2 -20 -50 -100 -200],'color',[1 1 1],'linewidth',2);
-            clabel(cs,h,'color',[0 0 0],'fontsize',10,'fontweight','bold','LabelSpacing',2000)
+          if strncmp(expt,'NZWAVE',6)
+            %[cs,h]=m_contour(lon_mod,lat_mod,-depth_mod',[-200 -200],'color',[0 .7 0],'linewidth',2);
+            %clabel(cs,h,'color',[0 .7 0],'fontsize',10,'fontweight','bold','LabelSpacing',2000)
           else
-            [cs,h]=m_contour(lon_geb,lat_geb,-depth_geb',[-200 -1000],'color',[1 1 1],'linewidth',2);
+            [cs,h]=m_contour(lon_geb,lat_geb,-depth_geb',[-200 -1000],'color',[0 0 0],'linewidth',2);
             clabel(cs,h,'color',[0 0 0],'fontsize',10,'fontweight','bold','LabelSpacing',2000)
           end
 
@@ -1477,11 +2778,12 @@ return
           %[cs,h]=m_contour(lon_aviso,lat_aviso,z_aviso_avg,[.76:.04:.88],'color','k');
           %clabel(cs,h,'color',[0 0 0],'fontsize',14,'fontweight','bold','LabelSpacing',2000) % each contour line represents 0.02 increase/decrease
 
-          m_gshhs_f('patch',[.7 .7 .7],'edgecolor','k','linewidth',.5);
+          m_gshhs_i('patch',[.7 .7 .7],'edgecolor',[0 0 0],'linewidth',.5);
           %%m_grid('fontname','helvetica','fontsize',22,'fontweight','bold');
           %%m_grid('xtick',[round(loni):2:round(lonf)],'xticklabels',[round(loni):2:round(lonf)],'fontname','helvetica','fontsize',20,'fontweight','bold');
           m_grid('fontname','helvetica','fontsize',14,'fontweight','bold');
           title([replace(file,'_',' '),' Hs and ',pcname,' at ',datestr(time(i),'HH:MM dd/mmm/yyyy')],'fontsize',14,'fontweight','bold')
+          title(['Hs and ',conname,' at ',datestr(time(i),'HH:MM dd/mmm/yyyy')],'fontsize',14,'fontweight','bold')
 
           %set(gca,'fontsize',14,'fontname','helvetica','fontweight','bold')
           %%m_contour(plon,plat,bathy',[200 2000],'w','linewidth',1);
@@ -1499,39 +2801,46 @@ return
             v_mod=model(ke).vcur(:,:,i);
           end
 
-          v_spa=1;
+          v_spa=40;
           if strcmp(vecname,'hs')
-            m_vec(10,lon_modm(1:v_spa:end,1:v_spa:end),lat_modm(1:v_spa:end,1:v_spa:end),u_mod(1:v_spa:end,1:v_spa:end)',v_mod(1:v_spa:end,1:v_spa:end)','k','shaftwidth',.75,'headwidth',3,'headangle',60,'headlength',3.5)
-            [hp ht]=m_vec(10,lon_obs+.1,lat_obs+.14,2,0,'k','shaftwidth',.75,'headwidth',3,'headangle',60,'headlength',3.5,'key',[num2str(2.0),' m']);
+            [hp ht]=m_vec(10,lon_modm(1:v_spa:end,1:v_spa:end),lat_modm(1:v_spa:end,1:v_spa:end),u_mod(1:v_spa:end,1:v_spa:end)',v_mod(1:v_spa:end,1:v_spa:end)','k','shaftwidth',.75,'headwidth',3,'headangle',60,'headlength',3.5);
+            if plot_obs
+              [hp ht]=m_vec(10,lon_obs+.1,lat_obs+.14,2,0,'k','shaftwidth',.75,'headwidth',3,'headangle',60,'headlength',3.5,'key',[num2str(2.0),' m']);
+            end
             set(ht,'fontsize',14,'fontweight','bold')
           elseif strcmp(vecname,'curr')
-            m_vec(5,lon_modm(1:v_spa:end,1:v_spa:end),lat_modm(1:v_spa:end,1:v_spa:end),u_mod(1:v_spa:end,1:v_spa:end)',v_mod(1:v_spa:end,1:v_spa:end)','k','shaftwidth',.75,'headwidth',3,'headangle',60,'headlength',3.5)
-            [hp ht]=m_vec(5,lon_obs+.1,lat_obs+.14,2,0,'k','shaftwidth',.75,'headwidth',3,'headangle',60,'headlength',3.5,'key',[num2str(2.0),' m/s']);
+            [hp ht]=m_vec(5,lon_modm(1:v_spa:end,1:v_spa:end),lat_modm(1:v_spa:end,1:v_spa:end),u_mod(1:v_spa:end,1:v_spa:end)',v_mod(1:v_spa:end,1:v_spa:end)','k','shaftwidth',.75,'headwidth',3,'headangle',60,'headlength',3.5)
+            if plot_obs
+              [hp ht]=m_vec(5,lon_obs+.1,lat_obs+.14,2,0,'k','shaftwidth',.75,'headwidth',3,'headangle',60,'headlength',3.5,'key',[num2str(2.0),' m/s']);
+            end
             set(ht,'fontsize',14,'fontweight','bold')
           end
 
-          pd_mod=model(ke).pd(:,:,i);
-          m_text(lon_obs+.1,lat_obs+.2,['Mod dp: ',num2str(pd_mod(ilon,ilat),'%.1f'),'^o'],'fontsize',14,'fontweight','bold') 
-          m_text(lon_obs+.1,lat_obs+.18,['Obs dp: ',num2str(pd_obs(i),'%.2f'),'^o'],'fontsize',14,'fontweight','bold') 
+          if plot_obs
+            pd_mod=model(ke).pd(:,:,i);
+            m_text(lon_obs+.1,lat_obs+.2,['Mod dp: ',num2str(pd_mod(ilon,ilat),'%.1f'),'^o'],'fontsize',14,'fontweight','bold') 
+            m_text(lon_obs+.1,lat_obs+.18,['Obs dp: ',num2str(pd_obs(i),'%.2f'),'^o'],'fontsize',14,'fontweight','bold') 
+          end
 
-          % model single vector 
-          data=model(ke).hs(:,:,i);
-          pd_mod=model(ke).pd(:,:,i);
-          pd=mod(-90-pd_mod,360);
-          u_mod=cosd(pd).*data; v_mod=sind(pd).*data;
-      	  vsize=2;
-          m_vec(vsize,lon_mod(ilon),lat_mod(ilat),u_mod(ilon,ilat),v_mod(ilon,ilat),'b','shaftwidth',2,'headwidth',6,'headangle',60,'headlength',8)
-          [hp ht]=m_vec(vsize,lon_obs+.1,lat_obs+.12,2,0,'b',                           'shaftwidth',2,'headwidth',6,'headangle',60,'headlength',8,'key',[num2str(2.0),' m']);
-          set(ht,'fontsize',14,'fontweight','bold')
-          
-          % obs single vector 
-          %pd=mod(-90-pd_obs,360);
-          %u_obs=cosd(pd).*hs_obs; v_obs=sind(pd).*hs_obs;
-          m_vec(vsize,lon_obs,lat_obs,u_obsc(i),v_obsc(i),'m'                          ,'shaftwidth',2,'headwidth',6,'headangle',60,'headlength',8)
-          %m_vec(10,lon_obs,lat_obs,u_obsl(i),v_obsl(i),'c','shaftwidth',.75,'headwidth',3,'headangle',60,'headlength',3.5)
+          if plot_obs
+            % model single vector 
+            data=model(ke).hs(:,:,i);
+            pd_mod=model(ke).pd(:,:,i);
+            pd=mod(-90-pd_mod,360);
+            u_mod=cosd(pd).*data; v_mod=sind(pd).*data;
+      	    vsize=2;
+            m_vec(vsize,lon_mod(ilon),lat_mod(ilat),u_mod(ilon,ilat),v_mod(ilon,ilat),'b','shaftwidth',2,'headwidth',6,'headangle',60,'headlength',8)
+            [hp ht]=m_vec(vsize,lon_obs+.1,lat_obs+.12,2,0,'b',                           'shaftwidth',2,'headwidth',6,'headangle',60,'headlength',8,'key',[num2str(2.0),' m']);
+            set(ht,'fontsize',14,'fontweight','bold')
+            
+            % obs single vector 
+            %pd=mod(-90-pd_obs,360);
+            %u_obs=cosd(pd).*hs_obs; v_obs=sind(pd).*hs_obs;
+            m_vec(vsize,lon_obs,lat_obs,u_obsc(i),v_obsc(i),'m'                          ,'shaftwidth',2,'headwidth',6,'headangle',60,'headlength',8)
+            %m_vec(10,lon_obs,lat_obs,u_obsl(i),v_obsl(i),'c','shaftwidth',.75,'headwidth',3,'headangle',60,'headlength',3.5)
+					end
 
           display(['Finished ploting map']); toc
-
 
           %if dcol(i)==6
           %  mod_rmse=nanrmse(obs(:,dcol(i)),modeli');
@@ -1540,6 +2849,7 @@ return
           %end
 
         end % for expt=expts
+				pause(0.5)
 
         path_dm=strcat(path_fig,expt{1},'/');
         system(['mkdir -p ',path_dm]);
@@ -1577,9 +2887,9 @@ return
           im = frame2im(frame);
           [imind,cm] = rgb2ind(im,256);
           if i == 1 & t==time_lima(1);
-            imwrite(imind,cm,gifName,'gif', 'Loopcount',inf,'DelayTime',.2);
+            imwrite(imind,cm,gifName,'gif', 'Loopcount',inf,'DelayTime',.5);
           else
-            imwrite(imind,cm,gifName,'gif','WriteMode','append','DelayTime',.2);
+            imwrite(imind,cm,gifName,'gif','WriteMode','append','DelayTime',.5);
           end
 				end
 
@@ -1589,7 +2899,7 @@ return
 				else
 				  pause(0.5)
 				end
- 
+
       end % for i=1:length(time)
 
     end % for t=time_lima
@@ -1600,7 +2910,8 @@ return
 
     %close 
 
-  end % if plot_map
+  end % if plot_matm
+
 
   if plot_downs
 
@@ -1926,14 +3237,14 @@ return
     scrsz=[1 1 1366 768];
     scrsz=get(0,'screensize');
     
-    if fobs==stations(1); figure('position',scrsz,'color',[1 1 1],'visible','on'); end
+    if fobs==stations(1); figc=figure('position',scrsz,'color',[1 1 1],'visible','on'); end
     %hold on
     %set(gca,'fontsize',12,'fontweight','bold')
     
     ke=0;
     for expt=expts
       ke=ke+1;
-    
+     
       expt=expt{1};
       [ig,ltime]=grab_nc_sufix(expt);
     
@@ -1946,7 +3257,8 @@ return
       time_lima=time_limab;
       time_modp=time_lima(1):1/24:time_lima(end)+1; time_modp=time_modp';
       hs_mod=[]; % nan(1,length(time_lima)); 
-	    tp_mod=hs_mod; pd_mod=hs_mod; time_mod=hs_mod;
+      tp_mod=hs_mod; pd_mod=hs_mod; time_mod=hs_mod;
+      tm_mod=hs_mod; md_mod=hs_mod; 
 
       % creating annual time vector 
       time_limav=datevec(time_lima);
@@ -1966,40 +3278,49 @@ return
             time_mod=[time_mod;time_m];
             hs_mod  =[hs_mod;hs_m];
             tp_mod  =[tp_mod;tp_m];
+            tm_mod  =[tm_mod;tm_m];
             pd_mod  =[pd_mod;pd_m];
+            md_mod  =[md_mod;md_m];
 
 						% cutting time_lima to account for the previous loaded annual mat files
 						[dif iloc]=nanmin(abs(time_mod(end)-time_lima));
 			      time_lima=time_lima(iloc+1:end);
           end
 
-        % saving a netcdf file containing hs, tp, and pd, its lon and lat for each point with the whole timeseries if s_year==1983 and f_year==2022
-				if s_year==1983 && f_year==2022
-	      	filename=[path_dm,file,'_',num2str(s_year),'_',num2str(f_year),'.nc'];
-	      	display(['Saving: ',filename])
-					%ncid=netcdf.create(filename,'NETCDF4');
-					%netcdf.putAtt(ncid,netcdf.getConstant('NC_GLOBAL'),'title','Wave model output');
-					%netcdf.putAtt(ncid,netcdf.getConstant('NC_GLOBAL'),'source','WaveWatch III');
-					%netcdf.putAtt(ncid,netcdf.getConstant('NC_GLOBAL'),'history','Created by: Rafael Costa Santana');
-					
-	      	%nccreate(filename,'time','Dimensions',{'time',length(time_modp)},'Datatype','double','Format','classic');
-	      	%ncwrite(filename,'time',time_modp);
-	      	%nccreate(filename,'hs','Dimensions',{'lon',length(lon_mod),'lat',length(lat_mod),'time',length(time_modp)},'Datatype','double','Format','classic');
-	      	%ncwrite(filename,'hs',hs_mod);
-	      	%nccreate(filename,'tp','Dimensions',{'lon',length(lon_mod),'lat',length(lat_mod),'time',length(time_modp)},'Datatype','double','Format','classic');
-	      	%ncwrite(filename,'tp',tp_mod);
-	      	%nccreate(filename,'pd','Dimensions',{'lon',length(lon_mod),'lat',length(lat_mod),'time',length(time_modp)},'Datatype','double','Format','classic');
-	      	%ncwrite(filename,'pd',pd_mod);
-				end
-
-
         end
 
+        % saving a netcdf file containing hs, tp, and pd, its lon and lat for each point with the whole timeseries if s_year==1983 and f_year==2022
+				if s_year==1984 && f_year==2023
+
+	      %	filename=[path_dm,'test_nzwave_',file,num2str(s_year),'_',num2str(f_year),'.nc'];
+	      %	display(['Saving: ',filename])
+        %  if exist(filename)==2
+        %   system(['rm -rf ',filename]);
+        %  end
+
+        %  lon_obs=lon_mod(points(fobs,1)); lat_obs=lat_mod(points(fobs,2));
+
+	      %	nccreate(filename,'time','Dimensions',{'time',length(time_mod)},'Datatype','double','Format','classic');
+	      %	ncwrite(filename,'time',time_mod);
+	      %	nccreate(filename,'lon','Dimensions',{'lon',length(lon_obs)},'Datatype','double','Format','classic');
+	      %	ncwrite(filename,'lon',lon_obs);
+	      %	nccreate(filename,'lat','Dimensions',{'lat',length(lat_obs)},'Datatype','double','Format','classic');
+	      %	ncwrite(filename,'lat',lat_obs);
+	      %	%nccreate(filename,'hs','Dimensions',{'lon',length(lon_obs),'lat',length(lat_obs),'time',length(time_mod)},'Datatype','double','Format','classic');
+	      %	nccreate(filename,'hs','Dimensions',{'time',length(time_mod)},'Datatype','double','Format','classic');
+	      %	ncwrite(filename,'hs',hs_mod);
+	      %	nccreate(filename,'tp','Dimensions',{'time',length(time_mod)},'Datatype','double','Format','classic');
+	      %	ncwrite(filename,'tp',tp_mod);
+	      %	nccreate(filename,'pd','Dimensions',{'time',length(time_mod)},'Datatype','double','Format','classic');
+	      %	ncwrite(filename,'pd',pd_mod);
+
+				end
 
       else
       	hs_mod=[]; % nan(1,length(time_lima)); 
 	      tp_mod=hs_mod; pd_mod=hs_mod; time_mod=hs_mod;
-			end
+	    	tm_mod=hs_mod; md_mod=hs_mod; 
+      end % if consider_annual_files==1
 
 
       checkin=0;  
@@ -2046,28 +3367,39 @@ return
           end
           
           time=squeeze(double(ncread(fname,'time')))./24+t; time=time(1:ltime-1);
-          hs=squeeze(double(ncread(fname,'hsig',          [ilon ilat 1],[1 1 ltime]))); hs=hs(1:end-1);
-          tp=squeeze(double(ncread(fname,'tpeak',         [ilon ilat 1],[1 1 ltime]))); tp=tp(1:end-1);
-          pd=squeeze(double(ncread(fname,'peak_direction',[ilon 1],[1 ltime]))); pd=pd(1:end-1)';
+          hs=squeeze(double(ncread(fname,'hsig',          [ilon ilat 1],[1 1 ltime])));  
+          hs=hs(1:end-1);
+          tp=squeeze(double(ncread(fname,'tpeak',         [ilon ilat 1],[1 1 ltime]))); 
+          tp=tp(1:end-1);
+          pd=squeeze(double(ncread(fname,'peak_direction',[ilon ilat 1],[1 1 ltime])));  
+          pd=pd(1:end-1);
+          tm=squeeze(double(ncread(fname,'tmean',         [ilon ilat 1],[1 1 ltime]))); 
+          tm=tm(1:end-1);
+          md=squeeze(double(ncread(fname,'mean_direction',[ilon ilat 1],[1 1 ltime]))); 
+          md=md(1:end-1);
+          %if length(pd)<24; return; end
 
           %wave energy (we) = (1/16)*rho*g*(hs.^2); % https://www.coastalwiki.org/wiki/Shallow-water_wave_theory#Introduction
           we=(1/16)*1025*9.8*(hs.^2);    
 
           display(['Saving: ',filename])
-          save(filename,'time','tp','hs','pd') % ,'ds','tm01','tm02','hs','tm','wlv','ucur','vcur','we')
+          save(filename,'time','tp','hs','pd','tm','md') % ,'ds','tm01','tm02','hs','tm','wlv','ucur','vcur','we')
 
         end % if ck_mod_mat==1 && exist(filename)==2
 
-  
+        pd=pd(:);
+ 
         time_mod=[time_mod;time];
         hs_mod=[hs_mod;hs];
         tp_mod=[tp_mod;tp];
-				pd_mod=[pd_mod;pd];
+        tm_mod=[tm_mod;tm];
+        pd_mod=[pd_mod;pd];
+        md_mod=[md_mod;md];
         clear model
 
         % check if it is the 31st of Dec to save the annual mat file
         tvec=datevec(t);
-				if tvec(2)==12 & tvec(3)==31 
+        if tvec(2)==12 & tvec(3)==31 
 
           if length(time_mod)>=365*length(time)
 						[dif imodp]=nanmin(abs(datenum(tvec(1),1,1)-time_mod));
@@ -2076,98 +3408,196 @@ return
 							time_m=time_mod(imodp:fmodp);
 							hs_m=hs_mod(imodp:fmodp);
 							tp_m=tp_mod(imodp:fmodp);
+							tm_m=tm_mod(imodp:fmodp);
 							pd_m=pd_mod(imodp:fmodp);
+							md_m=md_mod(imodp:fmodp);
 
 						  filename=[path_dm,file,'_',num2str(tvec(1)),'.mat'];
 						  display(['Saving: ',filename])
-						  save(filename,'time_m','hs_m','tp_m','pd_m') % ,'ds','tm01','tm02','hs','tm','wlv','ucur','vcur','we')
+						  save(filename,'time_m','hs_m','tp_m','pd_m','tm_m','md_m') % ,'ds','tm01','tm02','hs','tm','wlv','ucur','vcur','we')
             end
           end
-				end
+    		end
 
       end % for t=time_lima
     
 
       % Statistical analysis %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
       ka=0;
-      ccol=1;
+      ccol=4; % [1];
       for i=ccol
         ka=ka+1;
+
+        lon_obs=lon_mod(points(fobs,1));
+        lat_obs=lat_mod(points(fobs,2));
+
+        if correct_model>=1;
+
+          % select ij from and read the time series from satellite data
+          [dif iloncop]=nanmin(abs(lon_cop-lon_obs)); [dif ilatcop]=nanmin(abs(lat_cop-lat_obs));
+
+          % plotting pcolor map of satelite location   
+          %if fobs==stations(1); 
+          %  figa=figure; 
+					%  set(gcf,'Position', [1 53 1920 954]); 
+					%  hold on
+          %  pcolor(lon_copm',lat_copm',nanmean(hs_cop_mean,3))
+					%  shading flat
+          %end
+          %figure(figa)
+					%plot(lon_obs,lat_obs,'k.','markersize',10)
+					%plot(lon_cop(iloncop),lat_cop(ilatcop),'r.','markersize',10)
+					%%plot(lon_mod,lat_mod,'k.','markersize',10)
+
+          
+          %[dis]=sqrt((lon_cop-lon_obs).^2 + (lat_cop-lat_obs).^2);
+          %hs_cmax=squeeze(hs_cop_maxi(iloncop,ilatcop,:));
+          hs_cmea=squeeze(hs_cop_mean(iloncop,ilatcop,:));
+          %hs_cop=(hs_cmax+hs_cmea)./2;
+          hs_cop=hs_cmea;
+					%time_cop=time_cop+.5;
+          time_lima=time_lima+.5;
+
+          if strcmp(atype,'cmems_l4')==1 || strcmp(atype,'cmems_nrt')==1 || strcmp(atype,'cmems_merged_2deg')==1
+            % computing daily mean and max
+            k=0;
+            for t=time_lima(1:end)
+              k=k+1;
+              it=find(time_mod>=t & time_mod<=t+1);
+					  	hs_m(k)=nanmax(hs_mod(it));
+					  end
+            modeli=interp1(time_lima,hs_m,time_cop)';
+            time_m=time_lima;
+
+          elseif strcmp(atype,'cmems_l4_05deg')
+            [time_mod,ia,ic]=unique(time_mod);
+            hs_mod=hs_mod(ia);
+
+            modeli=interp1(time_mod,hs_mod,time_cop)';
+            hs_m=modeli;
+            time_m=time_cop;
+          end
+
+          obsi=hs_cop;
+          xplot=modeli; yplot=hs_cop;
+ 
+          inan=isnan(modeli); obsi(inan)=nan;  
+          inan=isnan(obsi); modeli(inan)=nan;
+          modi=modeli; inan=isnan(modi); modi(inan)=[]; 
+          inan=isnan(obsi); obsi(inan)=[];  
+
+        end
+
+        if correct_model==1;
+          p=polyfit(obsi,modi',1);
+          modc=model.data(:,dcol(i)).*(1+(1-p(1)));% + p(2);
+        elseif correct_model==2;
+          [modc]=bias_correction(obsi,modi,hs_mod,0);
+          hs_mod=modc;
+        end
 
         % selected statistical variable        
         if i==1 % max wave height
 					data=nanmax(hs_mod(:));
           tname='Max wave height (m)';
+          cmin=2; cmax=8;
 				elseif i==2 % mean wave height	
 					data=nanmean(hs_mod(:));
           tname='Mean wave height (m)';
+          cmin=2; cmax=8;
 				elseif i==3 % 99th percentile wave height
-          data=prctile(hs_mod,99);
+          data=prctile(hs_mod,90);
           tname='99th percentile wave height (m)';
+          cmin=2; cmax=6;
 				elseif i==4 % X-year return period wave height (m)
-          return_p=1;
-          [data,GEV]=GPDfitwaves_funcion(hs_mod,time_mod,1,return_p); % =GPDfitwaves_funcion(hs_obs,time_obs,kind,rp)
+          return_p=100;
+          %[data]=GPDfitwaves_funcion(hs_mod,time_mod,1,return_p); % =GPDfitwaves_funcion(hs_obs,time_obs,kind,rp)
           tname=[num2str(return_p),'-year return period wave height (m)'];
+          cmin=6; cmax=12;
+
+          hs_obs = hs_mod(:); time_obs = time_mod(:);
+          tolerance =0.0001; % sometimes gpfit doesn't like having zero values, so add a tiny (inconsequential) amount
+          tthr = 3; % peaks over threshold (POT) separated by at least 3 days. Most weather systems in NZ are separated by 4-7 days
+          ythr = GPthres(time_obs,hs_obs+tolerance,1,6,0.1,tthr,999); % Automate threshold selection
+          close(999);
+          disp(['GPD threshold selected: H_s = ' num2str(ythr) ' m'])
+          ARI = [1 2 5 10 20 50 100 200 500 1000]; % This specifies the Average Recurrence Intervals (ARI) for output. Change these to what you like.
+          [GPD,gpp,gpci,Sy,ARI_POT,POT_sorted] = GPDfit(hs_obs+tolerance,time_obs,tthr,ythr,ARI); % PF
+          [dif loc]=nanmin(abs(ARI-return_p));
+          data=GPD(1,loc);
+          display([num2str(return_p),'-year return period wave height (m) = ',num2str(data)]);
+
+          figure; clf
+          semilogx([0 0],[0 0],'r',[0 0],[0 0],'b'); hold on;
+          semilogx(ARI_POT,POT_sorted,'ok'),
+          hold on
+          semilogx(ARI,GPD(1,:),'r',ARI,GPD(2,:),'--r',ARI,GPD(3,:),'--r')
+          title(['GPD fitted to peaks over threshold, fobs = ',num2str(fobs)]), xlabel('Average recurrence interval (years)'), ylabel('H_s')
+
         end
+
+        figure(figc);
 
         if fobs==stations(1)
           ax=subplot(1,length(ccol),ka);
           %subplot(length(mcol),1,i);
           set(gca,'fontsize',12,'fontweight','bold')
           hold on
-          %m_proj('lambert','long', [min(lon_hr) max(lon_hr)],'lat',[min(lat_hr) max(lat_hr)]);
-          m_proj('lambert','long', [min(lon_mod(points(:,1)))-.5 max(lon_mod(points(:,1)))+.5],'lat',[min(lat_mod(points(:,2)))-.5 max(lat_mod(points(:,2)))+.5]);
+         if selected_coastal_points==1; % canterbury coast
+            m_proj('lambert','long',[171 174.2+.2],'lat',[-45.2 -41.6]);
+          else
+            %m_proj('lambert','long', [min(lon_hr) max(lon_hr)],'lat',[min(lat_hr) max(lat_hr)]);
+            m_proj('lambert','long', [min(lon_hr) max(lon_hr)],'lat',[min(lat_hr) -33]);
+          end
+          %if select_cpoint
+          %  m_proj('lambert','long', [min(lon_mod(points(:,1)))-.5 max(lon_mod(points(:,1)))+.5],'lat',[min(lat_mod(points(:,2)))-.5 max(lat_mod(points(:,2)))+.5]);
+          %else
+          %  m_proj('lambert','long', [lon_c-.5 lon_c+.5],'lat',[lat_c-.5 lat_c+.5]);
+          %end
           if ke==1 & plot_obs==1
             %plot(time_obs,obs(:,dcol(i))','.','color',[0 .7 0],'linewidth',2)
           end
         end
         %m_scatter(lon_mod(points(fobs,1)),lat_mod(points(fobs,2)),data,10,'filled')
 
-        cmin=1; cmax=9;
-        cmap=avhrr; 
+        cmap=jet; 
         dmap=linspace(cmin,cmax,length(cmap))';
         [dif ij]=nanmin(abs(dmap-data));
-        h=m_plot(lon_mod(points(fobs,1)),lat_mod(points(fobs,2)),'.','markersize',20.0);
+        h=m_plot(lon_mod(points(fobs,1)),lat_mod(points(fobs,2)),'.','markersize',30.0);
         set(h,'color',[cmap(ij,:)])
 
         if fobs==stations(1)
-          %avalname=mvalm{mcol(i)};
-          %if strcmp(avalname(end-3:end),'mean')
-          %  colormap(ax,avhrr)
-          %  %caxis([0 1.5])
-          %elseif strcmp(avalname(end-3:end),'bias')
-          %  colormap(ax,cmocean('balance'))
-          %  caxis([-1 1])
-          %elseif strcmp(avalname(end-3:end),'corr')
-          %  colormap(ax,cmocean('matter'))
-          %  [cs,h]=contour(lon_mod,lat_mod,data','w');%[.5:.2:1],'w');
-          %  clabel(cs,h,'color',[1 1 1],'fontsize',8,'fontweight','bold','LabelSpacing',2000)
-          %  caxis([0 1])
-          %end
           colormap(ax,cmap)
           caxis([cmin cmax])
           cb=colorbar;%('southoutside');
-          %set(get(cb,'ylabel'),'string','','fontsize',12,'fontweight','bold');
-          %set(cb,'fontsize',12,'fontweight','bold');
 
-          %[cs,h]=m_contour(lon_gebco,lat_gebco,bat_gebco',[-1000 -1000],'color',[0 0 0],'linewidth',2);
-          %[cs,h]=m_contour(lon_mod,lat_mod,-depth_mod',[-1000 -1000],'color',[0 0 0],'linewidth',2);
-          %clabel(cs,h,'color',[0 0 0],'fontsize',10,'fontweight','bold','LabelSpacing',2000)
-
-          m_gshhs_i('patch',[.7 .7 .7],'edgecolor','k','linewidth',.5);
+          m_gshhs_h('patch',[.7 .7 .7],'edgecolor','k','linewidth',.5);
           %m_grid('xtick',[round(loni):2:round(lonf)],'xticklabels',[round(loni):2:round(lonf)],'fontname','helvetica','fontsize',20,'fontweight','bold');
           m_grid('box','fancy','fontname','helvetica','fontsize',14,'fontweight','bold');
 
-          title([expt,' ',tname])%,', mean=',num2str(nanmean(data(:)),'%.2f')]);
+          title([expt,' ',tname,' between ',datestr(time_limab(1),'DD mmm YYYY'),' and ',datestr(time_limab(end),'DD mmm YYYY')])%,', mean=',num2str(nanmean(data(:)),'%.2f')]);
           
         end
+
+%return
  
       end % for i=1:length(mcol)
     
     end % for expt=expts
 
-    if save_fig==1
-      %export_fig(gcf,'steephead_period','-png','-r150');
+    if fobs==length(points)
+      path_dm=strcat(path_fig,expt,'/');
+      system(['mkdir -p ',path_dm]);
+      %figname=[path_dm,expt,'_wave_coastm_',datestr(time_limab(1),'YYYY_mm_DD_HH_MM'),'_',datestr(time_limab(end),'YYYY_mm_DD_HH_MM')];
+      figname=[path_dm,expt,'_wave_coastm_',replace(replace(tname,' ','_'),'(m)',''),'years_',datestr(time_limab(1),'YYYY'),'_',datestr(time_limab(end),'YYYY')];
+      display(['Plotting: ',figname]);
+      if save_fig==1
+        display(['Saving: ',figname]);
+        export_fig(gcf,[figname,'.png'],'-png','-r150');
+        saveas(gcf,[figname,'.fig'],'fig')
+        %close
+        %clf('reset')
+      end
     end
 
   end % if plot_coastm
@@ -2339,7 +3769,6 @@ return
           end
           m_pcolor(lon_mod,lat_mod,data')
           shading flat
-%zzz
           avalname=mvalm{mcol(i)};
           if strcmp(avalname(end-3:end),'mean')
             colormap(ax,avhrr)
@@ -2425,89 +3854,122 @@ return
       system(['mkdir -p ',path_dm]);
 
       hs_m_mean=[];hs_m_maxi=[]; hs_m_meanf=[];hs_m_maxif=[]; 
-    
-      checkin=0;  
-      % Loop in model time
-      kt=0;
-      for t=time_lima
-        kt=kt+1;
-        filename=[path_dm,atype,'_',datestr(t,'YYYYmmDDHH'),'.mat'];
-    
-        if ck_mod_mat==1 && exist(filename)==2
-      
-          display(['Loading: ',filename])
-          load(filename)%,'time_mod','model')
-      
-        else
 
-          ptime=datestr(t,'YYYY/mm/DD/HH/');
-          ftime=datestr(t,'YYYYmmDDHH');
-        
-          pname=[path_expt,ptime];
-        
-          fname=[pname,ww3pre,'_',ftime,'-utc_',gnames{ig},'.nc'];
-          display(['Loading: ',fname]);
+      tvec=datevec(time_lima(1));
+      filenamey=[path_dm,atype,'_',num2str(tvec(1,1)),'.mat'];
+      if ck_mod_mat==1 && exist(filenamey)==2
+
+				display(['Loading: ',filenamey])
+				load(filenamey)%,'time_mod','model')
+
+      else
     
-          if checkin==0; % t==time_lima(1)
-            checkin=1; 
-            lon_mod=double(ncread(fname,'lon'));
-            lat_mod=double(ncread(fname,'lat'));
-          end
+        checkin=0;  
+        % Loop in model time
+        kt=0;
+        for t=time_lima
+          kt=kt+1;
+          filename=[path_dm,atype,'_',datestr(t,'YYYYmmDDHH'),'.mat'];
+    
+          if ck_mod_mat==1 && exist(filename)==2
+        
+            display(['Loading: ',filename])
+            load(filename)%,'time_mod','model')
+        
+          else
+
+            ptime=datestr(t,'YYYY/mm/DD/HH/');
+            ftime=datestr(t,'YYYYmmDDHH');
           
-          time=squeeze(double(ncread(fname,'time')))./24+t; time=time(1:ltime-2);
-          hs=squeeze(double(ncread(fname,'hsig',          [1 1 1],[Inf Inf ltime-1]))); 
+            pname=[path_expt,ptime];
           
-          hs_mod_mean=nanmean(hs,3);
-          hs_mod_maxi=nanmax(hs,3);
-          
-          % filter mod
-          filt_mod_spa=1;
-          if filt_mod_spa
-            gauss = fspecial('average',[54 54]); % NZWAVE
-            hs_mod_meanf=imfilter(hs_mod_mean,gauss,'replicate');
-            hs_mod_maxif=imfilter(hs_mod_mean,gauss,'replicate');
-          end
-           
-          %interpolating 
-          hs_mod_mean=griddata(lon_mod,lat_mod',hs_mod_mean',lon_cop,lat_cop')';
-          hs_mod_maxi=griddata(lon_mod,lat_mod',hs_mod_maxi',lon_cop,lat_cop')';
-          hs_mod_meanf=griddata(lon_mod,lat_mod',hs_mod_meanf',lon_cop,lat_cop')';
-          hs_mod_maxif=griddata(lon_mod,lat_mod',hs_mod_maxif',lon_cop,lat_cop')';
-          display(['Saving: ',filename])
-          save(filename,'hs_mod_mean','hs_mod_maxi','hs_mod_meanf','hs_mod_maxif')
+            fname=[pname,ww3pre,'_',ftime,'-utc_',gnames{ig},'.nc'];
+            display(['Loading: ',fname]);
+    
+            if checkin==0; % t==time_lima(1)
+              checkin=1; 
+              lon_mod=double(ncread(fname,'lon'));
+              lat_mod=double(ncread(fname,'lat'));
+            end
+            
+            time=squeeze(double(ncread(fname,'time')))./24+t; time=time(1:ltime-2);
+            hs=squeeze(double(ncread(fname,'hsig',          [1 1 1],[Inf Inf ltime-1]))); 
+            
+            hs_mod_mean=nanmean(hs,3);
+            hs_mod_maxi=nanmax(hs,3);
+            
+            % filter mod
+            filt_mod_spa=1;
+            if filt_mod_spa
+              gauss = fspecial('average',[54 54]); % NZWAVE
+              hs_mod_meanf=imfilter(hs_mod_mean,gauss,'replicate');
+              hs_mod_maxif=imfilter(hs_mod_mean,gauss,'replicate');
+            end
+             
+            %interpolating 
+            hs_mod_mean=griddata(lon_mod,lat_mod',hs_mod_mean',lon_cop,lat_cop')';
+            hs_mod_maxi=griddata(lon_mod,lat_mod',hs_mod_maxi',lon_cop,lat_cop')';
+            hs_mod_meanf=griddata(lon_mod,lat_mod',hs_mod_meanf',lon_cop,lat_cop')';
+            hs_mod_maxif=griddata(lon_mod,lat_mod',hs_mod_maxif',lon_cop,lat_cop')';
+            display(['Saving: ',filename])
+            save(filename,'hs_mod_mean','hs_mod_maxi','hs_mod_meanf','hs_mod_maxif')
   
-        end % if ck_mod_mat==1 && exist(filename)==2
+          end % if ck_mod_mat==1 && exist(filename)==2
 
-        % ALTIMETER FUNCTIONS
+          if crop_l4
+            %if strncmp(expt,'NZWAVE-HR',9)~=1
+              %[dif ilon]=nanmin(abs(lon_cop-min(lon_hr))); [dif flon]=nanmin(abs(lon_cop-max(lon_hr)));
+              %[dif ilat]=nanmin(abs(lat_cop-min(lat_hr))); [dif flat]=nanmin(abs(lat_cop-max(lat_hr)));
+              hs_mod_mean =hs_mod_mean(ilonc:flonc,ilatc:flatc);
+              hs_mod_meanf=hs_mod_meanf(ilonc:flonc,ilatc:flatc);
+		          hs_mod_maxi =hs_mod_maxi(ilonc:flonc,ilatc:flatc);
+		          hs_mod_maxif=hs_mod_maxif(ilonc:flonc,ilatc:flatc);
+            %end
+          end
 
-        % concatenating 
-        hs_m_mean=cat(3,hs_m_mean,hs_mod_mean); 
-        hs_m_maxi=cat(3,hs_m_maxi,hs_mod_maxi); 
-        hs_m_meanf=cat(3,hs_m_meanf,hs_mod_meanf); 
-        hs_m_maxif=cat(3,hs_m_maxif,hs_mod_maxif); 
+          % ALTIMETER FUNCTIONS
+
+          % concatenating 
+          hs_m_mean=cat(3,hs_m_mean,hs_mod_mean); 
+          hs_m_maxi=cat(3,hs_m_maxi,hs_mod_maxi); 
+          hs_m_meanf=cat(3,hs_m_meanf,hs_mod_meanf); 
+          hs_m_maxif=cat(3,hs_m_maxif,hs_mod_maxif); 
      
-        icop=find(time_cop==t); 
+          icop=find(time_cop==t); 
  
-        % stats
-        hs_mean_rmse(kt)=nanrmse(hs_cop_mean(:,:,icop),hs_mod_mean);
-        hs_maxi_rmse(kt)=nanrmse(hs_cop_maxi(:,:,icop),hs_mod_maxi);
-        hs_diff=(hs_mod_mean-hs_cop_mean(:,:,icop)); 
-        hs_mean_bias(kt)=nanmean(hs_diff(:));
-        hs_diff=(hs_mod_maxi-hs_cop_maxi(:,:,icop));
-        hs_maxi_bias(kt)=nanmean(hs_diff(:));
-        hs_mean_corr(kt)=nancorr(hs_cop_mean(:,:,icop),hs_mod_mean);
-        hs_maxi_corr(kt)=nancorr(hs_cop_maxi(:,:,icop),hs_mod_maxi);
+          % time series stats
+          hs_mean_rmse(kt)=nanrmse(hs_cop_mean(:,:,icop),hs_mod_mean);
+          hs_maxi_rmse(kt)=nanrmse(hs_cop_maxi(:,:,icop),hs_mod_maxi);
+          hs_diff=(hs_mod_mean-hs_cop_mean(:,:,icop)); 
+          hs_mean_bias(kt)=nanmean(hs_diff(:));
+          hs_diff=(hs_mod_maxi-hs_cop_maxi(:,:,icop));
+          hs_maxi_bias(kt)=nanmean(hs_diff(:));
+          hs_mean_corr(kt)=nancorr(hs_cop_mean(:,:,icop),hs_mod_mean);
+          hs_maxi_corr(kt)=nancorr(hs_cop_maxi(:,:,icop),hs_mod_maxi);
 
-        hs_mean_frmse(kt)=nanrmse(hs_cop_mean(:,:,icop),hs_mod_meanf);
-        hs_maxi_frmse(kt)=nanrmse(hs_cop_maxi(:,:,icop),hs_mod_maxif);
-        hs_diff=(hs_mod_meanf-hs_cop_mean(:,:,icop)); 
-        hs_mean_fbias(kt)=nanmean(hs_diff(:));
-        hs_diff=(hs_mod_maxif-hs_cop_maxi(:,:,icop));
-        hs_maxi_fbias(kt)=nanmean(hs_diff(:));
-        hs_mean_fcorr(kt)=nancorr(hs_cop_mean(:,:,icop),hs_mod_meanf);
-        hs_maxi_fcorr(kt)=nancorr(hs_cop_maxi(:,:,icop),hs_mod_maxif);
+          hs_mean_frmse(kt)=nanrmse(hs_cop_mean(:,:,icop),hs_mod_meanf);
+          hs_maxi_frmse(kt)=nanrmse(hs_cop_maxi(:,:,icop),hs_mod_maxif);
+          hs_diff=(hs_mod_meanf-hs_cop_mean(:,:,icop)); 
+          hs_mean_fbias(kt)=nanmean(hs_diff(:));
+          hs_diff=(hs_mod_maxif-hs_cop_maxi(:,:,icop));
+          hs_maxi_fbias(kt)=nanmean(hs_diff(:));
+          hs_mean_fcorr(kt)=nancorr(hs_cop_mean(:,:,icop),hs_mod_meanf);
+          hs_maxi_fcorr(kt)=nancorr(hs_cop_maxi(:,:,icop),hs_mod_maxif);
 
-      end % for t=time_lima
+        end % for t=time_lima
+
+        % save annual file if time starts on 1st of Jan and finishes on the 31st of Dec
+        tvec=datevec(time_lima);
+			  if tvec(1,2)==1 & tvec(1,3)==1 & tvec(end,2)==12 & tvec(end,3)==31 
+          %filenamey=[path_dm,atype,'_',datestr(tvec(1,1),'YYYY'),'.mat'];
+			  	display(['Saving: ',filenamey])
+			  	save(filenamey,'hs_m_mean','hs_m_maxi','hs_m_meanf','hs_m_maxif',... 
+		       'hs_mean_rmse','hs_maxi_rmse','hs_mean_bias','hs_maxi_bias','hs_mean_corr','hs_maxi_corr',... 
+		       'hs_mean_frmse','hs_maxi_frmse','hs_mean_fbias','hs_maxi_fbias','hs_mean_fcorr','hs_maxi_fcorr')
+        end
+
+      end % if ck_mod_mat==1 && exist(filenamey)==2
+
 
       if plot_amap
         icopi=find(time_cop==time_lima(1)); 
@@ -2527,6 +3989,17 @@ return
             hs_maxi_fmbias(i,ii)=nanmean(hs_m_maxif(i,ii,:)-hs_cop_maxi(i,ii,icopi:icopf));
             hs_mean_fmcorr(i,ii)=nancorr(hs_m_meanf(i,ii,:),hs_cop_mean(i,ii,icopi:icopf));
             hs_maxi_fmcorr(i,ii)=nancorr(hs_m_maxif(i,ii,:),hs_cop_maxi(i,ii,icopi:icopf));
+
+            % compute obs stats 
+            hs_mean_ostd(i,ii)=nanstd(hs_cop_mean(i,ii,icopi:icopf));
+						hs_maxi_ostd(i,ii)=nanstd(hs_cop_maxi(i,ii,icopi:icopf));
+	          hs_mean_omean(i,ii)=nanmean(hs_cop_mean(i,ii,icopi:icopf));
+	          hs_maxi_omean(i,ii)=nanmean(hs_cop_maxi(i,ii,icopi:icopf));
+	          hs_mean_omin(i,ii)=nanmin(hs_cop_mean(i,ii,icopi:icopf));
+	          hs_maxi_omin(i,ii)=nanmin(hs_cop_maxi(i,ii,icopi:icopf));
+	          hs_mean_omax(i,ii)=nanmax(hs_cop_mean(i,ii,icopi:icopf));
+	          hs_maxi_omax(i,ii)=nanmax(hs_cop_maxi(i,ii,icopi:icopf));
+
           end
         end
       end
@@ -2578,7 +4051,11 @@ return
       if plot_amap
 
         if ka==0
+          scrsz=[1 41 1920 962];
+          %scrsz=[1 1 1366 768];
           scrsz=[2    42   958   953];
+          scrsz=get(0,'screensize');
+
           figure('position',scrsz,'color',[1 1 1],'visible','on');
           hold on
           set(gca,'fontsize',12,'fontweight','bold')
@@ -2601,27 +4078,106 @@ return
             end
           else
             if mod(length(runs),2)==1 
-              lsub=round(length(runs)/2); csub=round(length(runs)/2)-1;
-            elseif mod(length(runs),2)==0 
               lsub=round(length(runs)/2); csub=round(length(runs)/2);
+            elseif mod(length(runs),2)==0 
+              lsub=round(length(runs)/2); csub=round(length(runs)/2)+1;
             end
           end
 
+          % plotting obs if it is the first experiment
+          % plot map of selected variable
+          if plot_obs==1 & ka==1
+
+            display(['obsdata=',ovalm{acol(i)},';']); % ovalm = contains the name of the Obs VAriabLes for Maps 
+            eval(['obsdata=',ovalm{acol(i)},';']);
+
+            ax=subplot(lsub,csub,ka);
+            %subplot(length(acol),1,i);
+            set(gca,'fontsize',10,'fontweight','bold')
+            hold on
+            m_proj('lambert','long', [min(lon_cop)+1 max(lon_cop)-1],'lat',[min(lat_cop) max(lat_cop)-1]);
+            loni=nanmin(lon_cop(:)); lonf=nanmax(lon_cop(:));
+
+            m_pcolor(lon_cop-1,lat_cop-1,obsdata')
+            shading flat
+
+            avalname=ovalm{acol(i)};
+            if strcmp(avalname(end-2:end),'std')
+              colormap(ax,parula)%cmocean('haline'))
+              %caxis([0 1.5])
+            elseif strcmp(avalname(end-3:end),'mean')
+              colormap(ax,cmocean('thermal'))
+              %caxis([0 6])
+            elseif strcmp(avalname(end-3:end),'corr')
+              colormap(ax,cmocean('matter'))
+              [cs,h]=contour(lon_cop,lat_cop,data','w');%[.5:.2:1],'w');
+              clabel(cs,h,'color',[1 1 1],'fontsize',8,'fontweight','bold','LabelSpacing',2000)
+              caxis([0 1])
+            end
+
+            cb=colorbar; %('southoutside');
+            %set(get(cb,'ylabel'),'string','','fontsize',12,'fontweight','bold');
+            %set(cb,'fontsize',12,'fontweight','bold');
+            %h=colorbar;
+            %set(h,'position',[0.915 0.24 0.011 0.44]) % [left bottom width height]
+            %set(get(h,'ylabel'),'string','Probability density estimate','fontsize',10,'fontweight','bold');
+
+
+            %[cs,h]=m_contour(lon_mod,lat_mod,-depth_mod',[-1000 -1000],'color',[1 1 1],'linewidth',2);
+            %clabel(cs,h,'color',[0 0 0],'fontsize',10,'fontweight','bold','LabelSpacing',2000)
+
+            %[cs,h]=m_contour(lon_aviso,lat_aviso,z_aviso_avg,'color','k');
+            %[cs,h]=m_contour(lon_aviso,lat_aviso,z_aviso_avg,[.76:.04:.88],'color','k');
+            %clabel(cs,h,'color',[0 0 0],'fontsize',14,'fontweight','bold','LabelSpacing',2000) % each contour line represents 0.02 increase/decrease
+
+            m_gshhs_i('patch',[.7 .7 .7],'edgecolor','k','linewidth',.5);
+            m_grid('xtick',[round(loni):14:round(lonf)],'xticklabels',[round(loni):14:round(lonf)],'fontname','helvetica','fontsize',12,'fontweight','bold');
+
+            tavalm=replace(ovalm{acol(i)},'_',' '); tavalm=replace(tavalm,'hs',''); 
+            title(['Obs. Hs ',tavalm,' = ',num2str(nanmean(obsdata(:)),'%.2f'),' (m)']);
+
+            if strncmp(expt,'NZWAVE-HR',9)~=1
+              if crop_l4==0
+                datacrop=obsdata(ilonc:flonc,ilatc:flatc);
+                m_text(165,-29,['mean=',num2str(nanmean(datacrop(:)),'%.2f')],'fontweight','bold','fontsize',8);
+                [lon_modm,lat_modm]=meshgrid(lon_hr,lat_hr);
+                m_plot([lon_modm(:,1)],[lat_modm(:,1)],'k','linewidth',2);
+                m_plot([lon_modm(:,end)],[lat_modm(:,end)],'k','linewidth',2);
+                m_plot([lon_modm(1,:)],[lat_modm(1,:)],'k','linewidth',2);
+                m_plot([lon_modm(end,:)],[lat_modm(end,:)],'k','linewidth',2);
+              end
+            end
+
+            pause(0.5)
+
+            ka=ka+1;
+          end % if plot_obs
+
           ax=subplot(lsub,csub,ka);
           %subplot(length(acol),1,i);
-          set(gca,'fontsize',12,'fontweight','bold')
+          set(gca,'fontsize',10,'fontweight','bold')
           hold on
-          m_proj('lambert','long', [min(lon_cop) max(lon_cop)],'lat',[min(lat_cop) max(lat_cop)]);
+          if strncmp(expt,'NZWAVE-HR',9)~=1
+            m_proj('lambert','long', [min(lon_cop)+1 max(lon_cop)-1],'lat',[min(lat_cop) max(lat_cop)-1]);
+            loni=nanmin(lon_cop(:)); lonf=nanmax(lon_cop(:));
+          else
+            m_proj('lambert','long', [min(lon_hr)+.5 max(lon_hr)],'lat',[min(lat_hr)+1 max(lat_hr)]);
+            loni=nanmin(lon_hr(:)); lonf=nanmax(lon_hr(:));
+          end
           if ke==1 & plot_obs==1
             %plot(time_obs,obs(:,dcol(i))','.','color',[0 .7 0],'linewidth',2)
           end
-          m_pcolor(lon_cop,lat_cop,data')
+
+          if strncmp(expt,'NZWAVE-HR',9)~=1
+            m_pcolor(lon_cop-1,lat_cop-1,data')
+          else
+            m_pcolor(lon_cop-1,lat_cop-1,data')
+					end
           shading flat
-%zzz
           avalname=avalm{acol(i)};
           if strcmp(avalname(end-3:end),'rmse')
             colormap(ax,avhrr)
-            caxis([0 1.5])
+            caxis([0.2 0.8])
           elseif strcmp(avalname(end-3:end),'bias')
             colormap(ax,cmocean('balance'))
             caxis([-1 1])
@@ -2632,7 +4188,7 @@ return
             caxis([0 1])
           end
 
-          %cb=colorbar;%('southoutside');
+          cb=colorbar; %('southoutside');
           %set(get(cb,'ylabel'),'string','','fontsize',12,'fontweight','bold');
           %set(cb,'fontsize',12,'fontweight','bold');
 
@@ -2644,12 +4200,28 @@ return
           %clabel(cs,h,'color',[0 0 0],'fontsize',14,'fontweight','bold','LabelSpacing',2000) % each contour line represents 0.02 increase/decrease
 
           m_gshhs_i('patch',[.7 .7 .7],'edgecolor','k','linewidth',.5);
-          %%m_grid('xtick',[round(loni):2:round(lonf)],'xticklabels',[round(loni):2:round(lonf)],'fontname','helvetica','fontsize',20,'fontweight','bold');
-          m_grid('fontname','helvetica','fontsize',14,'fontweight','bold');
+          if strncmp(expt,'NZWAVE-HR',9)~=1
+            m_grid('xtick',[round(loni):14:round(lonf)],'xticklabels',[round(loni):14:round(lonf)],'fontname','helvetica','fontsize',12,'fontweight','bold');
+          else
+            m_grid('xtick',[round(loni):8:round(lonf)],'xticklabels',[round(loni):8:round(lonf)],'fontname','helvetica','fontsize'  ,12,'fontweight','bold');
+          end
+          %m_grid('fontname','helvetica','fontsize',14,'fontweight','bold');
 
           tavalm=replace(avalm{acol(i)},'_',' '); tavalm=replace(tavalm,'hs',''); 
-          title([expt,' ',tavalm,', mean=',num2str(nanmean(data(:)),'%.2f')]);
-          
+          title([expt,' ',tavalm,' = ',num2str(nanmean(data(:)),'%.2f')]);
+
+          if strncmp(expt,'NZWAVE-HR',9)~=1
+            if crop_l4==0
+              datacrop=data(ilonc:flonc,ilatc:flatc);
+              m_text(165,-29,['mean=',num2str(nanmean(datacrop(:)),'%.2f')],'fontweight','bold','fontsize',8);
+              [lon_modm,lat_modm]=meshgrid(lon_hr,lat_hr);
+              m_plot([lon_modm(:,1)],[lat_modm(:,1)],'k','linewidth',2);
+              m_plot([lon_modm(:,end)],[lat_modm(:,end)],'k','linewidth',2);
+              m_plot([lon_modm(1,:)],[lat_modm(1,:)],'k','linewidth',2);
+              m_plot([lon_modm(end,:)],[lat_modm(end,:)],'k','linewidth',2);
+            end
+          end
+
           %modeli=interp1(time_mod,model.data(:,dcol(i)),time_obs);
           
           %if dcol(i)==6
@@ -2658,7 +4230,9 @@ return
           %  mod_bias=nanmean(modeli')-nanmean(obs(:,dcol(i)));
           %  legh=[legh,{[expt,' rmse=',num2str(mod_rmse,'%.2f'),' corr=',num2str(mod_corr,'%.2f'),', bias=',num2str(mod_bias,'%.2f')]}];
           %end
-           
+ 
+          pause(0.5)
+
         end
 
       end % if plot_amap
@@ -2669,13 +4243,26 @@ return
       %subplot(length(dcol),1,find(dcol==6));
       %legend([legh],'location','best')
     end
-    
+
+    path_dm=strcat(path_fig,expt,'/');
+    system(['mkdir -p ',path_dm]);
+    if plot_amap==1
+      figname=[path_dm,avalm{acol(1)},'_',datestr(time_lima(1),'YYYYmmDD'),'_',datestr(time_lima(end),'YYYYmmDD'),'.png'];
+    elseif plot_aserie==1
+      figname=[path_dm,avals{acol(1)},'_',datestr(time_lima(1),'YYYYmmDD'),'_',datestr(time_lima(end),'YYYYmmDD'),'.png'];
+		end
+    display(['Plotting: ',figname]);
     if save_fig==1
-      %export_fig(gcf,'steephead_period','-png','-r150');
+      display(['Saving: ',figname]);
+      export_fig(gcf,figname,'-png','-r150');
+      %close
+      %clf('reset')
     end
 
-  end % if plot_aserie
-
+    
+  end % if plot_aserie and plot_amap
+  
+  
 end % fobs=fstations
 
 
@@ -2683,3 +4270,6 @@ end % fobs=fstations
 
 
 toc
+
+display('Use datetime instead of datenum for variable time tick on the plots. t_datetime=datetime(datevec(t_datenum))')
+display('for website figure use: scrsz=Position: [150 162 1244 730]')

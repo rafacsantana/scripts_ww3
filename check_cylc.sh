@@ -1,7 +1,6 @@
 #!/bin/bash
 
 #!/bin/bash
-# script to push UKMO data to Maui
 
 stime=$1
 
@@ -13,6 +12,7 @@ while [ $a -lt 200000 ]; do
   sc=`cylc scan`
   k=1
   kk=0
+  date
   for s in $sc; do
     k=$((k+1))
   
@@ -29,9 +29,11 @@ while [ $a -lt 200000 ]; do
   echo ''
   echo 'waiting for '$stime' seconds ...'
   echo ''
-  echo 'If the model crashes remember to RERUN the incomplete days below:'
-  echo ''
   date
+  #echo 'If the model crashes remember to RERUN the incomplete days below:'
+  #echo 'cylc run nzwave_gfd 20410221T00 -- to run from a certain datetime'
+  #echo 'cylc stop --kill nzwave_gfd -- to stop a nzwave_gfd suite'
+  echo ''
   sleep $stime
 
 done

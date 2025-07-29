@@ -23,7 +23,7 @@ time_lima=datenum(1997,06,08,0,0,0):1:datenum(1997,08,31,0,0,0); % GLOBALWAVE-ER
 %time_lima=datenum(2021,10,19,0,0,0):1:datenum(2021,10,24,0,0,0); % Banks Peninsula head tide and swell
 %time_lima=datenum(2021,10,1,0,0,0):1:datenum(2021,10,24,0,0,0); % Banks Peninsula data assimilation
 time_lima=datenum(2021,6,26,12,0,0):1/24:datenum(2021,6,30,0,0,0); %
-%time_lima=datenum(2021,6,29,6,0,0):1/24:datenum(2021,6,30,0,0,0); %
+time_lima=datenum(2021,6,29,6,0,0):1/24:datenum(2021,6,30,0,0,0); %
 %time_lima=datenum(2021,1,5,0,0,0):1:datenum(2021,1,15,0,0,0); %
 
 %time_lima=datenum(2029,12,1,0,0,0):1:datenum(2030,1,1,0,0,0); % Firts two days of output
@@ -381,6 +381,20 @@ for fobs=stations
                 m_text(144,-29.5,['Sig. Wave Height'],'color','w','fontsize',14,'fontweight','bold') 
               end
 
+              % adding name of regions
+              if ke==3
+                m_text(153,-40,['Tasman Sea'],'color','k','fontsize',14,'fontweight','bold') 
+                m_text(168,-46.25,['South Island'],'color','k','fontsize',14,'fontweight','bold','rotation',45)
+                m_text(174.8,-40.1,['North'],'color','k','fontsize',14,'fontweight','bold','rotation',45)
+                m_text(175.5,-40.4,['Island'],'color','k','fontsize',14,'fontweight','bold','rotation',45)
+
+                m_text(  168,-40, ['Cook Strait'],'color','k','fontsize',12,'fontweight','bold') 
+                m_vec(10,173.2,-40.2, 2,-2,'r','shaftwidth',2,'headwidth',4,'headangle',60,'headlength',3.5) 
+                m_text(  175.1,-35.5, ['Hauraki Gulf'],'color','k','fontsize',12,'fontweight','bold') 
+                m_vec(10,175.2,-35.7, 0,-2,'r','shaftwidth',2,'headwidth',4,'headangle',60,'headlength',3.5) 
+
+              end
+
               pd_mod=model(ke).pd;%(:,:,i);
               for o=1:length(stations)
                 filo=files{stations(o)};
@@ -388,9 +402,9 @@ for fobs=stations
                 m_plot(lon_obss(o),lat_obss(o),'.w','markersize',30)
                 m_plot(lon_obss(o),lat_obss(o),'.r','markersize',20)
                 if o==1 
-                  %m_text(lon_obss(o)-6,lat_obss(o)+.2,filo,'color','k','fontsize',14,'fontweight','bold') 
+                  m_text(lon_obss(o)+.4,lat_obss(o)-.4,filo,'color','k','fontsize',12,'fontweight','bold') 
                 elseif o==2 
-                  %m_text(lon_obss(o)-8,lat_obss(o)+.2,filo,'color','k','fontsize',14,'fontweight','bold') 
+                  m_text(lon_obss(o)+.4,lat_obss(o)-.4,filo,'color','k','fontsize',12,'fontweight','bold') 
                 end
               end
               %m_text(lon_obs+.1,lat_obs+.18,['Obs dp: ',num2str(pd_obs(i),'%.2f'),'^o'],'fontsize',14,'fontweight','bold') 

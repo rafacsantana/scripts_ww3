@@ -1,1 +1,1 @@
-/home/santanarc/scripts/niwa/matlab/startup.m
+/home/santanarc/santanarc/scripts/niwa/matlab/startup.m

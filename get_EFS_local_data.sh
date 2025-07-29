@@ -10,9 +10,11 @@ limite=$2  #{YYYYMMDD}
 current=${inicio}
 
 expt=NZWAVE-HR
+#expt=NZWAVE
+#expt=GLOBALWAVE
 
 PREFIX="ww3g" # qwqg00_2018012600_10mwind.gz and qwqg00.2018013100.fields.gz
-
+#PREFIX="nest_nzwave-4_to_nzwave-2_"
 PATH_OUT=/scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/$expt/
 
 while [ ${current} -le ${limite} ]; do
@@ -20,6 +22,11 @@ while [ ${current} -le ${limite} ]; do
   YEAR=`date -u -d "${current}" +%Y`
   MONTH=`date -u -d "${current}" +%m`
   DAY=`date -u -d "${current}" +%d`
+  #HOUR=`date -u -d "${current}" +%h`
+
+  #echo $YEAR $MONTH $DAY $HOUR
+
+  #exit 0
 
   PATH_OUTPUT=$PATH_OUT/${YEAR}/${MONTH}/${DAY}/00/
   mkdir -p $PATH_OUTPUT # /${YEAR}/${MONTH}/${DAY}/00/
