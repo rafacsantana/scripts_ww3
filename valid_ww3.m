@@ -104,7 +104,7 @@ plot_mod   =1; % model data
 plot_harm  =0; % harmonic analysis
 plot_atm   =1; % plot atmospheric forcing
 plot_cycs  =0; % 1 all cyclones 2 = strong cyclones. plot cyclone initial and final dates onn the time series plot (plot_series)
-save_csv   =0;
+save_csv   =1;
 save_mat   =0;
 save_fig   =0;
 save_video =0;
@@ -194,6 +194,7 @@ lon_hr=double(ncread(fname,'lon'));
 lat_hr=double(ncread(fname,'lat'));
 
 % Loading satellite obs
+GPDs=[];
 if plot_aserie || plot_amap || correct_model==2
   atype='cmems_l4';
   %atype='cmems_nrt';
@@ -3422,7 +3423,7 @@ for fobs=stations
     
 
       % Statistical analysis %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-      ka=0;
+      ka=0; 
       ccol=4; % [1];
       for i=ccol
         ka=ka+1;
@@ -3531,6 +3532,9 @@ for fobs=stations
             display([num2str(GPD(1,ii),'%.2f')])%,' m, ',num2str(ARI(ii)),'-year return period for this wave height (m)',]);
           end
 
+          % concatenating extreme values for to save in a csv file
+          GPDs=[GPDs,GPD(1,:)'];
+
           figure; clf
           semilogx([0 0],[0 0],'r',[0 0],[0 0],'b'); hold on;
           semilogx(ARI_POT,POT_sorted,'ok'),
@@ -3602,6 +3606,30 @@ for fobs=stations
         %close
         %clf('reset')
       end
+
+      if save_csv
+
+        fda=['canterbury_eva_hs','.csv'];
+        display(['Saving: ',fda]);
+    
+        if exist(fda)==2
+        system(['rm -rf ',fda]);
+        end
+    
+        csvdata=GPDs;
+        csvdata=num2cell(csvdata);
+        %csvhead={'date','Peak Period','Peak Direction','Hs'};
+        %csvhead=num2cell(1:2)%length(points));
+        % concatenating str matrices
+        csvall=[csvdata];
+        %csvall=[csvhead;csvall];
+        %csvwrite(fda,csvall);
+        T = cell2table(csvall);%,'VariableNames',csvhead);
+        writetable(T,fda)
+        fclose('all');
+
+      end
+
     end
 
   end % if plot_coastm
