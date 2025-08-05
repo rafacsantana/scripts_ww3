@@ -145,6 +145,30 @@ function [obs,time_obs,lon_obs,lat_obs]=proc_wave_obs(file,proc_obs,time_lima,sc
       obs(:,8)=obs(:,4);
       obs(:,9)=nan;
 
+    elseif strcmp(file,'Baring_Head_2025') 
+      %lat_obs=-41.434334; lon_obs=174.853727; 
+      %lat_obs=-41.416667; lon_obs=174.866667;
+      lat_obs=-41.4022; lon_obs=174.84669;
+      % hs
+      file_obsn=[file_obs,'_hs_north_20250701_20250718.csv'];
+      display(['Processing: ',file_obsn]);
+      ob=importdata([file_obsn]);
+      ob.textdata(1,:)
+      % time
+      for i=2:length(ob.textdata)
+        time_obs(i-1)=datenum(ob.textdata{i,1},'dd/mm/YYYY HH:MM:SS');
+      end
+      time_obs=time_obs-.5;
+      obs(:,6)=ob.data(:,1);
+      obs(obs==0)=nan;
+      
+      obs(:,1:5)=nan; 
+      obs(:,7:9)=nan; 
+
+      %obs(:,6)=movmean(obs(:,6),4);
+      %obs(:,6)=movmean(obs(:,6),4);
+
+
     elseif strcmp(file,'Mokohinau') 
 
       %clear 

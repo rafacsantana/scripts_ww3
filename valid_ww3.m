@@ -69,7 +69,7 @@ scase='tairua'; % 'cyclone_tam'; % 'graveyard_hills'; %dixon-anderson'; % cant b
 stations=1:length(files);
 %stations=[1,2,12,13,14]; % 0 = coastal stations (points)
 stations=[0]; % 0 = coastal stations (points)
-stations=[15]; % 0 = coastal stations (points)
+%stations=[15]; % 0 = coastal stations (points)
 
 runs=[2,15,16,14];
 runs=[14,16];
@@ -81,13 +81,13 @@ expt_names={'GLOBALWAVE'          ,'NZWAVE'             ,'NZWAVE-ST6'         ,'
             'GLOBALWAVE-ERA5'     ,'NZWAVE-ERA5-2021'   ,'NZWAVE-ST6-NZLAM'   ,'NZWAVE-ST6-BOM'   ,'NZWAVE-ST6-DEFAULT',... 15
             'NZWAVE-ST6-BOM-WCOR' ,}; % 20            
 % switches
-plot_series=1; % stations=0, plot_series=1, plot_coastm=1, plot_obs==0 to save the coastal points; plot_series=0, plot_coastm=1 to plot coastal points
+plot_series=0; % stations=0, plot_series=1, plot_coastm=1, plot_obs==0 to save the coastal points; plot_series=0, plot_coastm=1 to plot coastal points
 plot_rose  =0;
 plot_disp  =0;
 plot_eva   =0;
 plot_stats =0; % dispersion plots?
 
-plot_coastm=0; % statistical maps for coastal points % plot_series=0 and plot_coastm=1 to plot a coastal point
+plot_coastm=1; % statistical maps for coastal points % plot_series=0 and plot_coastm=1 to plot a coastal point
 plot_map   =0; % station maps with the model frequency
 plot_matm  =0; % matm = maps with atmospheric forcing
 plot_downs =0; % daily downscaled maps
@@ -97,7 +97,7 @@ plot_amap  =0; % altimeter maps
 plot_aserie=0; % altimeter series
 
 proc_obs   =1;
-ck_mod_mat =0;
+ck_mod_mat =1;
 display_txt=1; % when loading data
 plot_obs   =0; % stations=0, plot_series=1, plot_coastm=1, plot_obs==0 to save the coastal points
 plot_mod   =1; % model data
@@ -116,7 +116,7 @@ add_stats  =0; % to legend
 portrait   =0;
 
 interp_half_hour=1;
-correct_model=0 % -1=scatter_kde, 0=binscatter, 1=linear correction or nothing, >1 correct it (in development) 
+correct_model=2 % -1=scatter_kde, 0=binscatter, 1=linear correction or nothing, >1 correct it (in development) 
 select_cpoint=0; % select one coastal point based on lon_c lat_c variables given below
 time_limab=time_lima;
 
@@ -172,8 +172,7 @@ end
 gnames={'globalwave+globalum','nzwave+nzlam','nzwave_hr+nzcsm','tongawave+globalum','nzwave_era5'};
 
 %path_source=['/scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/']; % GLOBALWAVE/'];%2018/01/05/00'];
-%path_source=['/silverdale/esi/research/project/niwa03150/santanarc/hindcast/']; % GLOBALWAVE/'];%2018/01/05/00'];
-path_source=['/esi/project/niwa03150/santanarc/hindcast/']; % GLOBALWAVE/'];%2018/01/05/00'];
+path_source=['/silverdale/esi/research/project/niwa03150/santanarc/hindcast/']; % GLOBALWAVE/'];%2018/01/05/00'];
 %path_source=['~/EFS/']; 
 path_santanarc='/scale_wlg_persistent/filesets/project/niwa03150/santanarc/';
 path_obs=[path_santanarc,'data/obs/'];
@@ -3526,6 +3525,11 @@ for fobs=stations
           [dif loc]=nanmin(abs(ARI-return_p));
           data=GPD(1,loc);
           display([num2str(return_p),'-year return period wave height (m) = ',num2str(data)]);
+
+					display(['Station: ',num2str(fobs)])
+          for ii=1:length(ARI)
+            display([num2str(GPD(1,ii),'%.2f')])%,' m, ',num2str(ARI(ii)),'-year return period for this wave height (m)',]);
+          end
 
           figure; clf
           semilogx([0 0],[0 0],'r',[0 0],[0 0],'b'); hold on;
