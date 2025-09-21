@@ -70,6 +70,7 @@ stations=1:length(files);
 %stations=[1,2,12,13,14]; % 0 = coastal stations (points)
 stations=[0]; % 0 = coastal stations (points)
 stations=[15]; % 0 = coastal stations (points)
+%stations=[15]; % 0 = coastal stations (points)
 
 runs=[2,15,16,14];
 runs=[14,16];
@@ -97,7 +98,7 @@ plot_amap  =0; % altimeter maps
 plot_aserie=0; % altimeter series
 
 proc_obs   =1;
-ck_mod_mat =0;
+ck_mod_mat =1;
 display_txt=1; % when loading data
 plot_obs   =0; % stations=0, plot_series=1, plot_coastm=1, plot_obs==0 to save the coastal points
 plot_mod   =1; % model data
@@ -105,6 +106,7 @@ plot_harm  =0; % harmonic analysis
 plot_atm   =1; % plot atmospheric forcing
 plot_cycs  =0; % 1 all cyclones 2 = strong cyclones. plot cyclone initial and final dates onn the time series plot (plot_series)
 save_csv   =0;
+save_csv   =1;
 save_mat   =0;
 save_fig   =0;
 save_video =0;
@@ -116,7 +118,7 @@ add_stats  =0; % to legend
 portrait   =0;
 
 interp_half_hour=1;
-correct_model=0 % -1=scatter_kde, 0=binscatter, 1=linear correction or nothing, >1 correct it (in development) 
+correct_model=2 % -1=scatter_kde, 0=binscatter, 1=linear correction or nothing, >1 correct it (in development) 
 select_cpoint=0; % select one coastal point based on lon_c lat_c variables given below
 time_limab=time_lima;
 
@@ -172,12 +174,11 @@ end
 gnames={'globalwave+globalum','nzwave+nzlam','nzwave_hr+nzcsm','tongawave+globalum','nzwave_era5'};
 
 %path_source=['/scale_wlg_nobackup/filesets/nobackup/niwa03150/WAVE/hindcast/']; % GLOBALWAVE/'];%2018/01/05/00'];
-%path_source=['/silverdale/esi/research/project/niwa03150/santanarc/hindcast/']; % GLOBALWAVE/'];%2018/01/05/00'];
 path_source=['/esi/project/niwa03150/santanarc/hindcast/']; % GLOBALWAVE/'];%2018/01/05/00'];
 %path_source=['~/EFS/']; 
-path_santanarc='/scale_wlg_persistent/filesets/project/niwa03150/santanarc/';
+path_santanarc='/esi/project/niwa03150/santanarc/';
 path_obs=[path_santanarc,'data/obs/'];
-path_fig='/scale_wlg_nobackup/filesets/nobackup/niwa03150/santanarc/figures/';
+path_fig='/esi/project/niwa03150/santanarc/hindcast/figures/';
 
 % stations or grids - stations are bad in Baring_Head
 ww3pre={'ww3p_interp','ww3g'};
@@ -195,6 +196,7 @@ lon_hr=double(ncread(fname,'lon'));
 lat_hr=double(ncread(fname,'lat'));
 
 % Loading satellite obs
+GPDs=[];
 if plot_aserie || plot_amap || correct_model==2
   atype='cmems_l4';
   %atype='cmems_nrt';
@@ -3423,7 +3425,7 @@ for fobs=stations
     
 
       % Statistical analysis %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-      ka=0;
+      ka=0; 
       ccol=4; % [1];
       for i=ccol
         ka=ka+1;
@@ -3527,6 +3529,14 @@ for fobs=stations
           data=GPD(1,loc);
           display([num2str(return_p),'-year return period wave height (m) = ',num2str(data)]);
 
+          display(['Station: ',num2str(fobs)])
+          for ii=1:length(ARI)
+            display([num2str(GPD(1,ii),'%.2f')])%,' m, ',num2str(ARI(ii)),'-year return period for this wave height (m)',]);
+          end
+
+          % concatenating extreme values for to save in a csv file
+          GPDs=[GPDs,GPD(1,:)'];
+
           figure; clf
           semilogx([0 0],[0 0],'r',[0 0],[0 0],'b'); hold on;
           semilogx(ARI_POT,POT_sorted,'ok'),
@@ -3598,6 +3608,30 @@ for fobs=stations
         %close
         %clf('reset')
       end
+
+      if save_csv
+
+        fda=['canterbury_eva_hs','.csv'];
+        display(['Saving: ',fda]);
+    
+        if exist(fda)==2
+        system(['rm -rf ',fda]);
+        end
+    
+        csvdata=GPDs;
+        csvdata=num2cell(csvdata);
+        %csvhead={'date','Peak Period','Peak Direction','Hs'};
+        %csvhead=num2cell(1:2)%length(points));
+        % concatenating str matrices
+        csvall=[csvdata];
+        %csvall=[csvhead;csvall];
+        %csvwrite(fda,csvall);
+        T = cell2table(csvall);%,'VariableNames',csvhead);
+        writetable(T,fda)
+        fclose('all');
+
+      end
+
     end
 
   end % if plot_coastm
